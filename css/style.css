@@ -19,50 +19,202 @@ body {
 }
 
 /* =========================
-   NAVBAR
+   GLASS PREMIUM NAVBAR
 ========================= */
 
 header {
-  position: relative;
-  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 
-  background-color: rgba(255, 255, 255, 0.97);
+  z-index: 100;
 
-  padding: 20px 60px;
+  background: rgba(20, 20, 20, 0.22);
 
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  padding: 15px 55px;
+}
+
+/* GARIS GOLD SANGAT HALUS */
+
+header::after {
+  content: "";
+
+  position: absolute;
+
+  left: 8%;
+  right: 8%;
+
+  bottom: -1px;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(201, 164, 92, 0.55),
+    transparent
+  );
 }
 
 nav {
   display: flex;
-  justify-content: space-between;
+
   align-items: center;
+
+  justify-content: space-between;
+
+  max-width: 1400px;
+
+  margin: 0 auto;
 }
 
+/* =========================
+   BRAND / LOGO
+========================= */
+
 .logo {
-  font-size: 24px;
-  font-weight: bold;
-  letter-spacing: -0.5px;
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  text-decoration: none;
 }
+
+/* FRAME LOGO */
+
+.logo img {
+  width: 48px;
+  height: 48px;
+
+  padding: 5px;
+
+  object-fit: contain;
+
+  display: block;
+
+  background-color: rgba(255, 255, 255, 0.92);
+
+  border: 1px solid #c9a45c;
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.18),
+    0 0 0 3px rgba(201, 164, 92, 0.12);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* LOGO HOVER */
+
+.logo:hover img {
+  transform: scale(1.05);
+
+  box-shadow:
+    0 5px 20px rgba(201, 164, 92, 0.3),
+    0 0 0 4px rgba(201, 164, 92, 0.15);
+}
+
+/* =========================
+   BRAND TEXT
+========================= */
+
+.logo-text {
+  display: flex;
+
+  flex-direction: column;
+
+  line-height: 1;
+
+  gap: 5px;
+}
+
+.logo-text span {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 23px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.2px;
+
+  color: #ffffff;
+
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.logo-text small {
+  font-family: Arial, sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+
+  color: #d2ad63;
+
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================
+   NAV MENU
+========================= */
 
 nav ul {
   display: flex;
+
+  align-items: center;
+
   list-style: none;
-  gap: 28px;
+
+  gap: 30px;
+
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li a {
   position: relative;
 
+  display: inline-block;
+
+  padding: 10px 0;
+
   text-decoration: none;
-  color: #333;
 
-  font-size: 16px;
+  color: rgba(255, 255, 255, 0.92);
 
-  transition: color 0.3s ease;
+  font-family: Arial, sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 400;
+
+  letter-spacing: 0.2px;
+
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
-/* GARIS HOVER NAVBAR */
+/* GARIS GOLD */
 
 nav ul li a::after {
   content: "";
@@ -70,24 +222,68 @@ nav ul li a::after {
   position: absolute;
 
   left: 50%;
-  bottom: -7px;
+
+  bottom: 2px;
 
   width: 0;
   height: 1px;
 
-  background-color: #333;
+  background-color: #c9a45c;
 
   transform: translateX(-50%);
 
   transition: width 0.3s ease;
 }
 
+/* HOVER */
+
 nav ul li a:hover {
-  color: #777;
+  color: #d5b46f;
+
+  transform: translateY(-1px);
 }
 
 nav ul li a:hover::after {
   width: 100%;
+}
+
+/* =========================
+   BOOKING
+========================= */
+
+nav ul li:last-child a {
+  padding: 11px 22px;
+
+  color: white;
+
+  background: rgba(140, 106, 47, 0.85);
+
+  border: 1px solid rgba(201, 164, 92, 0.65);
+
+  border-radius: 3px;
+
+  text-shadow: none;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.18);
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+nav ul li:last-child a::after {
+  display: none;
+}
+
+nav ul li:last-child a:hover {
+  color: white;
+
+  background: rgba(169, 130, 61, 0.95);
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
 }
 
 /* =========================
@@ -97,15 +293,17 @@ nav ul li a:hover::after {
 .hero {
   position: relative;
 
-  min-height: calc(100vh - 81px);
+  min-height: 100vh;
 
   display: flex;
+
   justify-content: center;
+
   align-items: center;
 
   text-align: center;
 
-  padding: 80px 20px 160px;
+  padding: 120px 20px 160px;
 
   overflow: hidden;
 
@@ -114,7 +312,9 @@ nav ul li a:hover::after {
     url("../images/hero-villa.jpg");
 
   background-size: cover;
+
   background-position: center;
+
   background-repeat: no-repeat;
 }
 
@@ -126,11 +326,13 @@ nav ul li a:hover::after {
   content: "";
 
   position: absolute;
+
   inset: 0;
 
   background-image: url("../images/hero-villa.jpg");
 
   background-size: cover;
+
   background-position: center;
 
   z-index: -1;
@@ -163,11 +365,13 @@ nav ul li a:hover::after {
 @keyframes heroContent {
   from {
     opacity: 0;
+
     transform: translateY(30px);
   }
 
   to {
     opacity: 1;
+
     transform: translateY(0);
   }
 }
@@ -236,6 +440,7 @@ nav ul li a:hover::after {
   display: block;
 
   width: 60px;
+
   height: 1px;
 
   background-color: #c9a45c;
@@ -252,11 +457,13 @@ nav ul li a:hover::after {
 @keyframes titleAppear {
   from {
     opacity: 0;
+
     transform: translateY(25px);
   }
 
   to {
     opacity: 1;
+
     transform: translateY(0);
   }
 }
@@ -264,11 +471,13 @@ nav ul li a:hover::after {
 @keyframes lineAppear {
   from {
     opacity: 0;
+
     width: 0;
   }
 
   to {
     opacity: 1;
+
     width: 60px;
   }
 }
@@ -290,7 +499,7 @@ nav ul li a:hover::after {
 }
 
 /* =========================
-   HERO BUTTON - DARK GOLD
+   HERO BUTTON
 ========================= */
 
 .hero-button {
@@ -325,9 +534,11 @@ nav ul li a:hover::after {
   position: absolute;
 
   top: 0;
+
   left: -120%;
 
   width: 80%;
+
   height: 100%;
 
   background: linear-gradient(
@@ -366,6 +577,7 @@ nav ul li a:hover::after {
   position: absolute;
 
   left: 50%;
+
   bottom: 45px;
 
   transform: translateX(-50%);
@@ -392,11 +604,13 @@ nav ul li a:hover::after {
 @keyframes infoAppear {
   from {
     opacity: 0;
+
     transform: translate(-50%, 20px);
   }
 
   to {
     opacity: 1;
+
     transform: translate(-50%, 0);
   }
 }
@@ -443,6 +657,7 @@ nav ul li a:hover::after {
   position: absolute;
 
   right: 35px;
+
   bottom: 45px;
 
   display: flex;
@@ -464,6 +679,7 @@ nav ul li a:hover::after {
   display: block;
 
   width: 40px;
+
   height: 1px;
 
   background-color: white;
@@ -492,15 +708,19 @@ nav ul li a:hover::after {
 
   letter-spacing: 4px;
 
-  color: #777;
+  color: #8c6a2f;
 
   margin-bottom: 18px;
+
+  font-weight: 600;
 }
 
 .intro h2 {
+  font-family: Georgia, "Times New Roman", serif;
+
   font-size: 42px;
 
-  font-weight: 500;
+  font-weight: 400;
 
   line-height: 1.25;
 
@@ -521,6 +741,491 @@ nav ul li a:hover::after {
   color: #666;
 }
 
+/* =========================================================
+   SOCIAL MEDIA SECTION
+========================================================= */
+
+.social-section {
+  position: relative;
+
+  padding: 110px 7%;
+
+  background: linear-gradient(135deg, #25231f, #171614);
+
+  color: white;
+
+  overflow: hidden;
+}
+
+/* AKSEN BACKGROUND */
+
+.social-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 450px;
+  height: 450px;
+
+  top: -250px;
+  right: -150px;
+
+  border-radius: 50%;
+
+  background: rgba(201, 164, 92, 0.07);
+
+  filter: blur(10px);
+}
+
+.social-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  bottom: -180px;
+  left: -100px;
+
+  border-radius: 50%;
+
+  background: rgba(201, 164, 92, 0.05);
+}
+
+/* HEADING */
+
+.section-heading {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 750px;
+
+  margin: 0 auto 55px;
+
+  text-align: center;
+}
+
+.social-section .section-label {
+  color: #c9a45c;
+}
+
+.section-heading h2 {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(36px, 5vw, 52px);
+
+  font-weight: 400;
+
+  line-height: 1.2;
+
+  margin-bottom: 22px;
+
+  color: #ffffff;
+}
+
+.section-heading > p:last-child {
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+
+  color: rgba(255, 255, 255, 0.68);
+}
+
+/* SOCIAL CONTAINER */
+
+.social-container {
+  position: relative;
+
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 25px;
+
+  max-width: 1000px;
+
+  margin: 0 auto;
+}
+
+/* SOCIAL CARD */
+
+.social-card {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 22px;
+
+  padding: 28px 30px;
+
+  text-decoration: none;
+
+  color: white;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  border-radius: 6px;
+
+  backdrop-filter: blur(12px);
+
+  -webkit-backdrop-filter: blur(12px);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* GARIS EMAS */
+
+.social-card::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 3px;
+
+  background: linear-gradient(to bottom, transparent, #c9a45c, transparent);
+
+  opacity: 0;
+
+  transition: opacity 0.35s ease;
+}
+
+/* HOVER */
+
+.social-card:hover {
+  transform: translateY(-6px);
+
+  background: rgba(255, 255, 255, 0.1);
+
+  border-color: rgba(201, 164, 92, 0.4);
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.social-card:hover::before {
+  opacity: 1;
+}
+
+/* =========================
+   SOCIAL ICON
+========================= */
+
+.social-icon {
+  width: 58px;
+  height: 58px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(201, 164, 92, 0.65);
+
+  background: rgba(201, 164, 92, 0.08);
+
+  color: #d2ad63;
+
+  font-size: 14px;
+
+  font-weight: bold;
+
+  letter-spacing: 1px;
+
+  overflow: hidden;
+}
+
+/* LOGO INSTAGRAM DI DALAM ICON */
+
+.social-icon img {
+  width: 32px;
+  height: 32px;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+/* SOCIAL CONTENT */
+
+.social-content {
+  flex: 1;
+}
+
+.social-content span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  font-size: 10px;
+
+  letter-spacing: 3px;
+
+  color: #c9a45c;
+}
+
+.social-content h3 {
+  margin-bottom: 8px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 22px;
+
+  font-weight: 400;
+}
+
+.social-content p {
+  font-size: 13px;
+
+  line-height: 1.6;
+
+  color: rgba(255, 255, 255, 0.62);
+}
+
+/* ARROW */
+
+.social-arrow {
+  font-size: 25px;
+
+  color: #c9a45c;
+
+  transition: transform 0.3s ease;
+}
+
+.social-card:hover .social-arrow {
+  transform: translateX(6px);
+}
+
+/* =========================================================
+   F&B SECTION
+========================================================= */
+
+.fnb-section {
+  padding: 110px 7%;
+
+  background-color: #f5f1e9;
+
+  text-align: center;
+}
+
+/* F&B HEADING */
+
+.fnb-section .section-heading {
+  color: #333;
+}
+
+.fnb-section .section-label {
+  color: #8c6a2f;
+}
+
+.fnb-section .section-heading h2 {
+  color: #29251f;
+}
+
+.fnb-section .section-heading > p:last-child {
+  color: #6c675f;
+}
+
+/* PRODUCTS */
+
+.fnb-container {
+  max-width: 1200px;
+
+  margin: 0 auto 45px;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+
+  text-align: left;
+}
+
+/* PRODUCT CARD */
+
+.fnb-card {
+  background-color: #ffffff;
+
+  border: 1px solid rgba(140, 106, 47, 0.12);
+
+  box-shadow: 0 10px 35px rgba(70, 50, 25, 0.08);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.fnb-card:hover {
+  transform: translateY(-7px);
+
+  box-shadow: 0 18px 45px rgba(70, 50, 25, 0.15);
+}
+
+/* PRODUCT IMAGE */
+
+.fnb-image {
+  width: 100%;
+
+  height: 260px;
+
+  overflow: hidden;
+
+  background-color: #e7e0d3;
+}
+
+.fnb-image img {
+  width: 100%;
+
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.6s ease;
+}
+
+.fnb-card:hover .fnb-image img {
+  transform: scale(1.06);
+}
+
+/* PRODUCT INFO */
+
+.fnb-info {
+  padding: 25px;
+}
+
+.fnb-category {
+  margin-bottom: 9px;
+
+  font-size: 10px;
+
+  font-weight: bold;
+
+  letter-spacing: 3px;
+
+  color: #a9823d;
+}
+
+.fnb-info h3 {
+  margin-bottom: 10px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 25px;
+
+  font-weight: 400;
+
+  color: #29251f;
+}
+
+.fnb-description {
+  min-height: 48px;
+
+  margin-bottom: 22px;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+  color: #777;
+}
+
+/* PRICE */
+
+.fnb-bottom {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding-top: 18px;
+
+  border-top: 1px solid #eee5d8;
+}
+
+.fnb-price {
+  font-size: 18px;
+
+  font-weight: bold;
+
+  color: #8c6a2f;
+}
+
+.fnb-detail {
+  font-size: 12px;
+
+  color: #777;
+
+  transition: color 0.3s ease;
+}
+
+.fnb-card:hover .fnb-detail {
+  color: #8c6a2f;
+}
+
+/* SEMUA PRODUK */
+
+.fnb-button {
+  display: inline-block;
+
+  padding: 14px 30px;
+
+  text-decoration: none;
+
+  color: #ffffff;
+
+  background-color: #8c6a2f;
+
+  border: 1px solid #b18a45;
+
+  border-radius: 2px;
+
+  font-size: 14px;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.fnb-button:hover {
+  background-color: #a9823d;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 8px 25px rgba(140, 106, 47, 0.25);
+}
+
 /* =========================
    FOOTER
 ========================= */
@@ -533,4 +1238,320 @@ footer {
   background-color: #333;
 
   color: white;
+}
+
+/* =========================
+   FLOATING WHATSAPP
+========================= */
+
+.whatsapp-float {
+  position: fixed;
+
+  right: 25px;
+
+  bottom: 25px;
+
+  z-index: 9999;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 10px 12px 10px 10px;
+
+  background-color: #171717;
+
+  border-radius: 50px;
+
+  text-decoration: none;
+
+  color: white;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* =========================
+   AVATAR
+========================= */
+
+.whatsapp-avatar {
+  width: 48px;
+
+  height: 48px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background-color: #eeeeee;
+
+  border-radius: 50%;
+
+  border: 2px solid white;
+
+  color: #8c6a2f;
+
+  font-size: 13px;
+
+  font-weight: bold;
+
+  overflow: hidden;
+}
+
+/* LOGO DI DALAM AVATAR */
+
+.whatsapp-avatar img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: contain;
+
+  border-radius: 50%;
+
+  display: block;
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.whatsapp-text {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+
+  line-height: 1.2;
+}
+
+.whatsapp-text strong {
+  font-size: 14px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.whatsapp-text span {
+  font-size: 13px;
+
+  color: rgba(255, 255, 255, 0.75);
+
+  white-space: nowrap;
+}
+
+/* =========================
+   WHATSAPP BUTTON
+========================= */
+
+.whatsapp-button {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 13px 20px;
+
+  background-color: #20c76a;
+
+  border-radius: 30px;
+
+  font-size: 15px;
+
+  font-weight: bold;
+
+  white-space: nowrap;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.whatsapp-button span {
+  font-size: 20px;
+
+  color: white;
+}
+
+/* =========================
+   HOVER
+========================= */
+
+.whatsapp-float:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+}
+
+.whatsapp-float:hover .whatsapp-button {
+  background-color: #1eae5d;
+
+  transform: scale(1.03);
+}
+
+/* =========================
+   ANIMATION MUNCUL
+========================= */
+
+.whatsapp-float {
+  animation: whatsappAppear 0.8s ease forwards;
+}
+
+@keyframes whatsappAppear {
+  from {
+    opacity: 0;
+
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+  nav ul {
+    gap: 18px;
+  }
+
+  nav ul li a {
+    font-size: 13px;
+  }
+
+  .fnb-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 12px 20px;
+  }
+
+  /* NAV */
+
+  nav {
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+  nav ul {
+    gap: 14px;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+  }
+
+  nav ul li a {
+    font-size: 12px;
+  }
+
+  /* HERO */
+
+  .hero {
+    padding-top: 150px;
+  }
+
+  .hero-info {
+    width: 92%;
+
+    padding: 15px 10px;
+  }
+
+  .info-item span {
+    font-size: 16px;
+  }
+
+  .info-item p {
+    font-size: 9px;
+  }
+
+  .scroll-indicator {
+    display: none;
+  }
+
+  /* INTRO */
+
+  .intro {
+    padding: 80px 20px;
+  }
+
+  .intro h2 {
+    font-size: 32px;
+  }
+
+  /* SOCIAL */
+
+  .social-section {
+    padding: 80px 20px;
+  }
+
+  .social-container {
+    grid-template-columns: 1fr;
+  }
+
+  .social-card {
+    padding: 22px;
+  }
+
+  /* F&B */
+
+  .fnb-section {
+    padding: 80px 20px;
+  }
+
+  .fnb-container {
+    grid-template-columns: 1fr;
+  }
+
+  .fnb-image {
+    height: 240px;
+  }
+
+  /* WHATSAPP */
+
+  .whatsapp-float {
+    right: 15px;
+
+    bottom: 15px;
+
+    padding: 7px;
+  }
+
+  .whatsapp-avatar {
+    width: 45px;
+
+    height: 45px;
+  }
+
+  .whatsapp-text {
+    display: none;
+  }
+
+  .whatsapp-button {
+    padding: 12px 16px;
+
+    font-size: 14px;
+  }
 }
