@@ -1555,3 +1555,1529 @@ footer {
     font-size: 14px;
   }
 }
+
+/* ==================================================
+   TENTANG VILLA - STORY SECTION
+================================================== */
+
+.about-story {
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 110px 30px;
+}
+
+/* JUDUL SECTION */
+
+.about-story .section-heading {
+  max-width: 720px;
+  margin: 0 auto 100px;
+  text-align: center;
+}
+
+
+/* ==================================================
+   BARIS FOTO + TEKS
+================================================== */
+
+.about-story-row {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 90px;
+
+  margin-bottom: 140px;
+}
+
+/* FOTO 2 & 3
+   FOTO DI KANAN */
+
+.about-story-row.reverse {
+  grid-template-columns: 1.1fr 0.9fr;
+}
+
+
+/* ==================================================
+   POSISI FOTO
+================================================== */
+
+.about-story-row.reverse .about-story-image {
+  order: 2;
+}
+
+.about-story-row.reverse .about-story-content {
+  order: 1;
+}
+
+
+/* ==================================================
+   FOTO
+================================================== */
+
+.about-story-image {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  border-radius: 6px;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.about-story-image img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+/* Efek ketika mouse diarahkan ke foto */
+
+.about-story-image:hover img {
+  transform: scale(1.03);
+}
+
+
+/* ==================================================
+   TEKS
+================================================== */
+
+.about-story-content {
+  max-width: 500px;
+}
+
+.about-story-content .section-label {
+  margin-bottom: 20px;
+}
+
+.about-story-content h3 {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 40px;
+  font-weight: 400;
+
+  line-height: 1.2;
+
+  margin: 0 0 25px;
+}
+
+.about-story-content p:not(.section-label) {
+  font-size: 15px;
+
+  line-height: 1.9;
+
+  color: #666;
+
+  margin: 0 0 18px;
+}
+
+
+/* ==================================================
+   RESPONSIVE - TABLET
+================================================== */
+
+@media (max-width: 900px) {
+
+  .about-story {
+    padding: 90px 25px;
+  }
+
+  .about-story-row,
+  .about-story-row.reverse {
+    grid-template-columns: 1fr;
+    gap: 45px;
+
+    margin-bottom: 100px;
+  }
+
+  .about-story-row.reverse .about-story-image,
+  .about-story-row.reverse .about-story-content {
+    order: initial;
+  }
+
+  .about-story-image {
+    max-width: 430px;
+  }
+
+  .about-story-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+}
+
+
+/* ==================================================
+   RESPONSIVE - HP
+================================================== */
+
+@media (max-width: 600px) {
+
+  .about-story {
+    padding: 70px 20px;
+  }
+
+  .about-story .section-heading {
+    margin-bottom: 70px;
+  }
+
+  .about-story-row,
+  .about-story-row.reverse {
+    gap: 30px;
+    margin-bottom: 80px;
+  }
+
+  .about-story-image {
+    max-width: 350px;
+  }
+
+  .about-story-content h3 {
+    font-size: 30px;
+  }
+
+  .about-story-content p:not(.section-label) {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+}
+
+/* ==================================================
+   OMAH NOTO CIJERUK
+   PREMIUM COLOR & TYPOGRAPHY
+================================================== */
+
+
+/* ==================================================
+   COLOR PALETTE
+================================================== */
+
+:root {
+  --ivory: #f5f1e8;
+  --cream: #ebe4d7;
+  --brown: #2c2621;
+  --brown-light: #5a5047;
+  --sage: #73775a;
+  --taupe: #b8a994;
+  --gold: #b89b5e;
+  --white: #ffffff;
+}
+
+
+/* ==================================================
+   GOOGLE FONT
+================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap");
+
+
+/* ==================================================
+   GLOBAL
+================================================== */
+
+body {
+  background: var(--ivory);
+  color: var(--brown);
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  line-height: 1.7;
+}
+
+
+/* ==================================================
+   HEADINGS
+================================================== */
+
+h1,
+h2,
+h3 {
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+
+  color: var(--brown);
+
+  font-weight: 500;
+}
+
+
+/* ==================================================
+   SECTION LABEL
+================================================== */
+
+.section-label {
+  color: var(--gold);
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+}
+
+
+/* ==================================================
+   INTRO SECTION
+================================================== */
+
+.intro {
+  background: var(--ivory);
+
+  color: var(--brown);
+}
+
+
+.intro h1,
+.intro h2 {
+  color: var(--brown);
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-weight: 500;
+
+  letter-spacing: -0.5px;
+}
+
+
+.intro p:not(.section-label) {
+  color: var(--brown-light);
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+}
+
+
+/* ==================================================
+   ABOUT STORY
+================================================== */
+
+.about-story {
+  width: 100%;
+
+  max-width: 1150px;
+
+  margin: 0 auto;
+
+  padding: 110px 30px;
+
+  background: var(--cream);
+}
+
+
+.about-story .section-heading {
+  max-width: 720px;
+
+  margin: 0 auto 100px;
+
+  text-align: center;
+}
+
+
+.about-story .section-heading h2 {
+  color: var(--brown);
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 52px;
+
+  font-weight: 500;
+
+  line-height: 1.1;
+
+  margin-top: 15px;
+}
+
+
+.about-story .section-heading > p:last-child {
+  color: var(--brown-light);
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  line-height: 1.8;
+}
+
+
+/* ==================================================
+   STORY ROW
+================================================== */
+
+.about-story-row {
+  display: grid;
+
+  grid-template-columns: 0.9fr 1.1fr;
+
+  align-items: center;
+
+  gap: 90px;
+
+  margin-bottom: 140px;
+}
+
+
+/* FOTO KANAN */
+
+.about-story-row.reverse {
+  grid-template-columns: 1.1fr 0.9fr;
+}
+
+
+.about-story-row.reverse .about-story-image {
+  order: 2;
+}
+
+
+.about-story-row.reverse .about-story-content {
+  order: 1;
+}
+
+
+/* ==================================================
+   STORY IMAGE
+================================================== */
+
+.about-story-image {
+  width: 100%;
+
+  max-width: 400px;
+
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  border-radius: 6px;
+
+  box-shadow:
+    0 20px 50px rgba(44, 38, 33, 0.15);
+}
+
+
+.about-story-image img {
+  width: 100%;
+
+  height: auto;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+
+.about-story-image:hover img {
+  transform: scale(1.03);
+}
+
+
+/* ==================================================
+   STORY CONTENT
+================================================== */
+
+.about-story-content {
+  max-width: 500px;
+}
+
+
+.about-story-content .section-label {
+  color: var(--sage);
+
+  margin-bottom: 20px;
+
+  letter-spacing: 2.5px;
+}
+
+
+.about-story-content h3 {
+  color: var(--brown);
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 44px;
+
+  font-weight: 500;
+
+  line-height: 1.15;
+
+  margin: 0 0 25px;
+}
+
+
+.about-story-content p:not(.section-label) {
+  color: var(--brown-light);
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.9;
+
+  margin: 0 0 18px;
+}
+
+
+/* ==================================================
+   HIGHLIGHT / SOCIAL SECTION
+================================================== */
+
+.social-section {
+  background: var(--brown);
+
+  color: var(--ivory);
+}
+
+
+.social-section .section-heading h2 {
+  color: var(--ivory);
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 52px;
+
+  font-weight: 500;
+
+  line-height: 1.1;
+}
+
+
+.social-section .section-heading p:not(.section-label) {
+  color: #cfc7bb;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  line-height: 1.8;
+}
+
+
+/* ==================================================
+   HIGHLIGHT CARDS
+================================================== */
+
+.social-card {
+  background: rgba(245, 241, 232, 0.06);
+
+  border: 1px solid rgba(184, 155, 94, 0.28);
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease;
+}
+
+
+.social-card:hover {
+  background: rgba(245, 241, 232, 0.1);
+
+  border-color: rgba(184, 155, 94, 0.65);
+
+  transform: translateY(-6px);
+}
+
+
+.social-content span {
+  color: var(--gold);
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 11px;
+
+  letter-spacing: 2px;
+}
+
+
+.social-content h3 {
+  color: var(--ivory);
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 32px;
+
+  font-weight: 500;
+}
+
+
+.social-content p {
+  color: #cfc7bb;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* ==================================================
+   BUTTON
+================================================== */
+
+.hero-button {
+  background: var(--brown);
+
+  color: var(--ivory);
+
+  border: 1px solid var(--brown);
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.hero-button:hover {
+  background: var(--gold);
+
+  border-color: var(--gold);
+
+  color: var(--white);
+
+  transform: translateY(-2px);
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+footer {
+  background: #211d19;
+
+  color: #aaa196;
+
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+
+/* ==================================================
+   WHATSAPP
+================================================== */
+
+.whatsapp-float {
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+
+/* ==================================================
+   RESPONSIVE - TABLET
+================================================== */
+
+@media (max-width: 900px) {
+
+  .about-story {
+    padding: 90px 25px;
+  }
+
+
+  .about-story-row,
+  .about-story-row.reverse {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+
+    margin-bottom: 100px;
+  }
+
+
+  /* RESET ORDER DI MOBILE */
+
+  .about-story-row.reverse .about-story-image,
+  .about-story-row.reverse .about-story-content {
+    order: initial;
+  }
+
+
+  .about-story-image {
+    max-width: 430px;
+  }
+
+
+  .about-story-content {
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    text-align: center;
+  }
+
+
+  .about-story .section-heading h2 {
+    font-size: 46px;
+  }
+}
+
+
+/* ==================================================
+   RESPONSIVE - MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+  .about-story {
+    padding: 70px 20px;
+  }
+
+
+  .about-story .section-heading {
+    margin-bottom: 70px;
+  }
+
+
+  .about-story .section-heading h2 {
+    font-size: 38px;
+  }
+
+
+  .about-story-row,
+  .about-story-row.reverse {
+    gap: 30px;
+
+    margin-bottom: 80px;
+  }
+
+
+  .about-story-image {
+    max-width: 350px;
+  }
+
+
+  .about-story-content h3 {
+    font-size: 34px;
+  }
+
+
+  .about-story-content p:not(.section-label) {
+    font-size: 14px;
+
+    line-height: 1.8;
+  }
+
+
+  .social-section .section-heading h2 {
+    font-size: 40px;
+  }
+}
+/* ==================================================
+   ABOUT PAGE - PREMIUM REDESIGN
+================================================== */
+
+.about-page {
+  background: #f5f1e8;
+  color: #2c2621;
+}
+
+
+/* ==================================================
+   ABOUT HERO
+================================================== */
+
+.about-hero {
+  min-height: 680px;
+
+  display: flex;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(245, 241, 232, 0.72),
+      rgba(245, 241, 232, 1)
+    );
+
+  padding: 150px 7% 100px;
+}
+
+
+.about-hero-inner {
+  width: 100%;
+  max-width: 1250px;
+
+  margin: 0 auto;
+}
+
+
+.about-eyebrow {
+  margin: 0 0 25px;
+
+  color: #b89b5e;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+}
+
+
+.about-hero h1 {
+  max-width: 850px;
+
+  margin: 0;
+
+  color: #2c2621;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: clamp(65px, 8vw, 118px);
+
+  font-weight: 400;
+
+  line-height: 0.88;
+
+  letter-spacing: -3px;
+}
+
+
+.about-hero-bottom {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-end;
+
+  gap: 60px;
+
+  margin-top: 90px;
+
+  padding-top: 30px;
+
+  border-top: 1px solid rgba(44, 38, 33, 0.15);
+}
+
+
+.about-hero-bottom p {
+  max-width: 520px;
+
+  margin: 0;
+
+  color: #5a5047;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.9;
+}
+
+
+.about-scroll {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  color: #73775a;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  white-space: nowrap;
+}
+
+
+.about-scroll i {
+  width: 45px;
+  height: 1px;
+
+  display: block;
+
+  background: #b89b5e;
+}
+
+
+/* ==================================================
+   INTRO STATEMENT
+================================================== */
+
+.about-intro {
+  display: grid;
+
+  grid-template-columns: 180px 1fr;
+
+  gap: 80px;
+
+  max-width: 1150px;
+
+  margin: 0 auto;
+
+  padding: 150px 30px;
+}
+
+
+.about-intro-label {
+  padding-top: 10px;
+}
+
+
+.about-intro-label span {
+  display: block;
+
+  color: #b89b5e;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 30px;
+}
+
+
+.about-intro-label p {
+  margin: 5px 0;
+
+  color: #73775a;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+
+.about-intro-content {
+  max-width: 800px;
+}
+
+
+.about-intro-content h2 {
+  margin: 0 0 45px;
+
+  color: #2c2621;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: clamp(42px, 5vw, 68px);
+
+  font-weight: 400;
+
+  line-height: 1.05;
+}
+
+
+.about-intro-content h2 em {
+  color: #73775a;
+
+  font-style: italic;
+}
+
+
+.about-intro-content p {
+  max-width: 700px;
+
+  margin: 0 0 18px;
+
+  color: #5a5047;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.9;
+}
+
+
+/* ==================================================
+   STATS
+================================================== */
+
+.about-stats {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  max-width: 1150px;
+
+  margin: 0 auto;
+
+  padding: 45px 30px;
+
+  border-top: 1px solid rgba(44, 38, 33, 0.14);
+
+  border-bottom: 1px solid rgba(44, 38, 33, 0.14);
+}
+
+
+.about-stat {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+  padding-left: 35px;
+
+  border-left: 1px solid rgba(44, 38, 33, 0.14);
+}
+
+
+.about-stat:first-child {
+  padding-left: 0;
+
+  border-left: none;
+}
+
+
+.about-stat strong {
+  color: #2c2621;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 42px;
+
+  font-weight: 500;
+
+  line-height: 1;
+}
+
+
+.about-stat span {
+  color: #73775a;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+}
+
+
+/* ==================================================
+   STORY SECTION
+================================================== */
+
+.about-story-new {
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  padding: 170px 30px 130px;
+}
+
+
+.about-story-header {
+  margin-bottom: 120px;
+}
+
+
+.about-story-header h2 {
+  margin: 0;
+
+  color: #2c2621;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: clamp(50px, 6vw, 82px);
+
+  font-weight: 400;
+
+  line-height: 0.95;
+}
+
+
+/* ==================================================
+   FEATURE ROW
+================================================== */
+
+.about-feature {
+  display: grid;
+
+  grid-template-columns: 1.05fr 0.95fr;
+
+  align-items: center;
+
+  gap: 100px;
+
+  margin-bottom: 180px;
+}
+
+
+.about-feature-reverse {
+  grid-template-columns: 0.95fr 1.05fr;
+}
+
+
+.about-feature-reverse .about-feature-image {
+  order: 2;
+}
+
+
+.about-feature-reverse .about-feature-text {
+  order: 1;
+}
+
+
+/* ==================================================
+   FEATURE IMAGE
+================================================== */
+
+.about-feature-image {
+  overflow: hidden;
+
+  width: 100%;
+
+  max-width: 570px;
+
+  background: #ebe4d7;
+
+  box-shadow:
+    0 30px 70px rgba(44, 38, 33, 0.13);
+}
+
+
+.about-feature-image img {
+  width: 100%;
+
+  display: block;
+
+  transition: transform 0.7s ease;
+}
+
+
+.about-feature-image:hover img {
+  transform: scale(1.035);
+}
+
+
+/* ==================================================
+   FEATURE TEXT
+================================================== */
+
+.about-feature-text {
+  max-width: 470px;
+}
+
+
+.about-number {
+  display: block;
+
+  margin-bottom: 25px;
+
+  color: #b89b5e;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 3px;
+}
+
+
+.about-feature-text h3 {
+  margin: 0 0 30px;
+
+  color: #2c2621;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: clamp(48px, 5vw, 68px);
+
+  font-weight: 400;
+
+  line-height: 0.95;
+}
+
+
+.about-feature-text p {
+  margin: 0 0 18px;
+
+  color: #5a5047;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.9;
+}
+
+
+/* ==================================================
+   COMFORT
+================================================== */
+
+.about-comfort {
+  background: #2c2621;
+
+  color: #f5f1e8;
+}
+
+
+.about-comfort-inner {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 120px;
+
+  max-width: 1150px;
+
+  margin: 0 auto;
+
+  padding: 130px 30px;
+}
+
+
+.about-comfort-heading h2 {
+  margin: 0;
+
+  color: #f5f1e8;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: clamp(50px, 5vw, 72px);
+
+  font-weight: 400;
+
+  line-height: 0.98;
+}
+
+
+.about-comfort-text {
+  padding-top: 45px;
+}
+
+
+.about-comfort-text p {
+  margin: 0 0 22px;
+
+  color: #cfc7bb;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.9;
+}
+
+
+/* ==================================================
+   CLOSING
+================================================== */
+
+.about-closing {
+  background: #ebe4d7;
+
+  padding: 160px 30px;
+}
+
+
+.about-closing-content {
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+
+.about-closing h2 {
+  margin: 0 0 30px;
+
+  color: #2c2621;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: clamp(52px, 6vw, 82px);
+
+  font-weight: 400;
+
+  line-height: 0.95;
+}
+
+
+.about-closing-content > p:not(.about-eyebrow) {
+  max-width: 580px;
+
+  margin: 0 auto 40px;
+
+  color: #5a5047;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.9;
+}
+
+
+/* ==================================================
+   BOOKING BUTTON
+================================================== */
+
+.about-booking-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 25px;
+
+  padding: 16px 24px;
+
+  background: #2c2621;
+
+  color: #f5f1e8;
+
+  text-decoration: none;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.about-booking-button span {
+  font-size: 17px;
+
+  font-weight: 400;
+}
+
+
+.about-booking-button:hover {
+  background: #b89b5e;
+
+  transform: translateY(-3px);
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+.about-page footer {
+  background: #211d19;
+
+  color: #aaa196;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 900px) {
+
+  .about-hero {
+    min-height: 600px;
+
+    padding: 130px 30px 80px;
+  }
+
+
+  .about-hero h1 {
+    font-size: 75px;
+  }
+
+
+  .about-intro {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+    padding: 110px 30px;
+  }
+
+
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 35px;
+  }
+
+
+  .about-stat:nth-child(3) {
+    padding-left: 0;
+
+    border-left: none;
+  }
+
+
+  .about-feature,
+  .about-feature-reverse {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+
+    margin-bottom: 120px;
+  }
+
+
+  .about-feature-reverse .about-feature-image,
+  .about-feature-reverse .about-feature-text {
+    order: initial;
+  }
+
+
+  .about-feature-image {
+    max-width: 650px;
+
+    margin: 0 auto;
+  }
+
+
+  .about-feature-text {
+    max-width: 650px;
+
+    margin: 0 auto;
+  }
+
+
+  .about-comfort-inner {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+
+  .about-comfort-text {
+    padding-top: 0;
+  }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+  .about-hero {
+    min-height: 560px;
+
+    padding: 120px 22px 70px;
+  }
+
+
+  .about-hero h1 {
+    font-size: 60px;
+
+    letter-spacing: -1.5px;
+  }
+
+
+  .about-hero-bottom {
+    display: block;
+
+    margin-top: 60px;
+  }
+
+
+  .about-scroll {
+    margin-top: 30px;
+  }
+
+
+  .about-intro {
+    padding: 90px 22px;
+  }
+
+
+  .about-intro-content h2 {
+    font-size: 45px;
+  }
+
+
+  .about-stats {
+    grid-template-columns: 1fr 1fr;
+
+    padding: 35px 22px;
+  }
+
+
+  .about-stat {
+    padding-left: 20px;
+  }
+
+
+  .about-stat strong {
+    font-size: 34px;
+  }
+
+
+  .about-story-new {
+    padding: 100px 22px 70px;
+  }
+
+
+  .about-story-header {
+    margin-bottom: 75px;
+  }
+
+
+  .about-story-header h2 {
+    font-size: 55px;
+  }
+
+
+  .about-feature-text h3 {
+    font-size: 52px;
+  }
+
+
+  .about-comfort-inner {
+    padding: 90px 22px;
+  }
+
+
+  .about-comfort-heading h2 {
+    font-size: 52px;
+  }
+
+
+  .about-closing {
+    padding: 110px 22px;
+  }
+
+
+  .about-closing h2 {
+    font-size: 55px;
+  }
+
+}
