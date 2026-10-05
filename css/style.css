@@ -3081,3 +3081,15 @@ footer {
   }
 
 }
+/* =========================================
+   NAVBAR KHUSUS HALAMAN TENTANG
+   ========================================= */
+
+.about-page header {
+  background: #3a281f;
+  border-bottom: 1px solid rgba(201, 164, 92, 0.4);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
+
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
