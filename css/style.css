@@ -2384,7 +2384,7 @@ footer {
 .about-intro-label p {
   margin: 5px 0;
 
-  color: #73775a;
+  color: rgba(255, 248, 2355, 0.68);
 
   font-family: "Montserrat", Arial, sans-serif;
 
@@ -2402,7 +2402,7 @@ footer {
 .about-intro-content h2 {
   margin: 0 0 45px;
 
-  color: #2c2621;
+  color: #fff8eb;
 
   font-family: "Cormorant Garamond", Georgia, serif;
 
@@ -2414,7 +2414,7 @@ footer {
 }
 
 .about-intro-content h2 em {
-  color: #73775a;
+  color: #f0c982;
 
   font-style: italic;
 }
@@ -2424,7 +2424,7 @@ footer {
 
   margin: 0 0 18px;
 
-  color: #5a5047;
+  color: rgba(225, 248, 235, 0.82);
 
   font-family: "Montserrat", Arial, sans-serif;
 
@@ -2596,11 +2596,31 @@ footer {
 ================================================== */
 
 .about-story-new {
+  position: relative;
+  z-index: 1;
+
   max-width: 1250px;
-
   margin: 0 auto;
-
   padding: 170px 30px 130px;
+}
+
+.about-story-new::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  left: 50%;
+
+  width: 100vw;
+
+  transform: translateX(-50%);
+
+  background: #ebe4d7;
+
+  z-index: -1;
 }
 
 .about-story-header {
@@ -3416,7 +3436,7 @@ footer {
   }
 }
 .about-intro-label span {
-  color: #552f00;
+  color: #f0c982;
 }
 .about-story-header .about-eyebrow {
   color: #552f00;
