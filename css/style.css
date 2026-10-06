@@ -2492,6 +2492,107 @@ footer {
 }
 
 /* ==================================================
+   STAT ITEM
+================================================== */
+
+.about-stat {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  min-height: 125px;
+
+  padding: 25px 35px;
+
+  border-left:
+    1px solid
+    rgba(255, 255, 255, 0.14);
+}
+
+
+/* item pertama tidak punya garis kiri */
+
+.about-stat:first-child {
+  border-left: none;
+}
+
+/* ==================================================
+   ANGKA
+================================================== */
+
+.about-stat strong {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #f7f1e7;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 38px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: 1px;
+}
+
+/* ==================================================
+   LABEL
+================================================== */
+
+.about-stat span {
+  display: block;
+
+  color: #b9a991;
+
+  font-family:
+    "Montserrat",
+    Arial,
+    sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+/* ==================================================
+   HOVER
+================================================== */
+
+.about-stat {
+  transition:
+    background 0.35s ease,
+    transform 0.35s ease;
+}
+
+.about-stat:hover {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(184, 155, 94, 0.10),
+      rgba(255, 255, 255, 0.02)
+    );
+}
+
+.about-stat:hover strong {
+  color: #d8b875;
+}
+
+
+/* ==================================================
    STORY SECTION
 ================================================== */
 
@@ -2581,50 +2682,55 @@ footer {
    FEATURE TEXT
 ================================================== */
 
-.about-feature-text {
-  max-width: 470px;
+.about-stats {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  max-width: 1200px;
+
+  margin: 20px auto 110px;
+
+  padding: 0;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #211a16 0%,
+      #2c231d 45%,
+      #171310 100%
+    );
+
+  border: 1px solid rgba(201, 164, 92, 0.55);
+
+  box-shadow:
+    0 25px 60px rgba(35, 27, 21, 0.18);
 }
 
-.about-number {
-  display: block;
 
-  margin-bottom: 25px;
+/* garis dekorasi bagian atas */
 
-  color: #b89b5e;
+.about-stats::before {
+  content: "";
 
-  font-family: "Montserrat", Arial, sans-serif;
+  position: absolute;
 
-  font-size: 10px;
+  top: 0;
+  left: 10%;
+  right: 10%;
 
-  font-weight: 600;
+  height: 1px;
 
-  letter-spacing: 3px;
-}
-
-.about-feature-text h3 {
-  margin: 0 0 30px;
-
-  color: #2c2621;
-
-  font-family: "Cormorant Garamond", Georgia, serif;
-
-  font-size: clamp(48px, 5vw, 68px);
-
-  font-weight: 400;
-
-  line-height: 0.95;
-}
-
-.about-feature-text p {
-  margin: 0 0 18px;
-
-  color: #5a5047;
-
-  font-family: "Montserrat", Arial, sans-serif;
-
-  font-size: 14px;
-
-  line-height: 1.9;
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(216, 184, 117, 0.8),
+      transparent
+    );
 }
 
 /* ==================================================
@@ -2809,13 +2915,25 @@ footer {
   .about-stats {
     grid-template-columns: repeat(2, 1fr);
 
-    gap: 35px;
+    margin:
+      10px 30px 90px;
+  }
+
+  .about-stat {
+    min-height: 115px;
   }
 
   .about-stat:nth-child(3) {
-    padding-left: 0;
-
     border-left: none;
+    border-top:
+      1px solid
+      rgba(255, 255, 255, 0.14);
+  }
+
+  .about-stat:nth-child(4) {
+    border-top:
+      1px solid
+      rgba(255, 255, 255, 0.14);
   }
 
   .about-feature,
@@ -2891,18 +3009,37 @@ footer {
   }
 
   .about-stats {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
 
-    padding: 35px 22px;
+    margin:
+      10px 22px 70px;
   }
 
-  .about-stat {
-    padding-left: 20px;
+  .about-stat,
+  .about-stat:nth-child(3),
+  .about-stat:nth-child(4) {
+    min-height: 100px;
+
+    border-left: none;
+
+    border-top:
+      1px solid
+      rgba(255, 255, 255, 0.14);
+  }
+
+  .about-stat:first-child {
+    border-top: none;
   }
 
   .about-stat strong {
     font-size: 34px;
   }
+
+  .about-stat span {
+    font-size: 9px;
+    letter-spacing: 1.8px;
+  }
+
 
   .about-story-new {
     padding: 100px 22px 70px;
