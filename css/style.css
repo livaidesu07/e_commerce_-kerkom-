@@ -1575,7 +1575,6 @@ footer {
   text-align: center;
 }
 
-
 /* ==================================================
    BARIS FOTO + TEKS
 ================================================== */
@@ -1596,7 +1595,6 @@ footer {
   grid-template-columns: 1.1fr 0.9fr;
 }
 
-
 /* ==================================================
    POSISI FOTO
 ================================================== */
@@ -1608,7 +1606,6 @@ footer {
 .about-story-row.reverse .about-story-content {
   order: 1;
 }
-
 
 /* ==================================================
    FOTO
@@ -1623,8 +1620,7 @@ footer {
 
   border-radius: 6px;
 
-  box-shadow:
-    0 20px 50px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
 }
 
 .about-story-image img {
@@ -1643,7 +1639,6 @@ footer {
 .about-story-image:hover img {
   transform: scale(1.03);
 }
-
 
 /* ==================================================
    TEKS
@@ -1678,13 +1673,11 @@ footer {
   margin: 0 0 18px;
 }
 
-
 /* ==================================================
    RESPONSIVE - TABLET
 ================================================== */
 
 @media (max-width: 900px) {
-
   .about-story {
     padding: 90px 25px;
   }
@@ -1711,16 +1704,13 @@ footer {
     margin: 0 auto;
     text-align: center;
   }
-
 }
-
 
 /* ==================================================
    RESPONSIVE - HP
 ================================================== */
 
 @media (max-width: 600px) {
-
   .about-story {
     padding: 70px 20px;
   }
@@ -1747,14 +1737,12 @@ footer {
     font-size: 14px;
     line-height: 1.8;
   }
-
 }
 
 /* ==================================================
    OMAH NOTO CIJERUK
    PREMIUM COLOR & TYPOGRAPHY
 ================================================== */
-
 
 /* ==================================================
    COLOR PALETTE
@@ -1771,13 +1759,11 @@ footer {
   --white: #ffffff;
 }
 
-
 /* ==================================================
    GOOGLE FONT
 ================================================== */
 
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap");
-
 
 /* ==================================================
    GLOBAL
@@ -1792,7 +1778,6 @@ body {
   line-height: 1.7;
 }
 
-
 /* ==================================================
    HEADINGS
 ================================================== */
@@ -1806,7 +1791,6 @@ h3 {
 
   font-weight: 500;
 }
-
 
 /* ==================================================
    SECTION LABEL
@@ -1826,7 +1810,6 @@ h3 {
   text-transform: uppercase;
 }
 
-
 /* ==================================================
    INTRO SECTION
 ================================================== */
@@ -1836,7 +1819,6 @@ h3 {
 
   color: var(--brown);
 }
-
 
 .intro h1,
 .intro h2 {
@@ -1849,7 +1831,6 @@ h3 {
   letter-spacing: -0.5px;
 }
 
-
 .intro p:not(.section-label) {
   color: var(--brown-light);
 
@@ -1859,7 +1840,6 @@ h3 {
 
   line-height: 1.9;
 }
-
 
 /* ==================================================
    ABOUT STORY
@@ -1877,7 +1857,6 @@ h3 {
   background: var(--cream);
 }
 
-
 .about-story .section-heading {
   max-width: 720px;
 
@@ -1885,7 +1864,6 @@ h3 {
 
   text-align: center;
 }
-
 
 .about-story .section-heading h2 {
   color: var(--brown);
@@ -1901,7 +1879,6 @@ h3 {
   margin-top: 15px;
 }
 
-
 .about-story .section-heading > p:last-child {
   color: var(--brown-light);
 
@@ -1909,7 +1886,6 @@ h3 {
 
   line-height: 1.8;
 }
-
 
 /* ==================================================
    STORY ROW
@@ -1927,23 +1903,19 @@ h3 {
   margin-bottom: 140px;
 }
 
-
 /* FOTO KANAN */
 
 .about-story-row.reverse {
   grid-template-columns: 1.1fr 0.9fr;
 }
 
-
 .about-story-row.reverse .about-story-image {
   order: 2;
 }
 
-
 .about-story-row.reverse .about-story-content {
   order: 1;
 }
-
 
 /* ==================================================
    STORY IMAGE
@@ -1960,10 +1932,8 @@ h3 {
 
   border-radius: 6px;
 
-  box-shadow:
-    0 20px 50px rgba(44, 38, 33, 0.15);
+  box-shadow: 0 20px 50px rgba(44, 38, 33, 0.15);
 }
-
 
 .about-story-image img {
   width: 100%;
@@ -1977,11 +1947,9 @@ h3 {
   transition: transform 0.5s ease;
 }
 
-
 .about-story-image:hover img {
   transform: scale(1.03);
 }
-
 
 /* ==================================================
    STORY CONTENT
@@ -1991,7 +1959,6 @@ h3 {
   max-width: 500px;
 }
 
-
 .about-story-content .section-label {
   color: var(--sage);
 
@@ -1999,7 +1966,6 @@ h3 {
 
   letter-spacing: 2.5px;
 }
-
 
 .about-story-content h3 {
   color: var(--brown);
@@ -2015,7 +1981,6 @@ h3 {
   margin: 0 0 25px;
 }
 
-
 .about-story-content p:not(.section-label) {
   color: var(--brown-light);
 
@@ -2028,7 +1993,6 @@ h3 {
   margin: 0 0 18px;
 }
 
-
 /* ==================================================
    HIGHLIGHT / SOCIAL SECTION
 ================================================== */
@@ -2038,7 +2002,6 @@ h3 {
 
   color: var(--ivory);
 }
-
 
 .social-section .section-heading h2 {
   color: var(--ivory);
@@ -2052,7 +2015,6 @@ h3 {
   line-height: 1.1;
 }
 
-
 .social-section .section-heading p:not(.section-label) {
   color: #cfc7bb;
 
@@ -2060,7 +2022,6 @@ h3 {
 
   line-height: 1.8;
 }
-
 
 /* ==================================================
    HIGHLIGHT CARDS
@@ -2077,7 +2038,6 @@ h3 {
     background 0.35s ease;
 }
 
-
 .social-card:hover {
   background: rgba(245, 241, 232, 0.1);
 
@@ -2085,7 +2045,6 @@ h3 {
 
   transform: translateY(-6px);
 }
-
 
 .social-content span {
   color: var(--gold);
@@ -2097,7 +2056,6 @@ h3 {
   letter-spacing: 2px;
 }
 
-
 .social-content h3 {
   color: var(--ivory);
 
@@ -2108,7 +2066,6 @@ h3 {
   font-weight: 500;
 }
 
-
 .social-content p {
   color: #cfc7bb;
 
@@ -2118,7 +2075,6 @@ h3 {
 
   line-height: 1.8;
 }
-
 
 /* ==================================================
    BUTTON
@@ -2147,7 +2103,6 @@ h3 {
     transform 0.3s ease;
 }
 
-
 .hero-button:hover {
   background: var(--gold);
 
@@ -2157,7 +2112,6 @@ h3 {
 
   transform: translateY(-2px);
 }
-
 
 /* ==================================================
    FOOTER
@@ -2171,7 +2125,6 @@ footer {
   font-family: "Montserrat", Arial, sans-serif;
 }
 
-
 /* ==================================================
    WHATSAPP
 ================================================== */
@@ -2180,17 +2133,14 @@ footer {
   font-family: "Montserrat", Arial, sans-serif;
 }
 
-
 /* ==================================================
    RESPONSIVE - TABLET
 ================================================== */
 
 @media (max-width: 900px) {
-
   .about-story {
     padding: 90px 25px;
   }
-
 
   .about-story-row,
   .about-story-row.reverse {
@@ -2201,7 +2151,6 @@ footer {
     margin-bottom: 100px;
   }
 
-
   /* RESET ORDER DI MOBILE */
 
   .about-story-row.reverse .about-story-image,
@@ -2209,11 +2158,9 @@ footer {
     order: initial;
   }
 
-
   .about-story-image {
     max-width: 430px;
   }
-
 
   .about-story-content {
     max-width: 600px;
@@ -2223,33 +2170,27 @@ footer {
     text-align: center;
   }
 
-
   .about-story .section-heading h2 {
     font-size: 46px;
   }
 }
-
 
 /* ==================================================
    RESPONSIVE - MOBILE
 ================================================== */
 
 @media (max-width: 600px) {
-
   .about-story {
     padding: 70px 20px;
   }
-
 
   .about-story .section-heading {
     margin-bottom: 70px;
   }
 
-
   .about-story .section-heading h2 {
     font-size: 38px;
   }
-
 
   .about-story-row,
   .about-story-row.reverse {
@@ -2258,23 +2199,19 @@ footer {
     margin-bottom: 80px;
   }
 
-
   .about-story-image {
     max-width: 350px;
   }
 
-
   .about-story-content h3 {
     font-size: 34px;
   }
-
 
   .about-story-content p:not(.section-label) {
     font-size: 14px;
 
     line-height: 1.8;
   }
-
 
   .social-section .section-heading h2 {
     font-size: 40px;
@@ -2289,7 +2226,6 @@ footer {
   color: #2c2621;
 }
 
-
 /* ==================================================
    ABOUT HERO
 ================================================== */
@@ -2300,16 +2236,14 @@ footer {
   display: flex;
   align-items: center;
 
-  background:
-    linear-gradient(
-      180deg,
-      rgba(245, 241, 232, 0.72),
-      rgba(245, 241, 232, 1)
-    );
+  background: linear-gradient(
+    180deg,
+    rgba(245, 241, 232, 0.72),
+    rgba(245, 241, 232, 1)
+  );
 
   padding: 150px 7% 100px;
 }
-
 
 .about-hero-inner {
   width: 100%;
@@ -2317,7 +2251,6 @@ footer {
 
   margin: 0 auto;
 }
-
 
 .about-eyebrow {
   margin: 0 0 25px;
@@ -2333,7 +2266,6 @@ footer {
 
   text-transform: uppercase;
 }
-
 
 .about-hero h1 {
   max-width: 850px;
@@ -2353,7 +2285,6 @@ footer {
   letter-spacing: -3px;
 }
 
-
 .about-hero-bottom {
   display: flex;
 
@@ -2369,7 +2300,6 @@ footer {
   border-top: 1px solid rgba(44, 38, 33, 0.15);
 }
 
-
 .about-hero-bottom p {
   max-width: 520px;
 
@@ -2383,7 +2313,6 @@ footer {
 
   line-height: 1.9;
 }
-
 
 .about-scroll {
   display: flex;
@@ -2405,7 +2334,6 @@ footer {
   white-space: nowrap;
 }
 
-
 .about-scroll i {
   width: 45px;
   height: 1px;
@@ -2414,7 +2342,6 @@ footer {
 
   background: #b89b5e;
 }
-
 
 /* ==================================================
    INTRO STATEMENT
@@ -2434,11 +2361,9 @@ footer {
   padding: 150px 30px;
 }
 
-
 .about-intro-label {
   padding-top: 10px;
 }
-
 
 .about-intro-label span {
   display: block;
@@ -2449,7 +2374,6 @@ footer {
 
   font-size: 30px;
 }
-
 
 .about-intro-label p {
   margin: 5px 0;
@@ -2465,11 +2389,9 @@ footer {
   letter-spacing: 2px;
 }
 
-
 .about-intro-content {
   max-width: 800px;
 }
-
 
 .about-intro-content h2 {
   margin: 0 0 45px;
@@ -2485,13 +2407,11 @@ footer {
   line-height: 1.05;
 }
 
-
 .about-intro-content h2 em {
   color: #73775a;
 
   font-style: italic;
 }
-
 
 .about-intro-content p {
   max-width: 700px;
@@ -2506,7 +2426,6 @@ footer {
 
   line-height: 1.9;
 }
-
 
 /* ==================================================
    STATS
@@ -2528,7 +2447,6 @@ footer {
   border-bottom: 1px solid rgba(44, 38, 33, 0.14);
 }
 
-
 .about-stat {
   display: flex;
 
@@ -2541,13 +2459,11 @@ footer {
   border-left: 1px solid rgba(44, 38, 33, 0.14);
 }
 
-
 .about-stat:first-child {
   padding-left: 0;
 
   border-left: none;
 }
-
 
 .about-stat strong {
   color: #2c2621;
@@ -2560,7 +2476,6 @@ footer {
 
   line-height: 1;
 }
-
 
 .about-stat span {
   color: #73775a;
@@ -2576,7 +2491,6 @@ footer {
   text-transform: uppercase;
 }
 
-
 /* ==================================================
    STORY SECTION
 ================================================== */
@@ -2589,11 +2503,9 @@ footer {
   padding: 170px 30px 130px;
 }
 
-
 .about-story-header {
   margin-bottom: 120px;
 }
-
 
 .about-story-header h2 {
   margin: 0;
@@ -2608,7 +2520,6 @@ footer {
 
   line-height: 0.95;
 }
-
 
 /* ==================================================
    FEATURE ROW
@@ -2626,21 +2537,17 @@ footer {
   margin-bottom: 180px;
 }
 
-
 .about-feature-reverse {
   grid-template-columns: 0.95fr 1.05fr;
 }
-
 
 .about-feature-reverse .about-feature-image {
   order: 2;
 }
 
-
 .about-feature-reverse .about-feature-text {
   order: 1;
 }
-
 
 /* ==================================================
    FEATURE IMAGE
@@ -2655,10 +2562,8 @@ footer {
 
   background: #ebe4d7;
 
-  box-shadow:
-    0 30px 70px rgba(44, 38, 33, 0.13);
+  box-shadow: 0 30px 70px rgba(44, 38, 33, 0.13);
 }
-
 
 .about-feature-image img {
   width: 100%;
@@ -2668,11 +2573,9 @@ footer {
   transition: transform 0.7s ease;
 }
 
-
 .about-feature-image:hover img {
   transform: scale(1.035);
 }
-
 
 /* ==================================================
    FEATURE TEXT
@@ -2681,7 +2584,6 @@ footer {
 .about-feature-text {
   max-width: 470px;
 }
-
 
 .about-number {
   display: block;
@@ -2699,7 +2601,6 @@ footer {
   letter-spacing: 3px;
 }
 
-
 .about-feature-text h3 {
   margin: 0 0 30px;
 
@@ -2714,7 +2615,6 @@ footer {
   line-height: 0.95;
 }
 
-
 .about-feature-text p {
   margin: 0 0 18px;
 
@@ -2727,7 +2627,6 @@ footer {
   line-height: 1.9;
 }
 
-
 /* ==================================================
    COMFORT
 ================================================== */
@@ -2737,7 +2636,6 @@ footer {
 
   color: #f5f1e8;
 }
-
 
 .about-comfort-inner {
   display: grid;
@@ -2753,7 +2651,6 @@ footer {
   padding: 130px 30px;
 }
 
-
 .about-comfort-heading h2 {
   margin: 0;
 
@@ -2768,11 +2665,9 @@ footer {
   line-height: 0.98;
 }
 
-
 .about-comfort-text {
   padding-top: 45px;
 }
-
 
 .about-comfort-text p {
   margin: 0 0 22px;
@@ -2786,7 +2681,6 @@ footer {
   line-height: 1.9;
 }
 
-
 /* ==================================================
    CLOSING
 ================================================== */
@@ -2797,7 +2691,6 @@ footer {
   padding: 160px 30px;
 }
 
-
 .about-closing-content {
   max-width: 900px;
 
@@ -2805,7 +2698,6 @@ footer {
 
   text-align: center;
 }
-
 
 .about-closing h2 {
   margin: 0 0 30px;
@@ -2821,7 +2713,6 @@ footer {
   line-height: 0.95;
 }
 
-
 .about-closing-content > p:not(.about-eyebrow) {
   max-width: 580px;
 
@@ -2835,7 +2726,6 @@ footer {
 
   line-height: 1.9;
 }
-
 
 /* ==================================================
    BOOKING BUTTON
@@ -2871,20 +2761,17 @@ footer {
     transform 0.3s ease;
 }
 
-
 .about-booking-button span {
   font-size: 17px;
 
   font-weight: 400;
 }
 
-
 .about-booking-button:hover {
   background: #b89b5e;
 
   transform: translateY(-3px);
 }
-
 
 /* ==================================================
    FOOTER
@@ -2896,24 +2783,20 @@ footer {
   color: #aaa196;
 }
 
-
 /* ==================================================
    TABLET
 ================================================== */
 
 @media (max-width: 900px) {
-
   .about-hero {
     min-height: 600px;
 
     padding: 130px 30px 80px;
   }
 
-
   .about-hero h1 {
     font-size: 75px;
   }
-
 
   .about-intro {
     grid-template-columns: 1fr;
@@ -2923,20 +2806,17 @@ footer {
     padding: 110px 30px;
   }
 
-
   .about-stats {
     grid-template-columns: repeat(2, 1fr);
 
     gap: 35px;
   }
 
-
   .about-stat:nth-child(3) {
     padding-left: 0;
 
     border-left: none;
   }
-
 
   .about-feature,
   .about-feature-reverse {
@@ -2947,12 +2827,10 @@ footer {
     margin-bottom: 120px;
   }
 
-
   .about-feature-reverse .about-feature-image,
   .about-feature-reverse .about-feature-text {
     order: initial;
   }
-
 
   .about-feature-image {
     max-width: 650px;
@@ -2960,13 +2838,11 @@ footer {
     margin: 0 auto;
   }
 
-
   .about-feature-text {
     max-width: 650px;
 
     margin: 0 auto;
   }
-
 
   .about-comfort-inner {
     grid-template-columns: 1fr;
@@ -2974,26 +2850,21 @@ footer {
     gap: 40px;
   }
 
-
   .about-comfort-text {
     padding-top: 0;
   }
-
 }
-
 
 /* ==================================================
    MOBILE
 ================================================== */
 
 @media (max-width: 600px) {
-
   .about-hero {
     min-height: 560px;
 
     padding: 120px 22px 70px;
   }
-
 
   .about-hero h1 {
     font-size: 60px;
@@ -3001,28 +2872,23 @@ footer {
     letter-spacing: -1.5px;
   }
 
-
   .about-hero-bottom {
     display: block;
 
     margin-top: 60px;
   }
 
-
   .about-scroll {
     margin-top: 30px;
   }
-
 
   .about-intro {
     padding: 90px 22px;
   }
 
-
   .about-intro-content h2 {
     font-size: 45px;
   }
-
 
   .about-stats {
     grid-template-columns: 1fr 1fr;
@@ -3030,56 +2896,45 @@ footer {
     padding: 35px 22px;
   }
 
-
   .about-stat {
     padding-left: 20px;
   }
-
 
   .about-stat strong {
     font-size: 34px;
   }
 
-
   .about-story-new {
     padding: 100px 22px 70px;
   }
-
 
   .about-story-header {
     margin-bottom: 75px;
   }
 
-
   .about-story-header h2 {
     font-size: 55px;
   }
-
 
   .about-feature-text h3 {
     font-size: 52px;
   }
 
-
   .about-comfort-inner {
     padding: 90px 22px;
   }
-
 
   .about-comfort-heading h2 {
     font-size: 52px;
   }
 
-
   .about-closing {
     padding: 110px 22px;
   }
 
-
   .about-closing h2 {
     font-size: 55px;
   }
-
 }
 /* =========================================
    NAVBAR KHUSUS HALAMAN TENTANG
@@ -3092,4 +2947,265 @@ footer {
 
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
+}
+/* ==================================================
+   ABOUT PAGE - LANDSCAPE HERO
+   OMAH NOTO CIJERUK
+================================================== */
+
+.about-page {
+  background: #f5f1e8;
+  color: #2c2621;
+}
+
+/* ==================================================
+   HERO
+================================================== */
+
+.about-page .about-hero {
+  position: relative;
+
+  min-height: 720px;
+
+  display: flex;
+  align-items: flex-end;
+
+  padding: 150px 7% 85px;
+
+  overflow: hidden;
+
+  /* FOTO FULL LANDSCAPE */
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(35, 27, 21, 0.78) 0%,
+      rgba(35, 27, 21, 0.55) 35%,
+      rgba(35, 27, 21, 0.2) 65%,
+      rgba(35, 27, 21, 0.05) 100%
+    ),
+    url("../images/view-gunung.jpg");
+
+  background-size: cover;
+
+  background-position: center center;
+
+  background-repeat: no-repeat;
+}
+
+/* ==================================================
+   HERO CONTENT
+================================================== */
+
+.about-page .about-hero-inner {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 1250px;
+
+  margin: 0 auto;
+}
+
+/* ==================================================
+   LABEL
+================================================== */
+
+.about-page .about-eyebrow {
+  margin: 0 0 22px;
+
+  color: #e0c486;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+}
+
+/* ==================================================
+   TITLE
+================================================== */
+
+.about-page .about-hero h1 {
+  max-width: 800px;
+
+  margin: 0;
+
+  color: #fffaf2;
+
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+
+  font-size: clamp(58px, 6.5vw, 92px);
+
+  font-weight: 400;
+
+  line-height: 0.9;
+
+  letter-spacing: -2px;
+}
+
+/* ==================================================
+   BOTTOM CONTENT
+================================================== */
+
+.about-page .about-hero-bottom {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  gap: 60px;
+
+  max-width: 1050px;
+
+  margin-top: 70px;
+
+  padding-top: 25px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+/* ==================================================
+   DESCRIPTION
+================================================== */
+
+.about-page .about-hero-bottom p {
+  max-width: 500px;
+
+  margin: 0;
+
+  color: rgba(255, 250, 242, 0.9);
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.9;
+}
+
+/* ==================================================
+   SCROLL
+================================================== */
+
+.about-page .about-scroll {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  color: #e0c486;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  white-space: nowrap;
+}
+
+.about-page .about-scroll i {
+  width: 45px;
+
+  height: 1px;
+
+  display: block;
+
+  background: #d8b875;
+}
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 900px) {
+  .about-page .about-hero {
+    min-height: 650px;
+
+    padding: 140px 30px 75px;
+
+    background-size: cover;
+
+    background-position: center center;
+  }
+
+  .about-page .about-hero h1 {
+    max-width: 650px;
+
+    font-size: 72px;
+
+    letter-spacing: -1.5px;
+  }
+
+  .about-page .about-hero-bottom {
+    margin-top: 60px;
+
+    gap: 40px;
+  }
+}
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+  .about-page .about-hero {
+    min-height: 680px;
+
+    padding: 125px 22px 55px;
+
+    background-size: cover;
+
+    background-position: center center;
+  }
+
+  .about-page .about-eyebrow {
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 18px;
+  }
+
+  .about-page .about-hero h1 {
+    max-width: 100%;
+
+    font-size: 56px;
+
+    line-height: 0.92;
+
+    letter-spacing: -1px;
+  }
+
+  .about-page .about-hero-bottom {
+    display: block;
+
+    margin-top: 55px;
+
+    padding-top: 20px;
+  }
+
+  .about-page .about-hero-bottom p {
+    max-width: 100%;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+  }
+
+  .about-page .about-scroll {
+    margin-top: 25px;
+
+    font-size: 9px;
+  }
 }
