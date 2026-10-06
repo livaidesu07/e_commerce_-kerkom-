@@ -3093,9 +3093,18 @@ footer {
 ================================================== */
 
 .about-page {
-  background: #f5f1e8;
-  color: #2c2621;
+  background:
+    linear-gradient(
+      135deg,
+      #d8c0a8 10%,
+      #cdb198 25%,
+      #dec9b3 50%,
+      #c4a68b 75%,
+      #d2ac86 100%
+    );
 }
+
+
 
 /* ==================================================
    HERO
@@ -3347,4 +3356,13 @@ footer {
 
     font-size: 9px;
   }
+}
+.about-intro-label span {
+  color: #552f00;
+}
+.about-story-header .about-eyebrow {
+  color: #552f00;
+}
+.about-closing-content .about-eyebrow {
+  color: #552f00;
 }
