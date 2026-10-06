@@ -3078,12 +3078,14 @@ footer {
    ========================================= */
 
 .about-page header {
-  background: #3a281f;
-  border-bottom: 1px solid rgba(201, 164, 92, 0.4);
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
+  background: rgba(20, 20, 20, 0.22);
 
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 /* ==================================================
    ABOUT PAGE - LANDSCAPE HERO
