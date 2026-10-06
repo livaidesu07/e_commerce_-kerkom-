@@ -2222,8 +2222,14 @@ footer {
 ================================================== */
 
 .about-page {
-  background: #f5f1e8;
-  color: #2c2621;
+  background:
+    linear-gradient(rgba(80, 48, 24, 0.12), rgba(80, 48, 24, 0.12)),
+    url("../images/bg-tentang.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /* ==================================================
@@ -2515,7 +2521,6 @@ footer {
   border-left: 1px solid rgba(255, 255, 255, 0.14);
 }
 
-
 /* item pertama tidak punya garis kiri */
 
 .about-stat:first-child {
@@ -2533,10 +2538,7 @@ footer {
 
   color: #f7f1e7;
 
-  font-family:
-    "Cormorant Garamond",
-    Georgia,
-    serif;
+  font-family: "Cormorant Garamond", Georgia, serif;
 
   font-size: 38px;
 
@@ -2556,10 +2558,7 @@ footer {
 
   color: #b9a991;
 
-  font-family:
-    "Montserrat",
-    Arial,
-    sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
 
   font-size: 10px;
 
@@ -2581,18 +2580,16 @@ footer {
 }
 
 .about-stat:hover {
-  background:
-    linear-gradient(
-      135deg,
-      rgba(184, 155, 94, 0.10),
-      rgba(255, 255, 255, 0.02)
-    );
+  background: linear-gradient(
+    135deg,
+    rgba(184, 155, 94, 0.1),
+    rgba(255, 255, 255, 0.02)
+  );
 }
 
 .about-stat:hover strong {
   color: #d8b875;
 }
-
 
 /* ==================================================
    STORY SECTION
@@ -2670,8 +2667,7 @@ footer {
 
   border: 1px solid #c9a45c;
 
-  box-shadow:
-    0 15px 35px rgba(70, 45, 28, 0.15);
+  box-shadow: 0 15px 35px rgba(70, 45, 28, 0.15);
 
   overflow: hidden;
 }
@@ -2765,20 +2761,12 @@ footer {
 
   overflow: hidden;
 
-  background:
-    linear-gradient(
-      135deg,
-      #211a16 0%,
-      #2c231d 45%,
-      #171310 100%
-    );
+  background: linear-gradient(135deg, #211a16 0%, #2c231d 45%, #171310 100%);
 
   border: 1px solid rgba(201, 164, 92, 0.55);
 
-  box-shadow:
-    0 25px 60px rgba(35, 27, 21, 0.18);
+  box-shadow: 0 25px 60px rgba(35, 27, 21, 0.18);
 }
-
 
 /* garis dekorasi bagian atas */
 
@@ -2793,13 +2781,12 @@ footer {
 
   height: 1px;
 
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      rgba(216, 184, 117, 0.8),
-      transparent
-    );
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(216, 184, 117, 0.8),
+    transparent
+  );
 }
 
 /* ==================================================
@@ -2984,8 +2971,7 @@ footer {
   .about-stats {
     grid-template-columns: repeat(2, 1fr);
 
-    margin:
-      10px 30px 90px;
+    margin: 10px 30px 90px;
   }
 
   .about-stat {
@@ -2994,15 +2980,11 @@ footer {
 
   .about-stat:nth-child(3) {
     border-left: none;
-    border-top:
-      1px solid
-      rgba(255, 255, 255, 0.14);
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
   }
 
   .about-stat:nth-child(4) {
-    border-top:
-      1px solid
-      rgba(255, 255, 255, 0.14);
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
   }
 
   .about-feature,
@@ -3021,12 +3003,12 @@ footer {
 
   .about-feature-image {
     width: 380px;
-  height: 290px;
+    height: 290px;
 
-  max-width: 100%;
+    max-width: 100%;
 
-  margin: 0 auto;
-}
+    margin: 0 auto;
+  }
 
   .about-feature-text {
     max-width: 650px;
@@ -3083,8 +3065,7 @@ footer {
   .about-stats {
     grid-template-columns: 1fr;
 
-    margin:
-      10px 22px 70px;
+    margin: 10px 22px 70px;
   }
 
   .about-stat,
@@ -3094,9 +3075,7 @@ footer {
 
     border-left: none;
 
-    border-top:
-      1px solid
-      rgba(255, 255, 255, 0.14);
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
   }
 
   .about-stat:first-child {
@@ -3112,7 +3091,6 @@ footer {
     letter-spacing: 1.8px;
   }
 
-
   .about-story-new {
     padding: 100px 22px 70px;
   }
@@ -3127,10 +3105,10 @@ footer {
 
   .about-feature-text h3 {
     font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 68px;
-  font-weight: 400;
-  line-height: 0.95;
-  margin: 12px 0 30px;
+    font-size: 68px;
+    font-weight: 400;
+    line-height: 0.95;
+    margin: 12px 0 30px;
   }
 
   .about-comfort-inner {
@@ -3148,13 +3126,13 @@ footer {
   .about-closing h2 {
     font-size: 55px;
   }
-.about-story-new .about-feature-image {
-  width: 100%;
-  max-width: 340px;
-  height: 250px;
+  .about-story-new .about-feature-image {
+    width: 100%;
+    max-width: 340px;
+    height: 250px;
 
-  margin: 0 auto;
-}
+    margin: 0 auto;
+  }
 }
 /* =========================================
    NAVBAR KHUSUS HALAMAN TENTANG
@@ -3177,17 +3155,14 @@ footer {
 
 .about-page {
   background:
-    linear-gradient(
-      135deg,
-      #d8c0a8 10%,
-      #cdb198 25%,
-      #dec9b3 50%,
-      #c4a68b 75%,
-      #d2ac86 100%
-    );
+    linear-gradient(rgba(80, 48, 24, 0.12), rgba(80, 48, 24, 0.12)),
+    url("../images/bg-tentang.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
-
-
 
 /* ==================================================
    HERO
