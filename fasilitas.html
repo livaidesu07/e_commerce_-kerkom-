@@ -1272,5 +1272,109 @@
 
     </a>
 
+
+
+    <!-- =====================================================
+         LUXURY FACILITY LIGHTBOX
+    ====================================================== -->
+    <div class="luxury-lightbox" id="facilityLightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Galeri foto fasilitas">
+      <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Tutup gambar">&times;</button>
+      <button type="button" class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Foto sebelumnya">&#10094;</button>
+
+      <div class="lightbox-frame">
+        <div class="lightbox-inner-frame">
+          <img src="" alt="" id="lightboxImage" />
+        </div>
+        <div class="lightbox-caption">
+          <span id="lightboxNumber">01 — OMAH NOTO</span>
+          <h2 id="lightboxTitle">Fasilitas Omah Noto</h2>
+        </div>
+      </div>
+
+      <button type="button" class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Foto berikutnya">&#10095;</button>
+    </div>
+
+    <script>
+      (() => {
+        const lightbox = document.getElementById("facilityLightbox");
+        const lightboxImage = document.getElementById("lightboxImage");
+        const lightboxNumber = document.getElementById("lightboxNumber");
+        const lightboxTitle = document.getElementById("lightboxTitle");
+        const closeButton = document.getElementById("lightboxClose");
+        const prevButton = document.getElementById("lightboxPrev");
+        const nextButton = document.getElementById("lightboxNext");
+
+        const photos = Array.from(
+          document.querySelectorAll(".facility-card .facility-card-image img")
+        ).map((img) => {
+          const card = img.closest(".facility-card");
+          return {
+            src: img.getAttribute("src"),
+            alt: img.getAttribute("alt") || "Foto fasilitas Omah Noto Cijeruk",
+            title: card.querySelector("h3")?.textContent.trim() || "Fasilitas Omah Noto",
+            number: card.querySelector(".facility-number")?.textContent.trim() || "OMAH NOTO"
+          };
+        });
+
+        let currentIndex = 0;
+        let previousFocus = null;
+
+        function showPhoto(index) {
+          if (!photos.length) return;
+          currentIndex = (index + photos.length) % photos.length;
+          const photo = photos[currentIndex];
+          lightboxImage.src = photo.src;
+          lightboxImage.alt = photo.alt;
+          lightboxNumber.textContent = photo.number;
+          lightboxTitle.textContent = photo.title;
+        }
+
+        function openLightbox(index) {
+          previousFocus = document.activeElement;
+          showPhoto(index);
+          lightbox.classList.add("is-open");
+          lightbox.setAttribute("aria-hidden", "false");
+          document.body.style.overflow = "hidden";
+          closeButton.focus();
+        }
+
+        function closeLightbox() {
+          lightbox.classList.remove("is-open");
+          lightbox.setAttribute("aria-hidden", "true");
+          document.body.style.overflow = "";
+          lightboxImage.src = "";
+          if (previousFocus && typeof previousFocus.focus === "function") previousFocus.focus();
+        }
+
+        document.querySelectorAll(".facility-card .facility-card-image img").forEach((img, index) => {
+          img.setAttribute("tabindex", "0");
+          img.setAttribute("role", "button");
+          img.setAttribute("aria-label", `Perbesar foto ${photos[index]?.title || "fasilitas"}`);
+          img.addEventListener("click", () => openLightbox(index));
+          img.addEventListener("keydown", (event) => {
+            if (event.key === "Enter" || event.key === " ") {
+              event.preventDefault();
+              openLightbox(index);
+            }
+          });
+        });
+
+        closeButton.addEventListener("click", closeLightbox);
+        prevButton.addEventListener("click", () => showPhoto(currentIndex - 1));
+        nextButton.addEventListener("click", () => showPhoto(currentIndex + 1));
+
+        lightbox.addEventListener("click", (event) => {
+          if (event.target === lightbox) closeLightbox();
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (!lightbox.classList.contains("is-open")) return;
+          if (event.key === "Escape") closeLightbox();
+          if (event.key === "ArrowLeft") showPhoto(currentIndex - 1);
+          if (event.key === "ArrowRight") showPhoto(currentIndex + 1);
+        });
+      })();
+    </script>
+
   </body>
 </html>
