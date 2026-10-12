@@ -5841,10 +5841,10 @@ footer {
   background-repeat: no-repeat;
 }
 /* =====================================================
-   OMAH NOTO — LUXURY FACILITY LIGHTBOX
+   OMAH NOTO — LUXURY GALLERY LIGHTBOX
 ===================================================== */
 
-.facility-page .luxury-lightbox {
+.gallery-page .luxury-lightbox {
   position: fixed;
   inset: 0;
   z-index: 9999;
@@ -5868,7 +5868,7 @@ footer {
     visibility 0.35s ease;
 }
 
-.facility-page .luxury-lightbox.is-open {
+.gallery-page .luxury-lightbox.is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -5876,7 +5876,7 @@ footer {
 
 /* BINGKAI UTAMA */
 
-.facility-page .lightbox-frame {
+.gallery-page .lightbox-frame {
   position: relative;
 
   width: min(850px, 100%);
@@ -5901,13 +5901,13 @@ footer {
   transition: transform 0.35s ease;
 }
 
-.facility-page .luxury-lightbox.is-open .lightbox-frame {
+.gallery-page .luxury-lightbox.is-open .lightbox-frame {
   transform: scale(1);
 }
 
 /* BINGKAI BAGIAN DALAM */
 
-.facility-page .lightbox-inner-frame {
+.gallery-page .lightbox-inner-frame {
   position: relative;
 
   padding: 8px;
@@ -5919,7 +5919,7 @@ footer {
 
 /* FOTO BESAR */
 
-.facility-page .lightbox-inner-frame img {
+.gallery-page .lightbox-inner-frame img {
   display: block;
 
   width: 100%;
@@ -5933,17 +5933,109 @@ footer {
 /* JUDUL FOTO */
 
 /* =====================================================
-   LUXURY LIGHTBOX CAPTION
+   OMAH NOTO — LUXURY GALLERY LIGHTBOX
 ===================================================== */
 
-.facility-page .lightbox-caption {
+.gallery-page .luxury-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 70px 90px;
+
+  background: rgba(12, 15, 13, 0.94);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    opacity 0.35s ease,
+    visibility 0.35s ease;
+}
+
+.gallery-page .luxury-lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* BINGKAI CHAMPAGNE GOLD */
+
+.gallery-page .lightbox-frame {
+  position: relative;
+
+  width: min(850px, 100%);
+  max-height: 85vh;
+
+  padding: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #8f7748,
+    #b49a63 35%,
+    #d0b982 65%,
+    #8b7142
+  );
+
+  box-shadow:
+    0 0 0 1px rgba(230, 203, 139, 0.45),
+    0 0 0 7px rgba(184, 155, 94, 0.12),
+    0 25px 90px rgba(0, 0, 0, 0.65);
+
+  transform: scale(0.94);
+  transition: transform 0.35s ease;
+}
+
+.gallery-page .luxury-lightbox.is-open .lightbox-frame {
+  transform: scale(1);
+}
+
+/* BINGKAI BAGIAN DALAM */
+
+.gallery-page .lightbox-inner-frame {
+  position: relative;
+
+  padding: 7px;
+
+  border: 1px solid rgba(218, 190, 125, 0.55);
+
+  background: #191c19;
+}
+
+/* FOTO BESAR */
+
+.gallery-page .lightbox-inner-frame img {
+  display: block;
+
+  width: 100%;
+  max-height: 62vh;
+
+  object-fit: contain;
+
+  background: #191c19;
+}
+
+/* CAPTION */
+
+.gallery-page .lightbox-caption {
   padding: 22px 15px 12px;
+
   text-align: center;
 }
 
-/* NOMOR FASILITAS */
-.facility-page .lightbox-caption span {
+/* NOMOR FOTO */
+
+.gallery-page .lightbox-caption span {
   display: block;
+
   margin-bottom: 12px;
 
   font-family: "Montserrat", sans-serif;
@@ -5955,7 +6047,8 @@ footer {
 }
 
 /* JUDUL FOTO */
-.facility-page .lightbox-caption h2 {
+
+.gallery-page .lightbox-caption h2 {
   margin: 0;
 
   font-family: "Cormorant Garamond", Georgia, serif;
@@ -5969,7 +6062,7 @@ footer {
 
 /* TOMBOL TUTUP */
 
-.facility-page .lightbox-close {
+.gallery-page .lightbox-close {
   position: absolute;
   top: 25px;
   right: 35px;
@@ -5980,7 +6073,7 @@ footer {
   border: 1px solid rgba(201, 164, 92, 0.7);
   border-radius: 50%;
 
-  background: rgba(30, 32, 28, 0.85);
+  background: rgba(30, 32, 28, 0.9);
 
   color: #e6d2a0;
   font-size: 32px;
@@ -5993,14 +6086,14 @@ footer {
     transform 0.25s ease;
 }
 
-.facility-page .lightbox-close:hover {
+.gallery-page .lightbox-close:hover {
   background: #8f7138;
   transform: rotate(90deg);
 }
 
-/* TOMBOL FOTO SEBELUMNYA / BERIKUTNYA */
+/* TOMBOL NAVIGASI */
 
-.facility-page .lightbox-nav {
+.gallery-page .lightbox-nav {
   position: absolute;
   top: 50%;
 
@@ -6012,7 +6105,7 @@ footer {
   border: 1px solid rgba(201, 164, 92, 0.65);
   border-radius: 50%;
 
-  background: rgba(30, 32, 28, 0.85);
+  background: rgba(30, 32, 28, 0.9);
 
   color: #e6d2a0;
   font-size: 18px;
@@ -6024,45 +6117,45 @@ footer {
     color 0.25s ease;
 }
 
-.facility-page .lightbox-nav:hover {
+.gallery-page .lightbox-nav:hover {
   background: #8f7138;
   color: #fff;
 }
 
-.facility-page .lightbox-prev {
+.gallery-page .lightbox-prev {
   left: 25px;
 }
 
-.facility-page .lightbox-next {
+.gallery-page .lightbox-next {
   right: 25px;
 }
 
-/* KURSOR PADA FOTO KARTU */
+/* FOTO BISA DIKLIK */
 
-.facility-page .facility-card-image {
+.gallery-page .gallery-card img {
   cursor: zoom-in;
 }
 
-/* TAMPILAN HP */
+/* RESPONSIVE HP */
 
 @media (max-width: 600px) {
-  .facility-page .luxury-lightbox {
+  .gallery-page .luxury-lightbox {
     padding: 65px 18px;
   }
 
-  .facility-page .lightbox-frame {
-    padding: 9px;
+  .gallery-page .lightbox-frame {
+    padding: 8px;
   }
 
-  .facility-page .lightbox-inner-frame {
+  .gallery-page .lightbox-inner-frame {
     padding: 4px;
   }
 
-  .facility-page .lightbox-inner-frame img {
+  .gallery-page .lightbox-inner-frame img {
     max-height: 55vh;
   }
 
-  .facility-page .lightbox-close {
+  .gallery-page .lightbox-close {
     top: 12px;
     right: 12px;
 
@@ -6070,20 +6163,20 @@ footer {
     height: 42px;
   }
 
-  .facility-page .lightbox-prev {
+  .gallery-page .lightbox-prev {
     left: 8px;
   }
 
-  .facility-page .lightbox-next {
+  .gallery-page .lightbox-next {
     right: 8px;
   }
 
-  .facility-page .lightbox-nav {
+  .gallery-page .lightbox-nav {
     width: 38px;
     height: 38px;
   }
 
-  .facility-page .lightbox-caption span {
+  .gallery-page .lightbox-caption span {
     font-size: 8px;
     letter-spacing: 2px;
   }

@@ -99,7 +99,7 @@
       <!-- FOTO 1 -->
       <div class="gallery-card">
         <img
-          src="images/bg-fasillitas.png"
+          src="images/suasana-villa-omah-noto.png"
           alt="Suasana Omah Noto Cijeruk"
         />
 
@@ -232,5 +232,203 @@
     <footer>
       <p>&copy; 2026 Omah Noto Cijeruk. All Rights Reserved.</p>
     </footer>
+    <!-- =====================================================
+     OMAH NOTO — LUXURY GALLERY LIGHTBOX
+===================================================== -->
+
+<div
+  class="luxury-lightbox"
+  id="galleryLightbox"
+  aria-hidden="true"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Galeri foto Omah Noto Cijeruk"
+>
+  <!-- TOMBOL TUTUP -->
+  <button
+    type="button"
+    class="lightbox-close"
+    id="galleryLightboxClose"
+    aria-label="Tutup gambar"
+  >
+    &times;
+  </button>
+
+  <!-- FOTO SEBELUMNYA -->
+  <button
+    type="button"
+    class="lightbox-nav lightbox-prev"
+    id="galleryLightboxPrev"
+    aria-label="Foto sebelumnya"
+  >
+    &#10094;
+  </button>
+
+  <!-- BINGKAI LUXURY -->
+  <div class="lightbox-frame">
+
+    <div class="lightbox-inner-frame">
+      <img
+        src=""
+        alt=""
+        id="galleryLightboxImage"
+      />
+    </div>
+
+    <!-- JUDUL DAN NOMOR FOTO -->
+    <div class="lightbox-caption">
+      <span id="galleryLightboxNumber">01 — OMAH NOTO</span>
+      <h2 id="galleryLightboxTitle">Suasana Omah Noto Cijeruk</h2>
+    </div>
+
+  </div>
+
+  <!-- FOTO BERIKUTNYA -->
+  <button
+    type="button"
+    class="lightbox-nav lightbox-next"
+    id="galleryLightboxNext"
+    aria-label="Foto berikutnya"
+  >
+    &#10095;
+  </button>
+
+</div>
+
+<script>
+  (() => {
+    const lightbox = document.getElementById("galleryLightbox");
+    const lightboxImage = document.getElementById("galleryLightboxImage");
+    const lightboxNumber = document.getElementById("galleryLightboxNumber");
+    const lightboxTitle = document.getElementById("galleryLightboxTitle");
+
+    const closeButton = document.getElementById("galleryLightboxClose");
+    const prevButton = document.getElementById("galleryLightboxPrev");
+    const nextButton = document.getElementById("galleryLightboxNext");
+
+    // AMBIL SEMUA FOTO GALERI
+    const photos = Array.from(
+      document.querySelectorAll(".gallery-grid .gallery-card img")
+    ).map((img, index) => {
+      const card = img.closest(".gallery-card");
+
+      return {
+        src: img.getAttribute("src"),
+        alt: img.getAttribute("alt") || "Foto Omah Noto Cijeruk",
+
+        title:
+          card.querySelector(".gallery-caption h3")?.textContent.trim() ||
+          img.getAttribute("alt") ||
+          "Omah Noto Cijeruk",
+
+        number:
+          card.querySelector(".gallery-caption span")?.textContent.trim() ||
+          `${String(index + 1).padStart(2, "0")} — OMAH NOTO`
+      };
+    });
+
+    let currentIndex = 0;
+    let previousFocus = null;
+
+    // TAMPILKAN FOTO
+    function showPhoto(index) {
+      if (!photos.length) return;
+
+      currentIndex = (index + photos.length) % photos.length;
+
+      const photo = photos[currentIndex];
+
+      lightboxImage.src = photo.src;
+      lightboxImage.alt = photo.alt;
+      lightboxNumber.textContent = photo.number;
+      lightboxTitle.textContent = photo.title;
+    }
+
+    // BUKA LIGHTBOX
+    function openLightbox(index) {
+      previousFocus = document.activeElement;
+
+      showPhoto(index);
+
+      lightbox.classList.add("is-open");
+      lightbox.setAttribute("aria-hidden", "false");
+
+      document.body.style.overflow = "hidden";
+
+      closeButton.focus();
+    }
+
+    // TUTUP LIGHTBOX
+    function closeLightbox() {
+      lightbox.classList.remove("is-open");
+      lightbox.setAttribute("aria-hidden", "true");
+
+      document.body.style.overflow = "";
+
+      lightboxImage.removeAttribute("src");
+
+      if (previousFocus && typeof previousFocus.focus === "function") {
+        previousFocus.focus();
+      }
+    }
+
+    // PASANG EVENT PADA FOTO
+    document
+      .querySelectorAll(".gallery-grid .gallery-card img")
+      .forEach((img, index) => {
+        img.setAttribute("tabindex", "0");
+        img.setAttribute("role", "button");
+
+        img.setAttribute(
+          "aria-label",
+          `Perbesar foto ${photos[index]?.title || "Omah Noto Cijeruk"}`
+        );
+
+        img.addEventListener("click", () => openLightbox(index));
+
+        img.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            openLightbox(index);
+          }
+        });
+      });
+
+    // TOMBOL TUTUP DAN NAVIGASI
+    closeButton.addEventListener("click", closeLightbox);
+
+    prevButton.addEventListener("click", () => {
+      showPhoto(currentIndex - 1);
+    });
+
+    nextButton.addEventListener("click", () => {
+      showPhoto(currentIndex + 1);
+    });
+
+    // KLIK AREA GELAP UNTUK MENUTUP
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    // KEYBOARD
+    document.addEventListener("keydown", (event) => {
+      if (!lightbox.classList.contains("is-open")) return;
+
+      if (event.key === "Escape") {
+        closeLightbox();
+      }
+
+      if (event.key === "ArrowLeft") {
+        showPhoto(currentIndex - 1);
+      }
+
+      if (event.key === "ArrowRight") {
+        showPhoto(currentIndex + 1);
+      }
+    });
+  })();
+</script>
   </body>
 </html>
