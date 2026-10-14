@@ -5718,6 +5718,9 @@ footer {
 
 .gallery-page .gallery-video-heading > p:last-child {
   color: rgba(243, 238, 228, 0.62);
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .gallery-page .gallery-video {
