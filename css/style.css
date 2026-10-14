@@ -3541,7 +3541,6 @@ footer {
   z-index: -1;
 }
 
-
 /* ==================================================
    STORY HEADER
 ================================================== */
@@ -3575,10 +3574,7 @@ footer {
 
   color: #2c2621;
 
-  font-family:
-    "Cormorant Garamond",
-    Georgia,
-    serif;
+  font-family: "Cormorant Garamond", Georgia, serif;
 
   font-size: clamp(55px, 6vw, 82px);
 
@@ -3588,7 +3584,6 @@ footer {
 
   letter-spacing: -1.5px;
 }
-
 
 /* ==================================================
    STORY FEATURE
@@ -3608,13 +3603,11 @@ footer {
   margin-bottom: 190px;
 }
 
-
 /* FOTO KANAN */
 
 .about-feature-reverse {
   grid-template-columns: 0.9fr 1fr;
 }
-
 
 /* ==================================================
    IMAGE
@@ -3637,12 +3630,10 @@ footer {
 
   border: 1px solid rgba(184, 155, 94, 0.8);
 
-  box-shadow:
-    0 25px 55px rgba(55, 38, 25, 0.16);
+  box-shadow: 0 25px 55px rgba(55, 38, 25, 0.16);
 
   overflow: visible;
 }
-
 
 /* AKSEN GOLD DI BELAKANG FOTO */
 
@@ -3664,7 +3655,6 @@ footer {
   z-index: -1;
 }
 
-
 /* FOTO */
 
 .about-story-new .about-feature-image img {
@@ -3681,13 +3671,11 @@ footer {
     filter 0.7s ease;
 }
 
-
 /* HAPUS FRAME LAMA */
 
 .about-story-new .about-feature-image::before {
   display: none;
 }
-
 
 /* HOVER FOTO */
 
@@ -3696,7 +3684,6 @@ footer {
 
   filter: brightness(1.04);
 }
-
 
 /* ==================================================
    TEXT
@@ -3707,7 +3694,6 @@ footer {
 
   padding: 15px 0;
 }
-
 
 /* NOMOR */
 
@@ -3722,10 +3708,7 @@ footer {
 
   color: #b89b5e;
 
-  font-family:
-    "Montserrat",
-    Arial,
-    sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
 
   font-size: 10px;
 
@@ -3735,7 +3718,6 @@ footer {
 
   text-transform: uppercase;
 }
-
 
 /* GARIS KECIL */
 
@@ -3757,7 +3739,6 @@ footer {
   transform: translateY(-50%);
 }
 
-
 /* JUDUL */
 
 .about-feature-text h3 {
@@ -3765,10 +3746,7 @@ footer {
 
   color: #2c2621;
 
-  font-family:
-    "Cormorant Garamond",
-    Georgia,
-    serif;
+  font-family: "Cormorant Garamond", Georgia, serif;
 
   font-size: clamp(52px, 5vw, 68px);
 
@@ -3779,7 +3757,6 @@ footer {
   letter-spacing: -1px;
 }
 
-
 /* PARAGRAF */
 
 .about-feature-text p {
@@ -3789,10 +3766,7 @@ footer {
 
   color: #665b51;
 
-  font-family:
-    "Montserrat",
-    Arial,
-    sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
 
   font-size: 13px;
 
@@ -3800,7 +3774,6 @@ footer {
 
   line-height: 1.9;
 }
-
 
 /* ==================================================
    PEMISAH ANTAR CERITA
@@ -3819,14 +3792,8 @@ footer {
 
   height: 55px;
 
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(184, 155, 94, 0.65),
-      transparent
-    );
+  background: linear-gradient(to bottom, rgba(184, 155, 94, 0.65), transparent);
 }
-
 
 /* ==================================================
    CERITA TERAKHIR
@@ -3836,13 +3803,11 @@ footer {
   margin-bottom: 30px;
 }
 
-
 /* ==================================================
    TABLET
 ================================================== */
 
 @media (max-width: 900px) {
-
   .about-story-new {
     padding: 110px 30px 90px;
   }
@@ -3895,13 +3860,11 @@ footer {
   }
 }
 
-
 /* ==================================================
    MOBILE
 ================================================== */
 
 @media (max-width: 600px) {
-
   .about-story-new {
     padding: 85px 22px 70px;
   }
@@ -3969,12 +3932,11 @@ footer {
   padding: 48px 50px;
 
   /* KACA BURAM */
-  background:
-    linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.48),
-      rgba(255, 255, 255, 0.18)
-    );
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.48),
+    rgba(255, 255, 255, 0.18)
+  );
 
   backdrop-filter: blur(24px) saturate(115%);
   -webkit-backdrop-filter: blur(24px) saturate(115%);
@@ -3987,11 +3949,10 @@ footer {
   box-shadow:
     0 25px 60px rgba(55, 38, 25, 0.12),
     inset 0 1px 0 rgba(255, 255, 255, 0.85),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.20);
+    inset 0 -1px 0 rgba(255, 255, 255, 0.2);
 
   overflow: hidden;
 }
-
 
 /* ==================================================
    CAHAYA DI DALAM KACA
@@ -4007,7 +3968,7 @@ footer {
   width: 220px;
   height: 220px;
 
-  background: rgba(255, 255, 255, 0.20);
+  background: rgba(255, 255, 255, 0.2);
 
   border-radius: 50%;
 
@@ -4015,7 +3976,6 @@ footer {
 
   pointer-events: none;
 }
-
 
 /* ==================================================
    GARIS REFLEKSI KACA
@@ -4043,7 +4003,6 @@ footer {
   pointer-events: none;
 }
 
-
 /* ==================================================
    ISI CARD
 ================================================== */
@@ -4053,7 +4012,6 @@ footer {
   z-index: 2;
 }
 
-
 /* ==================================================
    NUMBER
 ================================================== */
@@ -4061,7 +4019,6 @@ footer {
 .about-feature-text .about-number {
   margin-bottom: 24px;
 }
-
 
 /* ==================================================
    JUDUL
@@ -4071,7 +4028,6 @@ footer {
   margin-bottom: 30px;
 }
 
-
 /* ==================================================
    PARAGRAF
 ================================================== */
@@ -4079,7 +4035,6 @@ footer {
 .about-feature-text p {
   margin-bottom: 17px;
 }
-
 
 /* ==================================================
    HOVER - EFEK KACA LEBIH HIDUP
@@ -4095,12 +4050,11 @@ footer {
 .about-feature-text:hover {
   transform: translateY(-4px);
 
-  background:
-    linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.56),
-      rgba(255, 255, 255, 0.22)
-    );
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.56),
+    rgba(255, 255, 255, 0.22)
+  );
 
   box-shadow:
     0 30px 70px rgba(55, 38, 25, 0.15),
@@ -4108,28 +4062,23 @@ footer {
     inset 0 -1px 0 rgba(255, 255, 255, 0.25);
 }
 
-
 /* ==================================================
    TABLET
 ================================================== */
 
 @media (max-width: 900px) {
-
   .about-feature-text {
     max-width: 650px;
     margin: 0 auto;
     padding: 45px;
   }
-
 }
-
 
 /* ==================================================
    MOBILE
 ================================================== */
 
 @media (max-width: 600px) {
-
   .about-feature-text {
     width: 100%;
     max-width: 100%;
@@ -4152,7 +4101,6 @@ footer {
   .about-feature-text p {
     margin-bottom: 15px;
   }
-
 }
 /* ==================================================
    OMAH NOTO — LUXURY FROSTED STORY
@@ -4180,15 +4128,8 @@ footer {
   overflow: hidden;
 
   /* Background utama */
-  background:
-    linear-gradient(
-      135deg,
-      #eee8dc 0%,
-      #e7dfd1 45%,
-      #f2ede4 100%
-    );
+  background: linear-gradient(135deg, #eee8dc 0%, #e7dfd1 45%, #f2ede4 100%);
 }
-
 
 /* ==================================================
    BACKGROUND LIGHT / BLUR
@@ -4205,13 +4146,12 @@ footer {
   top: 80px;
   left: -220px;
 
-  background:
-    radial-gradient(
-      circle,
-      rgba(184, 155, 94, 0.28) 0%,
-      rgba(184, 155, 94, 0.12) 35%,
-      transparent 70%
-    );
+  background: radial-gradient(
+    circle,
+    rgba(184, 155, 94, 0.28) 0%,
+    rgba(184, 155, 94, 0.12) 35%,
+    transparent 70%
+  );
 
   filter: blur(55px);
 
@@ -4219,7 +4159,6 @@ footer {
 
   pointer-events: none;
 }
-
 
 /* Blob kedua */
 
@@ -4234,13 +4173,12 @@ footer {
   right: -250px;
   bottom: 100px;
 
-  background:
-    radial-gradient(
-      circle,
-      rgba(115, 119, 90, 0.20) 0%,
-      rgba(115, 119, 90, 0.08) 38%,
-      transparent 72%
-    );
+  background: radial-gradient(
+    circle,
+    rgba(115, 119, 90, 0.2) 0%,
+    rgba(115, 119, 90, 0.08) 38%,
+    transparent 72%
+  );
 
   filter: blur(65px);
 
@@ -4248,7 +4186,6 @@ footer {
 
   pointer-events: none;
 }
-
 
 /* ==================================================
    STORY HEADER
@@ -4296,7 +4233,6 @@ footer {
   letter-spacing: -1.5px;
 }
 
-
 /* ==================================================
    STORY FEATURE
 ================================================== */
@@ -4305,7 +4241,6 @@ footer {
   position: relative;
   z-index: 2;
 }
-
 
 /* ==================================================
    FOTO
@@ -4326,8 +4261,7 @@ footer {
 
   border: 1px solid rgba(184, 155, 94, 0.75);
 
-  box-shadow:
-    0 25px 55px rgba(55, 38, 25, 0.16);
+  box-shadow: 0 25px 55px rgba(55, 38, 25, 0.16);
 
   overflow: visible;
 }
@@ -4343,7 +4277,7 @@ footer {
   top: 14px;
   left: 14px;
 
-  border: 1px solid rgba(184, 155, 94, 0.40);
+  border: 1px solid rgba(184, 155, 94, 0.4);
 
   z-index: -1;
 }
@@ -4364,11 +4298,8 @@ footer {
 .about-story-new .about-feature-image:hover img {
   transform: scale(1.025);
 
-  filter:
-    brightness(1.04)
-    saturate(1.03);
+  filter: brightness(1.04) saturate(1.03);
 }
-
 
 /* ==================================================
    FROSTED GLASS CARD
@@ -4382,21 +4313,16 @@ footer {
   padding: 48px 50px;
 
   /* TRANSPARENT GLASS */
-  background:
-    linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.42),
-      rgba(255, 255, 255, 0.16)
-    );
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.42),
+    rgba(255, 255, 255, 0.16)
+  );
 
   /* BLUR BACKGROUND */
-  backdrop-filter:
-    blur(25px)
-    saturate(120%);
+  backdrop-filter: blur(25px) saturate(120%);
 
-  -webkit-backdrop-filter:
-    blur(25px)
-    saturate(120%);
+  -webkit-backdrop-filter: blur(25px) saturate(120%);
 
   /* KACA */
   border: 1px solid rgba(255, 255, 255, 0.62);
@@ -4405,9 +4331,9 @@ footer {
 
   /* SHADOW */
   box-shadow:
-    0 25px 60px rgba(55, 38, 25, 0.10),
+    0 25px 60px rgba(55, 38, 25, 0.1),
     inset 0 1px 0 rgba(255, 255, 255, 0.82),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.20);
+    inset 0 -1px 0 rgba(255, 255, 255, 0.2);
 
   overflow: hidden;
 
@@ -4415,7 +4341,6 @@ footer {
     transform 0.5s ease,
     box-shadow 0.5s ease;
 }
-
 
 /* ==================================================
    GLASS LIGHT
@@ -4432,18 +4357,16 @@ footer {
   top: -140px;
   left: -120px;
 
-  background:
-    radial-gradient(
-      circle,
-      rgba(255, 255, 255, 0.38),
-      transparent 70%
-    );
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.38),
+    transparent 70%
+  );
 
   filter: blur(25px);
 
   pointer-events: none;
 }
-
 
 /* ==================================================
    GLASS HIGHLIGHT LINE
@@ -4460,19 +4383,17 @@ footer {
   width: 80%;
   height: 1px;
 
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 0.95),
-      transparent
-    );
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.95),
+    transparent
+  );
 
   opacity: 0.85;
 
   pointer-events: none;
 }
-
 
 /* ==================================================
    TEXT
@@ -4483,7 +4404,6 @@ footer {
 
   z-index: 2;
 }
-
 
 /* NUMBER */
 
@@ -4509,7 +4429,6 @@ footer {
   text-transform: uppercase;
 }
 
-
 /* NUMBER LINE */
 
 .about-feature-text .about-number::before {
@@ -4527,7 +4446,6 @@ footer {
 
   transform: translateY(-50%);
 }
-
 
 /* TITLE */
 
@@ -4547,7 +4465,6 @@ footer {
   letter-spacing: -1px;
 }
 
-
 /* PARAGRAPH */
 
 .about-feature-text p {
@@ -4566,7 +4483,6 @@ footer {
   line-height: 1.9;
 }
 
-
 /* ==================================================
    HOVER GLASS
 ================================================== */
@@ -4579,7 +4495,6 @@ footer {
     inset 0 1px 0 rgba(255, 255, 255, 0.92),
     inset 0 -1px 0 rgba(255, 255, 255, 0.25);
 }
-
 
 /* ==================================================
    SEPARATOR
@@ -4597,21 +4512,14 @@ footer {
   width: 1px;
   height: 55px;
 
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(184, 155, 94, 0.65),
-      transparent
-    );
+  background: linear-gradient(to bottom, rgba(184, 155, 94, 0.65), transparent);
 }
-
 
 /* ==================================================
    TABLET
 ================================================== */
 
 @media (max-width: 900px) {
-
   .about-story-new {
     padding: 110px 30px 90px;
   }
@@ -4664,13 +4572,11 @@ footer {
   }
 }
 
-
 /* ==================================================
    MOBILE
 ================================================== */
 
 @media (max-width: 600px) {
-
   .about-story-new {
     padding: 85px 22px 70px;
   }
@@ -4714,13 +4620,9 @@ footer {
 
     border-radius: 16px;
 
-    backdrop-filter:
-      blur(20px)
-      saturate(115%);
+    backdrop-filter: blur(20px) saturate(115%);
 
-    -webkit-backdrop-filter:
-      blur(20px)
-      saturate(115%);
+    -webkit-backdrop-filter: blur(20px) saturate(115%);
   }
 
   .about-feature-text h3 {
@@ -4760,13 +4662,7 @@ footer {
   padding: 9px;
 
   /* Bronze / dark walnut frame */
-  background:
-    linear-gradient(
-      145deg,
-      #4a4036 0%,
-      #2d2823 45%,
-      #51463a 100%
-    );
+  background: linear-gradient(145deg, #4a4036 0%, #2d2823 45%, #51463a 100%);
 
   /* Frame utama */
   border: 1px solid rgba(184, 155, 94, 0.85);
@@ -4782,7 +4678,6 @@ footer {
 
   z-index: 2;
 }
-
 
 /* ==================================================
    GOLD INNER FRAME
@@ -4800,14 +4695,12 @@ footer {
 
   border: 1px solid rgba(214, 183, 113, 0.75);
 
-  box-shadow:
-    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
 
   pointer-events: none;
 
   z-index: 3;
 }
-
 
 /* ==================================================
    OFFSET BACK FRAME
@@ -4830,10 +4723,8 @@ footer {
 
   z-index: -1;
 
-  box-shadow:
-    0 12px 25px rgba(35, 26, 19, 0.08);
+  box-shadow: 0 12px 25px rgba(35, 26, 19, 0.08);
 }
-
 
 /* ==================================================
    PHOTO
@@ -4851,8 +4742,7 @@ footer {
 
   border: 1px solid rgba(255, 248, 235, 0.38);
 
-  box-shadow:
-    inset 0 0 25px rgba(0, 0, 0, 0.12);
+  box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.12);
 
   z-index: 2;
 
@@ -4861,7 +4751,6 @@ footer {
     filter 0.7s ease;
 }
 
-
 /* ==================================================
    SUBTLE PHOTO HOVER
 ================================================== */
@@ -4869,11 +4758,8 @@ footer {
 .about-story-new .about-feature-image:hover img {
   transform: scale(1.018);
 
-  filter:
-    brightness(1.035)
-    saturate(1.03);
+  filter: brightness(1.035) saturate(1.03);
 }
-
 
 /* ==================================================
    LIGHT ON FRAME
@@ -4889,19 +4775,17 @@ footer {
   transform: translateY(-3px);
 
   box-shadow:
-    0 2px 0 rgba(255, 255, 255, 0.40) inset,
+    0 2px 0 rgba(255, 255, 255, 0.4) inset,
     0 0 0 1px rgba(70, 55, 42, 0.85),
     0 25px 50px rgba(35, 26, 19, 0.25),
     0 40px 80px rgba(35, 26, 19, 0.14);
 }
-
 
 /* ==================================================
    MOBILE
 ================================================== */
 
 @media (max-width: 600px) {
-
   .about-story-new .about-feature-image {
     height: 270px;
 
@@ -4919,7 +4803,6 @@ footer {
     top: 9px;
     left: 9px;
   }
-
 }
 .facility-page .facility-hero {
   position: relative;
@@ -5054,8 +4937,7 @@ footer {
 
   color: rgba(255, 255, 255, 0.88);
 
-  text-shadow:
-    0 2px 10px rgba(0, 0, 0, 0.65);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.65);
 }
 /* ==================================================
    GALERI PAGE
@@ -5065,7 +4947,6 @@ footer {
   background: #f5f1e8;
   color: #2c2621;
 }
-
 
 /* ==================================================
    GALERI HERO
@@ -5080,10 +4961,7 @@ footer {
   padding: 150px 7% 100px;
 
   background:
-    linear-gradient(
-      rgba(44, 38, 33, 0.45),
-      rgba(44, 38, 33, 0.65)
-    ),
+    linear-gradient(rgba(44, 38, 33, 0.45), rgba(44, 38, 33, 0.65)),
     url("../images/bg-galeri.jpg");
 
   background-size: cover;
@@ -5142,7 +5020,6 @@ footer {
   line-height: 1.9;
 }
 
-
 /* ==================================================
    FOTO SECTION
 ================================================== */
@@ -5189,7 +5066,6 @@ footer {
   line-height: 1.9;
 }
 
-
 /* ==================================================
    FOTO GRID
 ================================================== */
@@ -5201,7 +5077,6 @@ footer {
 
   gap: 24px;
 }
-
 
 /* ==================================================
    FOTO CARD
@@ -5218,14 +5093,12 @@ footer {
 
   border: 1px solid rgba(184, 155, 94, 0.35);
 
-  box-shadow:
-    0 15px 35px rgba(44, 38, 33, 0.10);
+  box-shadow: 0 15px 35px rgba(44, 38, 33, 0.1);
 
   transition:
     transform 0.4s ease,
     box-shadow 0.4s ease;
 }
-
 
 /* FOTO */
 
@@ -5245,7 +5118,6 @@ footer {
     filter 0.8s ease;
 }
 
-
 /* GOLD FRAME */
 
 .gallery-card::after {
@@ -5262,20 +5134,17 @@ footer {
   z-index: 2;
 }
 
-
 /* HOVER */
 
 .gallery-card:hover {
   transform: translateY(-7px);
 
-  box-shadow:
-    0 25px 50px rgba(44, 38, 33, 0.16);
+  box-shadow: 0 25px 50px rgba(44, 38, 33, 0.16);
 }
 
 .gallery-card:hover img {
   transform: scale(1.04);
 }
-
 
 /* ==================================================
    VIDEO SECTION
@@ -5305,7 +5174,6 @@ footer {
   color: #cfc7bb;
 }
 
-
 /* ==================================================
    VIDEO
 ================================================== */
@@ -5320,8 +5188,7 @@ footer {
 
   background: #b89b5e;
 
-  box-shadow:
-    0 25px 60px rgba(0, 0, 0, 0.30);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
 }
 
 .gallery-video video {
@@ -5332,22 +5199,17 @@ footer {
   background: #000;
 }
 
-
 /* ==================================================
    GALERI RESPONSIVE
 ================================================== */
 
 @media (max-width: 900px) {
-
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
 }
 
-
 @media (max-width: 600px) {
-
   .gallery-hero {
     min-height: 550px;
 
@@ -5383,7 +5245,6 @@ footer {
   .gallery-video {
     padding: 5px;
   }
-
 }
 /* =========================================================
    FOTO DI DALAM FACILITY CARD
@@ -5408,7 +5269,9 @@ footer {
   object-fit: cover;
   object-position: center;
 
-  transition: transform 0.6s ease, filter 0.6s ease;
+  transition:
+    transform 0.6s ease,
+    filter 0.6s ease;
 }
 
 /* efek saat card disentuh mouse */
@@ -5442,11 +5305,7 @@ footer {
   overflow: hidden;
 
   background:
-    linear-gradient(
-      180deg,
-      rgba(25, 22, 18, 0.20),
-      rgba(25, 22, 18, 0.72)
-    ),
+    linear-gradient(180deg, rgba(25, 22, 18, 0.2), rgba(25, 22, 18, 0.72)),
     url("images/bg-alam-judul.png") center / cover no-repeat;
 }
 
@@ -5511,7 +5370,6 @@ footer {
   background: #c6a45e;
 }
 
-
 /* =========================================================
    FOTO VILLA
 ========================================================= */
@@ -5519,12 +5377,7 @@ footer {
 .gallery-page .gallery-photo-section {
   padding: 140px 6% 160px;
 
-  background:
-    linear-gradient(
-      135deg,
-      #f3eee4,
-      #e7dfd1
-    );
+  background: linear-gradient(135deg, #f3eee4, #e7dfd1);
 }
 
 .gallery-page .gallery-section-heading {
@@ -5556,7 +5409,6 @@ footer {
   color: #71695f;
 }
 
-
 /* =========================================================
    GALLERY GRID
 ========================================================= */
@@ -5572,7 +5424,6 @@ footer {
 
   gap: 22px;
 }
-
 
 /* FOTO CARD */
 
@@ -5625,7 +5476,7 @@ footer {
   font-size: 11px;
   line-height: 1.6;
 
-  color: rgba(255,255,255,0.75);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .gallery-page .gallery-card::after {
@@ -5634,12 +5485,7 @@ footer {
   position: absolute;
   inset: 0;
 
-  background:
-    linear-gradient(
-      180deg,
-      transparent 55%,
-      rgba(25, 22, 18, 0.28)
-    );
+  background: linear-gradient(180deg, transparent 55%, rgba(25, 22, 18, 0.28));
 
   pointer-events: none;
 
@@ -5665,7 +5511,6 @@ footer {
 
   filter: brightness(1.05);
 }
-
 
 /* =========================================================
    VARIASI UKURAN FOTO
@@ -5694,7 +5539,6 @@ footer {
 .gallery-page .gallery-card:nth-child(6) {
   height: 400px;
 }
-
 
 /* =========================================================
    VIDEO SECTION
@@ -5732,8 +5576,7 @@ footer {
 
   background: #111;
 
-  box-shadow:
-    0 30px 70px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
 
   overflow: hidden;
 }
@@ -5748,13 +5591,11 @@ footer {
   object-fit: cover;
 }
 
-
 /* =========================================================
    RESPONSIVE
 ========================================================= */
 
 @media (max-width: 900px) {
-
   .gallery-page .gallery-hero {
     min-height: 80vh;
 
@@ -5774,11 +5615,9 @@ footer {
   .gallery-page .gallery-card:nth-child(n) {
     height: 420px;
   }
-
 }
 
 @media (max-width: 600px) {
-
   .gallery-page .gallery-hero {
     min-height: 85vh;
 
@@ -5812,7 +5651,6 @@ footer {
   .gallery-page .gallery-card:nth-child(n) {
     height: 300px;
   }
-
 }
 
 /* =========================================================
@@ -5832,11 +5670,7 @@ footer {
   overflow: hidden;
 
   background:
-    linear-gradient(
-      180deg,
-      rgba(20, 18, 15, 0.20),
-      rgba(20, 18, 15, 0.72)
-    ),
+    linear-gradient(180deg, rgba(20, 18, 15, 0.2), rgba(20, 18, 15, 0.72)),
     url("../images/bg-alam-judul.png");
 
   background-size: cover;
@@ -5888,12 +5722,12 @@ footer {
   padding: 16px;
 
   background: linear-gradient(
-  135deg,
-  #8f7748,
-  #b49a63 35%,
-  #d0b982 65%,
-  #8b7142
-);
+    135deg,
+    #8f7748,
+    #b49a63 35%,
+    #d0b982 65%,
+    #8b7142
+  );
 
   box-shadow:
     0 0 0 1px rgba(230, 203, 139, 0.65),
@@ -6180,6 +6014,497 @@ footer {
   }
 
   .gallery-page .lightbox-caption span {
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+}
+/* =====================================================
+   OMAH NOTO — LUXURY GALLERY LIGHTBOX
+===================================================== */
+
+.gallery-page .luxury-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 70px 90px;
+
+  background: rgba(12, 15, 13, 0.94);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    opacity 0.35s ease,
+    visibility 0.35s ease;
+}
+
+.gallery-page .luxury-lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* BINGKAI CHAMPAGNE GOLD */
+
+.gallery-page .lightbox-frame {
+  position: relative;
+
+  width: min(850px, 100%);
+  max-height: 85vh;
+
+  padding: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #8f7748,
+    #b49a63 35%,
+    #d0b982 65%,
+    #8b7142
+  );
+
+  box-shadow:
+    0 0 0 1px rgba(230, 203, 139, 0.45),
+    0 0 0 7px rgba(184, 155, 94, 0.12),
+    0 25px 90px rgba(0, 0, 0, 0.65);
+
+  transform: scale(0.94);
+  transition: transform 0.35s ease;
+}
+
+.gallery-page .luxury-lightbox.is-open .lightbox-frame {
+  transform: scale(1);
+}
+
+/* BINGKAI BAGIAN DALAM */
+
+.gallery-page .lightbox-inner-frame {
+  position: relative;
+
+  padding: 7px;
+
+  border: 1px solid rgba(218, 190, 125, 0.55);
+
+  background: #191c19;
+}
+
+/* FOTO BESAR */
+
+.gallery-page .lightbox-inner-frame img {
+  display: block;
+
+  width: 100%;
+  max-height: 62vh;
+
+  object-fit: contain;
+
+  background: #191c19;
+}
+
+/* CAPTION */
+
+.gallery-page .lightbox-caption {
+  padding: 22px 15px 12px;
+
+  text-align: center;
+}
+
+/* NOMOR FOTO */
+
+.gallery-page .lightbox-caption span {
+  display: block;
+
+  margin-bottom: 12px;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 4px;
+
+  color: #6e542b;
+}
+
+/* JUDUL FOTO */
+
+.gallery-page .lightbox-caption h2 {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(32px, 4vw, 46px);
+  font-weight: 400;
+  line-height: 1.1;
+
+  color: #fffaf0;
+  text-shadow: 0 2px 8px rgba(54, 39, 17, 0.2);
+}
+
+/* TOMBOL TUTUP */
+
+.gallery-page .lightbox-close {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+
+  width: 48px;
+  height: 48px;
+
+  border: 1px solid rgba(201, 164, 92, 0.7);
+  border-radius: 50%;
+
+  background: rgba(30, 32, 28, 0.9);
+
+  color: #e6d2a0;
+  font-size: 32px;
+  font-weight: 300;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.gallery-page .lightbox-close:hover {
+  background: #8f7138;
+  transform: rotate(90deg);
+}
+
+/* TOMBOL NAVIGASI */
+
+.gallery-page .lightbox-nav {
+  position: absolute;
+  top: 50%;
+
+  width: 48px;
+  height: 48px;
+
+  transform: translateY(-50%);
+
+  border: 1px solid rgba(201, 164, 92, 0.65);
+  border-radius: 50%;
+
+  background: rgba(30, 32, 28, 0.9);
+
+  color: #e6d2a0;
+  font-size: 18px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.gallery-page .lightbox-nav:hover {
+  background: #8f7138;
+  color: #fff;
+}
+
+.gallery-page .lightbox-prev {
+  left: 25px;
+}
+
+.gallery-page .lightbox-next {
+  right: 25px;
+}
+
+/* FOTO BISA DIKLIK */
+
+.gallery-page .gallery-card img {
+  cursor: zoom-in;
+}
+
+/* RESPONSIVE HP */
+
+@media (max-width: 600px) {
+  .gallery-page .luxury-lightbox {
+    padding: 65px 18px;
+  }
+
+  .gallery-page .lightbox-frame {
+    padding: 8px;
+  }
+
+  .gallery-page .lightbox-inner-frame {
+    padding: 4px;
+  }
+
+  .gallery-page .lightbox-inner-frame img {
+    max-height: 55vh;
+  }
+
+  .gallery-page .lightbox-close {
+    top: 12px;
+    right: 12px;
+
+    width: 42px;
+    height: 42px;
+  }
+
+  .gallery-page .lightbox-prev {
+    left: 8px;
+  }
+
+  .gallery-page .lightbox-next {
+    right: 8px;
+  }
+
+  .gallery-page .lightbox-nav {
+    width: 38px;
+    height: 38px;
+  }
+
+  .gallery-page .lightbox-caption span {
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+}
+/* =====================================================
+   OMAH NOTO — FACILITY LIGHTBOX FIX
+===================================================== */
+
+.facility-page .luxury-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 70px 90px;
+  box-sizing: border-box;
+
+  background: rgba(12, 15, 13, 0.94);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    opacity 0.35s ease,
+    visibility 0.35s ease;
+}
+
+.facility-page .luxury-lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* BINGKAI UTAMA */
+
+.facility-page .lightbox-frame {
+  position: relative;
+
+  width: min(850px, 100%);
+  max-height: 85vh;
+  overflow-y: auto;
+
+  padding: 12px;
+  box-sizing: border-box;
+
+  background: linear-gradient(
+    135deg,
+    #8f7748,
+    #b49a63 35%,
+    #d0b982 65%,
+    #8b7142
+  );
+
+  box-shadow:
+    0 0 0 1px rgba(230, 203, 139, 0.45),
+    0 0 0 7px rgba(184, 155, 94, 0.12),
+    0 25px 90px rgba(0, 0, 0, 0.65);
+
+  transform: scale(0.94);
+  transition: transform 0.35s ease;
+}
+
+.facility-page .luxury-lightbox.is-open .lightbox-frame {
+  transform: scale(1);
+}
+
+/* BINGKAI DALAM */
+
+.facility-page .lightbox-inner-frame {
+  position: relative;
+  padding: 7px;
+
+  border: 1px solid rgba(218, 190, 125, 0.55);
+  background: #191c19;
+}
+
+/* FOTO LIGHTBOX */
+
+.facility-page .lightbox-inner-frame img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+  max-height: 62vh;
+
+  object-fit: contain;
+  object-position: center;
+
+  background: #191c19;
+}
+
+/* CAPTION */
+
+.facility-page .lightbox-caption {
+  padding: 22px 15px 12px;
+  text-align: center;
+}
+
+.facility-page .lightbox-caption span {
+  display: block;
+  margin-bottom: 12px;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 4px;
+
+  color: #fff0c7;
+}
+
+.facility-page .lightbox-caption h2 {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(32px, 4vw, 46px);
+  font-weight: 400;
+  line-height: 1.1;
+
+  color: #fffaf0;
+}
+
+/* TOMBOL TUTUP */
+
+.facility-page .lightbox-close {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+  padding: 0;
+
+  border: 1px solid rgba(201, 164, 92, 0.7);
+  border-radius: 50%;
+
+  background: rgba(30, 32, 28, 0.9);
+  color: #e6d2a0;
+
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.facility-page .lightbox-close:hover {
+  background: #8f7138;
+}
+
+/* TOMBOL NAVIGASI */
+
+.facility-page .lightbox-nav {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+  padding: 0;
+
+  transform: translateY(-50%);
+
+  border: 1px solid rgba(201, 164, 92, 0.65);
+  border-radius: 50%;
+
+  background: rgba(30, 32, 28, 0.9);
+  color: #e6d2a0;
+
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.facility-page .lightbox-nav:hover {
+  background: #8f7138;
+  color: #fff;
+}
+
+.facility-page .lightbox-prev {
+  left: 25px;
+}
+
+.facility-page .lightbox-next {
+  right: 25px;
+}
+
+/* RESPONSIVE HP */
+
+@media (max-width: 600px) {
+  .facility-page .luxury-lightbox {
+    padding: 65px 18px;
+  }
+
+  .facility-page .lightbox-frame {
+    padding: 8px;
+  }
+
+  .facility-page .lightbox-inner-frame {
+    padding: 4px;
+  }
+
+  .facility-page .lightbox-inner-frame img {
+    max-height: 55vh;
+  }
+
+  .facility-page .lightbox-close {
+    top: 12px;
+    right: 12px;
+
+    width: 42px;
+    height: 42px;
+  }
+
+  .facility-page .lightbox-prev {
+    left: 8px;
+  }
+
+  .facility-page .lightbox-next {
+    right: 8px;
+  }
+
+  .facility-page .lightbox-nav {
+    width: 38px;
+    height: 38px;
+  }
+
+  .facility-page .lightbox-caption span {
     font-size: 8px;
     letter-spacing: 2px;
   }
