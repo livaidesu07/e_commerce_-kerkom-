@@ -6637,6 +6637,15 @@ footer {
   font-size: 13px;
   line-height: 1.9;
 }
+/* BACKGROUND HERO HALAMAN LOKASI */
+body.location-page .location-hero {
+    background:
+        linear-gradient(
+            rgba(28, 25, 21, 0.42),
+            rgba(28, 25, 21, 0.42)
+        ),
+        url("../images/hero-villa.jpg") center center / cover no-repeat;
+}
 
 /* FOTO LOKASI */
 
@@ -7064,5 +7073,1800 @@ footer {
 
     .villa-address-card:hover {
         transform: none;
+    }
+}
+/* =====================================================
+   OMAH NOTO CIJERUK — LOCATION PAGE ENHANCEMENTS
+   Luxury Editorial | Ivory, Cocoa & Gold
+===================================================== */
+
+/* PENGATURAN DASAR HALAMAN */
+
+body.location-page {
+    background: #f5f1e8;
+    color: #2c2621;
+    font-family: "Montserrat", Arial, sans-serif;
+    line-height: 1.7;
+}
+
+.location-page *,
+.location-page *::before,
+.location-page *::after {
+    box-sizing: border-box;
+}
+
+.location-page a {
+    text-decoration: none;
+}
+
+
+/* NAVBAR */
+
+.location-page header {
+    position: relative;
+    width: 100%;
+    padding: 15px 30px;
+    background: #fffdf9;
+    border-bottom: 1px solid #e7dfd3;
+    box-shadow: 0 4px 20px rgba(44, 38, 33, 0.05);
+}
+
+.location-page header::after {
+    display: none;
+}
+
+.location-page nav {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.location-page .logo {
+    color: #574536;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 28px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.location-page nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    list-style: none;
+}
+
+.location-page nav ul li a {
+    position: relative;
+    display: inline-block;
+    padding: 12px 0;
+    color: #5a5047;
+    font-size: 12px;
+    font-weight: 500;
+    text-shadow: none;
+    transition: color 0.3s ease;
+}
+
+.location-page nav ul li a:not(.nav-booking)::after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #b89b5e;
+    transition: width 0.3s ease;
+}
+
+.location-page nav ul li a:not(.nav-booking):hover::after,
+.location-page nav ul li a:not(.nav-booking).active::after {
+    width: 100%;
+}
+
+.location-page nav ul li a:hover,
+.location-page nav ul li a.active {
+    color: #a48757;
+}
+
+.location-page nav ul li a.nav-booking {
+    padding: 13px 23px;
+    background: #a48757;
+    color: #fffdf9;
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.location-page nav ul li a.nav-booking:hover {
+    background: #80643d;
+    transform: translateY(-2px);
+}
+
+
+/* HERO SECTION */
+
+.location-page .location-hero {
+    position: relative;
+    display: flex;
+    min-height: 440px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 85px 25px 90px;
+    background:
+        radial-gradient(
+            ellipse at 50% 0%,
+            rgba(255, 255, 255, 0.52),
+            transparent 65%
+        ),
+        #ebe4d7;
+    text-align: center;
+}
+
+.location-page .location-hero::before {
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    width: 1px;
+    height: 35px;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(164, 135, 87, 0.6)
+    );
+}
+
+.location-page .location-hero-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 900px;
+}
+
+.location-page .eyebrow {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: #a48757;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    line-height: 1.8;
+    text-transform: uppercase;
+}
+
+.location-page .location-hero h1 {
+    margin: 0 0 24px;
+    color: #2c2621;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(48px, 6.2vw, 82px);
+    font-weight: 400;
+    line-height: 0.98;
+    letter-spacing: -1.5px;
+}
+
+.location-page .location-hero h1 span {
+    display: block;
+    margin-top: 8px;
+    color: #8b704c;
+    font-style: italic;
+}
+
+.location-page .location-hero p {
+    max-width: 620px;
+    margin: 0 auto;
+    color: #6c6257;
+    font-size: 13px;
+    line-height: 2;
+}
+
+/* TOMBOL LOKASI — GLASSMORPHISM */
+.location-page .location-hero-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    margin-top: 30px;
+    padding: 13px 22px;
+
+    /* Efek kaca transparan */
+    background: rgba(255, 255, 255, 0.10);
+    -webkit-backdrop-filter: blur(12px) saturate(140%);
+    backdrop-filter: blur(12px) saturate(140%);
+
+    /* Bingkai emas */
+    border: 1px solid rgba(212, 181, 125, 0.75);
+    border-radius: 4px;
+
+    color: #fffaf2;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    text-decoration: none;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.12),
+        0 5px 18px rgba(0, 0, 0, 0.12);
+
+    transition:
+        gap 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* Efek hover */
+.location-page .location-hero-link:hover {
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.85);
+    color: #fffaf2;
+    transform: translateY(-2px);
+}
+
+/* Panah */
+.location-page .location-hero-link span {
+    font-size: 15px;
+    color: #e6c78f;
+}
+
+.location-page .location-hero-decoration {
+    position: absolute;
+    right: 35px;
+    bottom: 25px;
+    left: 35px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    color: #9b8a72;
+    font-size: 8px;
+    letter-spacing: 2px;
+}
+
+
+/* KONTEN UTAMA */
+
+.location-page .location-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 85px 35px;
+}
+
+.location-page .location-section-intro {
+    max-width: 680px;
+    margin-bottom: 35px;
+}
+
+.location-page .section-heading {
+    margin: 0 0 15px;
+    color: #2c2621;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(34px, 4vw, 48px);
+    font-weight: 500;
+    line-height: 1.15;
+}
+
+.location-page .section-description {
+    margin: 0;
+    color: #6c6257;
+    font-size: 13px;
+    line-height: 2;
+}
+
+
+/* FOTO LOKASI */
+
+.location-page .location-photo {
+    position: relative;
+    width: 100%;
+    height: 440px;
+    margin: 0 0 55px;
+    overflow: hidden;
+    background: #e5ded2;
+    border: 1px solid #d8cbbb;
+}
+
+.location-page .location-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 60%;
+    transition: transform 0.7s ease;
+}
+
+.location-page .location-photo:hover .location-image {
+    transform: scale(1.025);
+}
+
+.location-page .location-photo-caption {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 18px 22px;
+    background: linear-gradient(
+        to top,
+        rgba(34, 29, 24, 0.82),
+        transparent
+    );
+    color: #fffaf2;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+
+/* GRID INFORMASI */
+
+.location-page .location-information-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 25px;
+    margin-bottom: 80px;
+}
+
+.location-page .location-card {
+    min-width: 0;
+    padding: 32px;
+    background: #fffdf9;
+    border: 1px solid #e8dfd3;
+}
+
+
+/* KARTU ALAMAT */
+
+.location-page .villa-address-card {
+    min-height: 0;
+    padding: 32px !important;
+    background: linear-gradient(
+        135deg,
+        #fffdf8,
+        #f7f1e7
+    ) !important;
+    border: 1px solid #e4d8c5 !important;
+    box-shadow: 0 12px 35px rgba(69, 53, 35, 0.045);
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.location-page .villa-address-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 45px rgba(69, 53, 35, 0.09);
+}
+
+.location-page .villa-address-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 24px;
+}
+
+.location-page .villa-address-label {
+    color: #9b7a46;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 3.5px;
+}
+
+.location-page .villa-address-number {
+    color: #c4b18f;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 22px;
+    font-style: italic;
+}
+
+.location-page .villa-address-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 18px;
+    border: 1px solid rgba(184, 155, 94, 0.28);
+    border-radius: 50%;
+    background: rgba(184, 155, 94, 0.1);
+    color: #9e804d;
+}
+
+.location-page .villa-address-title {
+    margin: 0 0 18px !important;
+    color: #403328 !important;
+    font-family: "Cormorant Garamond", Georgia, serif !important;
+    font-size: clamp(30px, 3vw, 38px) !important;
+    font-weight: 500 !important;
+    line-height: 1.05;
+}
+
+.location-page .villa-address-title span {
+    display: block;
+    margin-top: 5px;
+    color: #a48757;
+    font-size: 0.88em;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.location-page .villa-address-divider {
+    width: 52px;
+    height: 1px;
+    margin-bottom: 18px;
+    background: linear-gradient(
+        to right,
+        #b89b5e,
+        rgba(184, 155, 94, 0.15)
+    );
+}
+
+.location-page .villa-address-text {
+    max-width: 360px;
+    margin: 0 0 25px !important;
+    color: #71675a !important;
+    font-size: 12px !important;
+    line-height: 2 !important;
+    overflow-wrap: anywhere;
+}
+
+.location-page .villa-address-bottom {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding-top: 17px;
+    border-top: 1px solid #e8dece;
+    color: #9a8668;
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+}
+
+.location-page .villa-address-dot {
+    flex: 0 0 6px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #b89b5e;
+}
+
+.location-page .location-card-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    margin-top: 25px;
+    padding: 13px 19px;
+    background: #a48757;
+    color: #fffdf9;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.location-page .location-card-button:hover {
+    background: #80643d;
+    transform: translateY(-2px);
+}
+
+
+/* KARTU DETAIL LOKASI */
+
+.location-page .location-detail-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 38px;
+    background: #ebe4d7;
+    border-color: #e3d9c8;
+}
+
+.location-page .card-label {
+    margin-bottom: 12px;
+    color: #a48757;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.location-page .location-detail-card h3 {
+    margin: 0 0 15px;
+    color: #403328;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.location-page .location-detail-card > p {
+    color: #6c6257;
+    font-size: 12px;
+    line-height: 2;
+}
+
+.location-page .location-detail-divider {
+    height: 1px;
+    margin: 25px 0;
+    background: #d8cbbb;
+}
+
+.location-page .location-detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(216, 203, 187, 0.65);
+    font-size: 11px;
+}
+
+.location-page .location-detail-row:last-child {
+    border-bottom: 0;
+}
+
+.location-page .location-detail-row span {
+    color: #85786a;
+}
+
+.location-page .location-detail-row strong {
+    color: #574536;
+    font-weight: 600;
+    text-align: right;
+}
+
+
+/* AKSES KENDARAAN */
+
+.location-page .access-section {
+    padding-top: 5px;
+}
+
+.location-page .access-heading {
+    max-width: 650px;
+    margin-bottom: 30px;
+}
+
+.location-page .access-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.location-page .access-item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+    min-width: 0;
+    padding: 30px 25px;
+    background: #ebe4d7;
+    border: 1px solid #e2d8c7;
+    border-left: 2px solid #b89b5e;
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.location-page .access-item:hover {
+    background: #f0e9dd;
+    transform: translateY(-3px);
+}
+
+.location-page .access-item-number {
+    color: #b89b5e;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 25px;
+    font-style: italic;
+}
+
+.location-page .access-item-content {
+    min-width: 0;
+}
+
+.location-page .access-item h3 {
+    margin: 0 0 9px;
+    color: #403328;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.location-page .access-item p {
+    color: #6c6257;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.location-page .access-item-icon {
+    margin-left: auto;
+    color: #a48757;
+    font-size: 18px;
+}
+
+
+/* GOOGLE MAPS CTA */
+
+.location-page .maps-section {
+    position: relative;
+    overflow: hidden;
+    margin-top: 80px;
+    padding: 65px 25px;
+    background:
+        radial-gradient(
+            circle at 90% 15%,
+            rgba(184, 155, 94, 0.12),
+            transparent 35%
+        ),
+        #2c2621;
+    color: #f5f1e8;
+    text-align: center;
+}
+
+.location-page .maps-section .eyebrow {
+    color: #c6ad7d;
+}
+
+.location-page .maps-section h2 {
+    position: relative;
+    z-index: 1;
+    margin: 0 0 15px;
+    color: #f5f1e8;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(34px, 4vw, 48px);
+    font-weight: 400;
+    line-height: 1.15;
+}
+
+.location-page .maps-section p {
+    position: relative;
+    z-index: 1;
+    max-width: 580px;
+    margin: 0 auto 27px;
+    color: #d1c7b8;
+    font-size: 12px;
+    line-height: 2;
+}
+
+.location-page .maps-button {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 26px;
+    background: #b89b5e;
+    color: #fffdf9;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.location-page .maps-button:hover {
+    background: #96783e;
+    transform: translateY(-3px);
+}
+
+.location-page .maps-decoration {
+    position: absolute;
+    right: 20px;
+    bottom: 8px;
+    left: 20px;
+    color: rgba(255, 255, 255, 0.035);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(30px, 8vw, 90px);
+    font-weight: 600;
+    letter-spacing: 5px;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+
+/* FOOTER */
+
+.location-page .location-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 38px 25px 25px;
+    background: #211d19;
+    color: #cfc7bb;
+    text-align: center;
+}
+
+.location-page .footer-brand {
+    color: #f5f1e8;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.location-page .location-footer p {
+    max-width: 460px;
+    color: #bdb2a3;
+    font-size: 11px;
+    line-height: 1.9;
+}
+
+.location-page .footer-copyright {
+    margin-top: 15px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    width: 100%;
+    color: #9f9486;
+    font-size: 10px;
+}
+
+
+/* RESPONSIVE TABLET */
+
+@media (max-width: 1000px) {
+    .location-page header {
+        padding: 16px 22px;
+    }
+
+    .location-page nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .location-page nav ul {
+        gap: 10px 20px;
+    }
+
+    .location-page .location-container {
+        padding: 65px 25px;
+    }
+
+    .location-page .location-information-grid {
+        gap: 18px;
+    }
+
+    .location-page .location-card {
+        padding: 25px;
+    }
+
+    .location-page .villa-address-card {
+        padding: 27px !important;
+    }
+}
+
+
+/* RESPONSIVE HP */
+
+@media (max-width: 600px) {
+    .location-page header {
+        padding: 15px 18px;
+    }
+
+    .location-page .logo {
+        font-size: 25px;
+    }
+
+    .location-page nav ul {
+        gap: 5px 14px;
+    }
+
+    .location-page nav ul li a {
+        padding: 8px 0;
+        font-size: 11px;
+    }
+
+    .location-page nav ul li a.nav-booking {
+        padding: 9px 15px;
+    }
+
+    .location-page .location-hero {
+        min-height: 390px;
+        padding: 75px 22px 80px;
+    }
+
+    .location-page .location-hero h1 {
+        font-size: clamp(43px, 12vw, 60px);
+        letter-spacing: -0.5px;
+    }
+
+    .location-page .location-hero p {
+        font-size: 12px;
+    }
+
+    .location-page .location-hero-decoration {
+        right: 18px;
+        bottom: 18px;
+        left: 18px;
+        font-size: 7px;
+        letter-spacing: 1px;
+    }
+
+    .location-page .location-container {
+        padding: 50px 18px;
+    }
+
+    .location-page .location-section-intro {
+        margin-bottom: 25px;
+    }
+
+    .location-page .section-heading {
+        font-size: 35px;
+    }
+
+    .location-page .section-description {
+        font-size: 12px;
+    }
+
+    .location-page .location-photo {
+        height: 280px;
+        margin-bottom: 30px;
+    }
+
+    .location-page .location-photo-caption {
+        padding: 13px;
+        font-size: 8px;
+        letter-spacing: 0.7px;
+    }
+
+    .location-page .location-information-grid,
+    .location-page .access-list {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-bottom: 55px;
+    }
+
+    .location-page .location-card,
+    .location-page .villa-address-card {
+        padding: 25px !important;
+    }
+
+    .location-page .location-detail-card {
+        padding: 27px !important;
+    }
+
+    .location-page .location-detail-card h3 {
+        font-size: 32px;
+    }
+
+    .location-page .villa-address-title {
+        font-size: 35px !important;
+    }
+
+    .location-page .villa-address-text {
+        font-size: 12px !important;
+    }
+
+    .location-page .villa-address-bottom {
+        font-size: 7px;
+        letter-spacing: 1px;
+    }
+
+    .location-page .access-item {
+        padding: 24px 18px;
+        gap: 15px;
+    }
+
+    .location-page .access-item h3 {
+        font-size: 25px;
+    }
+
+    .location-page .maps-section {
+        margin-top: 55px;
+        padding: 45px 20px;
+    }
+
+    .location-page .maps-section h2 {
+        font-size: 35px;
+    }
+
+    .location-page .maps-decoration {
+        font-size: 35px;
+        letter-spacing: 2px;
+    }
+
+    .location-page .location-footer {
+        padding: 30px 20px 20px;
+    }
+}
+
+
+/* AKSESIBILITAS */
+
+@media (prefers-reduced-motion: reduce) {
+    .location-page *,
+    .location-page *::before,
+    .location-page *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+
+    .location-page .location-photo:hover .location-image,
+    .location-page .villa-address-card:hover,
+    .location-page .access-item:hover,
+    .location-page .maps-button:hover {
+        transform: none;
+    }
+}
+/* =========================================================
+   OMAH NOTO CIJERUK — LOCATION PAGE FINAL ENHANCEMENTS
+   Menyamakan navbar dan WhatsApp dengan halaman Home
+   Semua aturan dibatasi ke .location-page
+========================================================= */
+
+
+/* =========================================================
+   1. NAVBAR — DARK GLASS STYLE
+========================================================= */
+
+body.location-page > header {
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    padding: 15px 4.2%;
+    background: rgba(29, 29, 29, 0.94);
+    border-bottom: 1px solid rgba(184, 155, 94, 0.4);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+body.location-page > header::before,
+body.location-page > header::after {
+    display: none;
+    content: none;
+}
+
+body.location-page > header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 28px;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+body.location-page > header nav .logo {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    flex-shrink: 0;
+    color: #ffffff;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 29px;
+    font-weight: 600;
+    line-height: 1;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* Logo bulat villa */
+
+body.location-page > header nav .logo img {
+    display: block;
+    width: 59px;
+    height: 59px;
+    flex-shrink: 0;
+    object-fit: contain;
+    border: 2px solid #b89b5e;
+    border-radius: 50%;
+    background: #fffaf1;
+    box-shadow: 0 0 0 4px rgba(184, 155, 94, 0.12);
+}
+
+/* Teks logo */
+
+body.location-page > header nav .logo-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+body.location-page > header nav .logo-text span {
+    display: block;
+}
+
+body.location-page > header nav .logo-text .logo-subtitle {
+    color: #c7a45d;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+/* Daftar navigasi */
+
+body.location-page > header nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body.location-page > header nav ul li {
+    margin: 0;
+    padding: 0;
+}
+
+body.location-page > header nav ul li a {
+    position: relative;
+    display: inline-block;
+    padding: 12px 0;
+    color: #f5f1e8;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-decoration: none;
+    text-shadow: none;
+    transition: color 0.3s ease;
+}
+
+body.location-page > header nav ul li a:not(.nav-booking)::after {
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #c5a15c;
+    content: "";
+    transition: width 0.3s ease;
+}
+
+body.location-page > header nav ul li a:not(.nav-booking):hover::after,
+body.location-page > header nav ul li a:not(.nav-booking).active::after {
+    width: 100%;
+}
+
+body.location-page > header nav ul li a:not(.nav-booking):hover,
+body.location-page > header nav ul li a.active {
+    color: #c9a660;
+}
+
+/* Tombol Booking */
+
+body.location-page > header nav ul li a.nav-booking {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 48px;
+    padding: 13px 27px;
+    border: 1px solid #b89b5e;
+    border-radius: 3px;
+    background: #a48757;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.15);
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+body.location-page > header nav ul li a.nav-booking:hover {
+    background: #87683a;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   2. WHATSAPP FLOATING WIDGET
+========================================================= */
+
+body.location-page .whatsapp-float {
+    position: fixed;
+    right: 28px;
+    bottom: 25px;
+    z-index: 2000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    width: min(570px, calc(100% - 40px));
+    min-height: 102px;
+    padding: 13px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 60px;
+    background: rgba(20, 20, 20, 0.97);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.28);
+    color: #ffffff;
+    font-family: "Montserrat", Arial, sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+body.location-page .whatsapp-float:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.34);
+}
+
+/* Logo villa di sisi kiri */
+
+body.location-page .whatsapp-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 62px;
+    height: 62px;
+    flex: 0 0 62px;
+    overflow: hidden;
+    border: 2px solid #c6a363;
+    border-radius: 50%;
+    background: #fffaf1;
+}
+
+body.location-page .whatsapp-avatar img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+/* Tulisan di tengah */
+
+body.location-page .whatsapp-text {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+    gap: 3px;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+body.location-page .whatsapp-text strong {
+    display: block;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+body.location-page .whatsapp-text span {
+    display: block;
+    color: #c9c9c9;
+    font-size: 12px;
+}
+
+/* Tombol hijau */
+
+body.location-page .whatsapp-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    flex: 0 0 auto;
+    min-height: 61px;
+    padding: 15px 22px;
+    border: 0;
+    border-radius: 40px;
+    background: #20c875;
+    color: #ffffff;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+body.location-page .whatsapp-button:hover {
+    background: #16ad62;
+    transform: scale(1.02);
+}
+
+body.location-page .whatsapp-button img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+/* Jika tombol WhatsApp memakai SVG */
+
+body.location-page .whatsapp-button svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   3. RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+    body.location-page > header {
+        padding: 14px 25px;
+    }
+
+    body.location-page > header nav {
+        flex-wrap: wrap;
+        gap: 15px 25px;
+    }
+
+    body.location-page > header nav ul {
+        gap: 12px 20px;
+    }
+
+    body.location-page > header nav ul li a {
+        font-size: 12px;
+    }
+
+    body.location-page .whatsapp-float {
+        right: 20px;
+        bottom: 20px;
+        width: min(520px, calc(100% - 40px));
+    }
+
+    body.location-page .whatsapp-button {
+        padding: 13px 17px;
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================================
+   4. RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+    body.location-page > header {
+        padding: 13px 16px;
+    }
+
+    body.location-page > header nav {
+        justify-content: center;
+        gap: 13px;
+    }
+
+    body.location-page > header nav .logo {
+        justify-content: center;
+        font-size: 25px;
+    }
+
+    body.location-page > header nav .logo img {
+        width: 49px;
+        height: 49px;
+    }
+
+    body.location-page > header nav .logo-text .logo-subtitle {
+        font-size: 8px;
+        letter-spacing: 4px;
+    }
+
+    body.location-page > header nav ul {
+        justify-content: center;
+        gap: 5px 14px;
+        width: 100%;
+    }
+
+    body.location-page > header nav ul li a {
+        padding: 7px 0;
+        font-size: 11px;
+    }
+
+    body.location-page > header nav ul li a.nav-booking {
+        min-height: 0;
+        padding: 9px 15px;
+        font-size: 11px;
+    }
+
+    body.location-page .whatsapp-float {
+        right: 12px;
+        bottom: 12px;
+        gap: 9px;
+        width: calc(100% - 24px);
+        min-height: 76px;
+        padding: 9px;
+        border-radius: 45px;
+    }
+
+    body.location-page .whatsapp-avatar {
+        width: 45px;
+        height: 45px;
+        flex-basis: 45px;
+    }
+
+    body.location-page .whatsapp-text {
+        gap: 1px;
+    }
+
+    body.location-page .whatsapp-text strong {
+        font-size: 11px;
+    }
+
+    body.location-page .whatsapp-text span {
+        font-size: 10px;
+    }
+
+    body.location-page .whatsapp-button {
+        min-height: 43px;
+        gap: 5px;
+        padding: 10px 12px;
+        font-size: 10px;
+    }
+
+    body.location-page .whatsapp-button img,
+    body.location-page .whatsapp-button svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+
+/* LAYAR HP SANGAT KECIL */
+
+@media (max-width: 380px) {
+    body.location-page .whatsapp-float {
+        gap: 7px;
+        padding: 8px;
+    }
+
+    body.location-page .whatsapp-avatar {
+        width: 38px;
+        height: 38px;
+        flex-basis: 38px;
+    }
+
+    body.location-page .whatsapp-text strong {
+        font-size: 10px;
+    }
+
+    body.location-page .whatsapp-text span {
+        font-size: 9px;
+    }
+
+    body.location-page .whatsapp-button {
+        padding: 9px 10px;
+        font-size: 9px;
+    }
+}
+
+
+/* =========================================================
+   5. AKSESIBILITAS
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    body.location-page .whatsapp-float,
+    body.location-page .whatsapp-button,
+    body.location-page > header nav ul li a {
+        transition: none;
+    }
+
+    body.location-page .whatsapp-float:hover,
+    body.location-page .whatsapp-button:hover {
+        transform: none;
+    }
+}
+/* ===== FLOATING WHATSAPP - LOKASI ===== */
+
+.location-whatsapp {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    width: fit-content;
+    max-width: calc(100vw - 32px);
+    padding: 10px 13px;
+
+    background: #fffdf8;
+    border: 1px solid rgba(87, 78, 60, 0.12);
+    border-radius: 15px;
+    box-shadow: 0 5px 22px rgba(0, 0, 0, 0.14);
+
+    color: #302f28;
+    text-decoration: none;
+
+    font-family: 'Montserrat', sans-serif;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.location-whatsapp:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.18);
+}
+
+.location-whatsapp-logo {
+    width: 43px;
+    height: 43px;
+    flex-shrink: 0;
+
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid #e8dfce;
+}
+
+.location-whatsapp-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.location-whatsapp-text strong {
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.location-whatsapp-text small {
+    font-size: 9px;
+    color: #77746b;
+    line-height: 1.4;
+}
+
+.location-whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    flex-shrink: 0;
+    padding: 10px 12px;
+
+    background: #218c55;
+    color: #fff;
+    border-radius: 9px;
+
+    font-size: 10px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.location-whatsapp-button svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+    .location-whatsapp {
+        right: 12px;
+        bottom: 12px;
+        gap: 8px;
+        padding: 8px 10px;
+    }
+
+    .location-whatsapp-logo {
+        width: 35px;
+        height: 35px;
+    }
+
+    .location-whatsapp-text strong {
+        font-size: 9px;
+    }
+
+    .location-whatsapp-text small {
+        font-size: 8px;
+    }
+
+    .location-whatsapp-button {
+        gap: 4px;
+        padding: 9px;
+        font-size: 9px;
+    }
+
+    .location-whatsapp-button svg {
+        width: 14px;
+        height: 14px;
+    }
+}
+/* =========================================
+   LOKASI — NAVBAR GLASS EFFECT
+   ========================================= */
+
+body.location-page > header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    background: rgba(35, 35, 33, 0.72) !important;
+    -webkit-backdrop-filter: blur(18px) saturate(150%);
+    backdrop-filter: blur(18px) saturate(150%);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+
+    transition:
+        background 0.3s ease,
+        backdrop-filter 0.3s ease;
+}
+
+/* Navbar tetap terbaca di atas background terang */
+body.location-page > header nav {
+    background: transparent !important;
+}
+
+/* Link menu */
+body.location-page > header nav ul li a {
+    transition: color 0.25s ease;
+}
+
+/* Menu lokasi aktif */
+body.location-page > header nav ul li a.active {
+    color: #c6a15b;
+}
+
+/* Tombol booking */
+body.location-page > header nav ul li a.nav-booking {
+    background: #a98b58;
+    color: #fff;
+    border-radius: 4px;
+}
+/* =========================================
+   LOKASI — WHATSAPP WIDGET
+   ========================================= */
+
+.location-whatsapp {
+    position: fixed;
+    right: 28px;
+    bottom: 24px;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    width: max-content;
+    max-width: calc(100vw - 32px);
+    padding: 12px 14px;
+
+    background: rgba(255, 253, 248, 0.92);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+
+    box-shadow: 0 8px 28px rgba(40, 32, 20, 0.12);
+
+    color: #302f28;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.location-whatsapp-logo {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.location-whatsapp-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.location-whatsapp-text strong {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.location-whatsapp-text small {
+    font-size: 10px;
+    color: #77746b;
+}
+
+.location-whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    padding: 11px 14px;
+
+    background: #218c55;
+    color: white;
+    border-radius: 10px;
+
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.location-whatsapp-button svg {
+    width: 17px;
+    height: 17px;
+}
+
+.location-whatsapp:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(40, 32, 20, 0.16);
+}
+
+@media (max-width: 480px) {
+    .location-whatsapp {
+        right: 12px;
+        bottom: 12px;
+        gap: 8px;
+        padding: 9px;
+    }
+
+    .location-whatsapp-logo {
+        width: 34px;
+        height: 34px;
+    }
+
+    .location-whatsapp-text strong {
+        font-size: 9px;
+    }
+
+    .location-whatsapp-text small {
+        font-size: 8px;
+    }
+
+    .location-whatsapp-button {
+        padding: 9px;
+        font-size: 9px;
+    }
+
+    .location-whatsapp-button svg {
+        width: 14px;
+        height: 14px;
+    }
+}
+/* =====================================
+   LOKASI — HERO TEXT READABILITY
+   ===================================== */
+
+body.location-page .location-hero .location-hero-content h1 {
+    color: #fffaf2 !important;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
+}
+
+body.location-page .location-hero .location-hero-content h1 span {
+    color: #d5b783 !important;
+}
+
+body.location-page .location-hero .location-hero-content p {
+    color: #fffaf2 !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.65);
+}
+
+body.location-page .location-hero .eyebrow {
+    color: #d5b783 !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+body.location-page .location-hero .location-hero-link {
+    color: #fffaf2 !important;
+    border-color: #d5b783 !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+body.location-page .location-hero-decoration {
+    color: #e5d4b8 !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+/* ==========================================
+   LOCATION HERO — DESCRIPTION & GLASS BUTTON
+   ========================================== */
+
+/* Deskripsi hero */
+body.location-page .location-hero .location-hero-content > p {
+    max-width: 700px;
+    margin: 26px auto 0;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 2;
+    letter-spacing: 0.15px;
+
+    color: #fffaf2 !important;
+    text-align: center;
+
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.65);
+}
+
+/* Tombol kaca */
+body.location-page .location-hero .location-hero-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    margin-top: 28px;
+    padding: 13px 22px;
+
+    background: rgba(255, 255, 255, 0.10) !important;
+
+    -webkit-backdrop-filter: blur(12px) saturate(140%);
+    backdrop-filter: blur(12px) saturate(140%);
+
+    border: 1px solid rgba(230, 199, 143, 0.65) !important;
+    border-radius: 4px !important;
+
+    color: #fffaf2 !important;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-decoration: none;
+
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.12),
+        0 5px 18px rgba(0, 0, 0, 0.10);
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* Ikon panah */
+body.location-page .location-hero .location-hero-link span {
+    color: #e6c78f !important;
+    font-size: 15px;
+    transition: transform 0.3s ease;
+}
+
+/* Efek hover */
+body.location-page .location-hero .location-hero-link:hover {
+    background: rgba(255, 255, 255, 0.18) !important;
+    border-color: rgba(255, 255, 255, 0.85) !important;
+    transform: translateY(-2px);
+}
+
+body.location-page .location-hero .location-hero-link:hover span {
+    transform: translateY(3px);
+}
+
+/* Tampilan HP */
+@media (max-width: 600px) {
+    body.location-page .location-hero .location-hero-content > p {
+        max-width: 88%;
+        font-size: 12px;
+        line-height: 1.9;
+    }
+
+    body.location-page .location-hero .location-hero-link {
+        padding: 12px 18px;
+        font-size: 9px;
+        letter-spacing: 1.5px;
     }
 }

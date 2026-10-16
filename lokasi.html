@@ -1,315 +1,218 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Lokasi - Omah Noto Cijeruk</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <title>Lokasi | Omah Noto Cijeruk</title>
 
+    <meta
+        name="description"
+        content="Temukan lokasi Omah Noto Cijeruk di Bogor dan rencanakan perjalanan menuju villa dengan nyaman."
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Khusus halaman Lokasi: menyamakan navbar dan WhatsApp dengan Home -->
     <style>
-      /* RESET */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
-      body {
-        font-family: Arial, sans-serif;
-        background: #f8f6f1;
-        color: #40382f;
-        line-height: 1.7;
-      }
-
-      a {
-        text-decoration: none;
-        color: inherit;
-      }
-
-      /* NAVBAR */
-      header {
-        background: #fffdf9;
-        border-bottom: 1px solid #e7dfd3;
-      }
-
-      nav {
-        max-width: 1200px;
-        margin: auto;
-        padding: 22px 30px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 30px;
-      }
-
-      .logo {
-        font-family: Georgia, serif;
-        font-size: 25px;
-        font-weight: bold;
-        color: #574536;
-        white-space: nowrap;
-      }
-
-      nav ul {
-        list-style: none;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-      }
-
-      nav ul a {
-        font-size: 13px;
-        color: #655b50;
-        transition: color 0.3s;
-      }
-
-      nav ul a:hover,
-      nav ul a.active {
-        color: #a27b4c;
-      }
-
-      /* HERO */
-      .location-hero {
-        padding: 90px 24px 70px;
-        text-align: center;
-        background: #eee7dc;
-      }
-
-      .eyebrow {
-        font-size: 11px;
-        letter-spacing: 4px;
-        text-transform: uppercase;
-        color: #98784f;
-        margin-bottom: 18px;
-      }
-
-      .location-hero h1 {
-        font-family: Georgia, serif;
-        font-size: clamp(42px, 6vw, 68px);
-        font-weight: normal;
-        line-height: 1.15;
-        margin-bottom: 20px;
-      }
-
-      .location-hero p {
-        max-width: 650px;
-        margin: auto;
-        color: #75695c;
-        font-size: 15px;
-      }
-
-      /* KONTEN UTAMA */
-      .location-container {
-        max-width: 1100px;
-        margin: auto;
-        padding: 75px 25px;
-      }
-
-      .section-heading {
-        font-family: Georgia, serif;
-        font-size: 36px;
-        font-weight: normal;
-        margin-bottom: 15px;
-      }
-
-      .section-description {
-        color: #7b7064;
-        font-size: 14px;
-        margin-bottom: 30px;
-      }
-
-      /* FOTO LOKASI */
-      .location-photo {
-        width: 100%;
-        height: 430px;
-        overflow: hidden;
-        background: #e5ded2;
-        border: 1px solid #d8cbbb;
-        margin-bottom: 55px;
-      }
-
-      .location-image {
-        width: 100%;
-        height: 100%;
-        display: block;
-        object-fit: cover;
-        object-position: center 60%;
-      }
-
-      /* INFORMASI LOKASI */
-      .location-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 25px;
-        margin-bottom: 55px;
-      }
-
-      .location-card {
-        background: #fffdf9;
-        padding: 30px;
-        border: 1px solid #e8dfd3;
-      }
-
-      .card-label {
-        font-size: 10px;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-        color: #a17d50;
-        margin-bottom: 12px;
-      }
-
-      .location-card h3 {
-        font-family: Georgia, serif;
-        font-size: 25px;
-        font-weight: normal;
-        margin-bottom: 12px;
-      }
-
-      .location-card p {
-        font-size: 14px;
-        color: #756b60;
-      }
-
-      /* AKSES KENDARAAN */
-      .access-section {
-        padding-top: 15px;
-      }
-
-      .access-list {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 25px;
-        margin-top: 25px;
-      }
-
-      .access-item {
-        padding: 25px;
-        border-left: 2px solid #b59a76;
-        background: #f0ebe3;
-      }
-
-      .access-item h3 {
-        font-family: Georgia, serif;
-        font-size: 22px;
-        font-weight: normal;
-        margin-bottom: 8px;
-      }
-
-      .access-item p {
-        color: #756b60;
-        font-size: 14px;
-      }
-
-      /* TOMBOL GOOGLE MAPS */
-      .maps-section {
-        margin-top: 60px;
-        padding: 45px 25px;
-        background: #574536;
-        color: #fffaf2;
-        text-align: center;
-      }
-
-      .maps-section h2 {
-        font-family: Georgia, serif;
-        font-size: 34px;
-        font-weight: normal;
-        margin-bottom: 12px;
-      }
-
-      .maps-section p {
-        color: #e0d6c9;
-        font-size: 14px;
-        margin-bottom: 25px;
-      }
-
-      .maps-button {
-        display: inline-block;
-        padding: 13px 25px;
-        background: #f8f3e9;
-        color: #574536;
-        font-size: 12px;
-        letter-spacing: 1px;
-        transition: background 0.3s;
-      }
-
-      .maps-button:hover {
-        background: #e3d4be;
-      }
-
-      /* FOOTER */
-      footer {
-        padding: 25px;
-        text-align: center;
-        border-top: 1px solid #e7dfd3;
-        background: #fffdf9;
-        color: #82776a;
-        font-size: 12px;
-      }
-
-      /* RESPONSIVE TABLET */
-      @media (max-width: 900px) {
-        nav {
-          flex-direction: column;
+        body.location-page > header {
+            position: absolute !important;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(30, 30, 29, 0.76) !important;
+            -webkit-backdrop-filter: blur(18px) saturate(145%) !important;
+            backdrop-filter: blur(18px) saturate(145%) !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.10);
         }
 
-        nav ul {
-          justify-content: center;
-        }
-      }
-
-      /* RESPONSIVE HP */
-      @media (max-width: 600px) {
-        .location-hero {
-          padding: 65px 20px;
+        body.location-page > header nav {
+            background: transparent !important;
         }
 
-        .location-container {
-          padding: 50px 20px;
+        body.location-page > header .logo {
+            display: flex;
+            align-items: center;
+            gap: 14px;
         }
 
-        .location-photo {
-          height: 280px;
+        body.location-page > header .logo img {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 50%;
+            flex-shrink: 0;
         }
 
-        .location-grid,
-        .access-list {
-          grid-template-columns: 1fr;
+        body.location-page > header .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.05;
         }
 
-        .section-heading {
-          font-size: 30px;
+        body.location-page > header .logo-text > span {
+            color: #fff;
         }
 
-        nav ul {
-          justify-content: center;
-          gap: 12px;
+        body.location-page > header .logo-text small {
+            color: #c6a15b;
+            letter-spacing: 0.35em;
         }
 
-        nav ul a {
-          font-size: 12px;
+        body.location-page > header nav ul li a {
+            color: #f7f4ed;
         }
 
-        .logo {
-          font-size: 23px;
+        body.location-page > header nav ul li a.active {
+            color: #c6a15b;
         }
 
-        .maps-section h2 {
-          font-size: 28px;
+        /* Widget dibuat seukuran widget Home, hanya pada halaman Lokasi */
+        body.location-page .whatsapp-float {
+            position: fixed !important;
+            right: 28px !important;
+            bottom: 28px !important;
+            z-index: 9999 !important;
+            display: flex !important;
+            align-items: center !important;
+            gap: 16px !important;
+            box-sizing: border-box !important;
+            width: auto !important;
+            max-width: calc(100vw - 32px) !important;
+            min-width: 0 !important;
+            min-height: 0 !important;
+            padding: 12px 14px !important;
+            border-radius: 60px !important;
+            background: #171716 !important;
+            color: #fff !important;
+            box-shadow: 0 8px 28px rgba(0,0,0,.24) !important;
+            text-decoration: none !important;
         }
-      }
+
+        body.location-page .whatsapp-avatar {
+            width: 62px !important;
+            height: 62px !important;
+            flex: 0 0 62px !important;
+            border-radius: 50% !important;
+            overflow: hidden !important;
+        }
+
+        body.location-page .whatsapp-avatar img {
+            display: block !important;
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+        }
+
+        body.location-page .whatsapp-text {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 4px !important;
+            min-width: 0 !important;
+            color: #fff !important;
+            line-height: 1.25 !important;
+        }
+
+        body.location-page .whatsapp-text strong {
+            color: #fff !important;
+            font-size: 16px !important;
+            white-space: nowrap;
+        }
+
+        body.location-page .whatsapp-text > span {
+            color: #d0d0d0 !important;
+            font-size: 14px !important;
+            white-space: nowrap;
+        }
+
+        body.location-page .whatsapp-button {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 8px !important;
+            flex: 0 0 auto !important;
+            padding: 20px 25px !important;
+            border-radius: 40px !important;
+            background: #19c96b !important;
+            color: #fff !important;
+            font-size: 17px !important;
+            font-weight: 600 !important;
+            white-space: nowrap !important;
+        }
+
+        @media (max-width: 700px) {
+            body.location-page > header .logo img {
+                width: 48px;
+                height: 48px;
+            }
+
+            body.location-page .whatsapp-float {
+                right: 12px !important;
+                bottom: 12px !important;
+                gap: 9px !important;
+                padding: 8px 10px !important;
+            }
+
+            body.location-page .whatsapp-avatar {
+                width: 38px !important;
+                height: 38px !important;
+                flex-basis: 38px !important;
+            }
+
+            body.location-page .whatsapp-text strong {
+                font-size: 11px !important;
+            }
+
+            body.location-page .whatsapp-text > span {
+                font-size: 10px !important;
+            }
+
+            body.location-page .whatsapp-button {
+                gap: 5px !important;
+                padding: 12px 13px !important;
+                font-size: 11px !important;
+            }
+        }
+
+        @media (max-width: 430px) {
+            body.location-page .whatsapp-text > span {
+                display: none !important;
+            }
+
+            body.location-page .whatsapp-button {
+                padding: 10px !important;
+                font-size: 10px !important;
+            }
+        }
     </style>
-  </head>
 
-  <body>
-    <!-- NAVBAR -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body class="location-page">
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
     <header>
-      <nav>
-        <div class="logo">Omah Noto Cijeruk</div>
+      <nav aria-label="Navigasi utama">
+        <div class="logo">
+          <img src="images/logo-omah-noto.png" alt="Logo Omah Noto Cijeruk" />
+
+          <div class="logo-text">
+            <span>Omah Noto</span>
+            <small>Cijeruk</small>
+          </div>
+        </div>
 
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -318,143 +221,364 @@
           <li><a href="galeri.html">Galeri</a></li>
           <li><a href="harga.html">Harga</a></li>
           <li><a href="sekitar.html">Sekitar Villa</a></li>
-          <li><a href="lokasi.html" class="active">Lokasi</a></li>
+          <li><a href="lokasi.html" class="active" aria-current="page">Lokasi</a></li>
           <li><a href="booking.html">Booking</a></li>
         </ul>
       </nav>
     </header>
 
-    <!-- HERO -->
-    <section class="location-hero">
-      <div class="eyebrow">Find Your Escape</div>
 
-      <h1>Temukan Jalan Menuju<br />Omah Noto</h1>
+    <!-- =========================
+         HERO SECTION
+    ========================== -->
+    <main>
 
-      <p>
-        Temukan lokasi Omah Noto Cijeruk dan rencanakan perjalananmu
-        menuju tempat beristirahat yang nyaman di kawasan Bogor.
-      </p>
-    </section>
+        <section class="location-hero">
 
-    <!-- KONTEN LOKASI -->
-    <main class="location-container">
-      <div class="eyebrow">Our Location</div>
+            <div class="location-hero-content">
 
-      <h2 class="section-heading">Lokasi Villa</h2>
+                <span class="eyebrow">
+                    LOCATION &amp; DIRECTIONS
+                </span>
 
-      <p class="section-description">
-        Berikut gambaran lokasi Omah Noto Cijeruk untuk membantu
-        kamu merencanakan perjalanan.
-      </p>
+                <h1>
+                    Temukan Jalan Menuju
+                    <span>Omah Noto</span>
+                </h1>
 
-      <!-- FOTO LOKASI VILLA -->
-      <div class="location-photo">
-        <img
-          src="images/lokasi-villa.jpg"
-          alt="Papan nama dan jalan masuk Omah Noto Cijeruk"
-          class="location-image"
-        />
-      </div>
+                <p>
+                    Perjalanan menuju ketenangan dimulai dari sini.
+                    Temukan lokasi Omah Noto Cijeruk dan persiapkan
+                    perjalananmu menuju tempat beristirahat yang nyaman
+                    di kawasan Bogor.
+                </p>
 
-     <!-- ALAMAT VILLA — LUXURY DESIGN -->
-<div class="location-card villa-address-card">
+                <a
+                    href="#alamat-villa"
+                    class="location-hero-link"
+                >
+                    TEMUKAN LOKASI
+                    <span aria-hidden="true">↓</span>
+                </a>
 
-    <div class="villa-address-top">
-        <span class="villa-address-label">OUR ADDRESS</span>
-        <span class="villa-address-number">01</span>
-    </div>
+            </div>
 
-    <div class="villa-address-icon">
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="27"
-            height="27"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.3"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            aria-hidden="true"
-        >
-            <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
-            <circle cx="12" cy="10" r="2.5"/>
-        </svg>
-    </div>
+            <div class="location-hero-decoration" aria-hidden="true">
+                <span>CIJERUK</span>
+                <span>BOGOR · WEST JAVA</span>
+            </div>
 
-    <h3 class="villa-address-title">
-        Omah Noto
-        <span>Cijeruk</span>
-    </h3>
+        </section>
 
-    <div class="villa-address-divider"></div>
 
-    <p class="villa-address-text">
-        Surya Asri, Tj. Sari, Kecamatan Cijeruk,
-        Kabupaten Bogor, Jawa Barat 16740.
-    </p>
+        <!-- =========================
+             INFORMASI LOKASI
+        ========================== -->
+        <section class="location-container" id="alamat-villa">
 
-    <div class="villa-address-bottom">
-        <span class="villa-address-dot"></span>
-        <span>CIJERUK · BOGOR · INDONESIA</span>
-    </div>
+            <div class="location-section-intro">
 
-</div>
-      <!-- AKSES KENDARAAN -->
-      <section class="access-section">
-        <div class="eyebrow">Getting Here</div>
+                <span class="eyebrow">
+                    OUR LOCATION
+                </span>
 
-        <h2 class="section-heading">Akses Menuju Villa</h2>
+                <h2 class="section-heading">
+                    Sebuah Tempat untuk Kembali Tenang
+                </h2>
 
-        <p class="section-description">
-          Rencanakan perjalanan dengan kendaraan yang sesuai
-          dan periksa rute sebelum berangkat.
-        </p>
+                <p class="section-description">
+                    Berada di kawasan Cijeruk, Bogor, Omah Noto
+                    menjadi tempat untuk menikmati waktu istirahat
+                    dan suasana yang lebih dekat dengan alam.
+                </p>
 
-        <div class="access-list">
-          <div class="access-item">
-            <h3>Mobil</h3>
+            </div>
 
-            <p>
-              Buka titik lokasi melalui Google Maps untuk melihat
-              rute mobil yang tersedia dari tempat keberangkatanmu.
-            </p>
-          </div>
 
-          <div class="access-item">
-            <h3>Sepeda Motor</h3>
+            <!-- FOTO LOKASI -->
+            <figure class="location-photo">
 
-            <p>
-              Periksa rute sepeda motor melalui Google Maps dan
-              ikuti petunjuk perjalanan menuju lokasi villa.
-            </p>
-          </div>
-        </div>
-      </section>
+                <img
+                    src="images/lokasi-villa.jpg"
+                    alt="Papan nama dan jalan masuk menuju Omah Noto Cijeruk"
+                    class="location-image"
+                    loading="lazy"
+                >
 
-      <!-- TOMBOL GOOGLE MAPS -->
-      <section class="maps-section">
-        <h2>Siap Menuju Omah Noto?</h2>
+                <figcaption class="location-photo-caption">
+                    <span>01 / OUR DESTINATION</span>
+                    <span>Omah Noto Cijeruk</span>
+                </figcaption>
 
-        <p>
-          Buka lokasi villa di Google Maps untuk melihat titik
-          lokasi dan petunjuk arah perjalanan.
-        </p>
+            </figure>
 
-        <a
-          href="https://maps.app.goo.gl/LTp8xjmDvHP1sJTV7"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="maps-button"
-        >
-          BUKA GOOGLE MAPS ↗
-        </a>
-      </section>
+
+            <!-- KARTU ALAMAT -->
+            <div class="location-information-grid">
+
+                <article class="location-card villa-address-card">
+
+                    <div class="villa-address-top">
+                        <span class="villa-address-label">
+                            OUR ADDRESS
+                        </span>
+
+                        <span class="villa-address-number">
+                            01
+                        </span>
+                    </div>
+
+                    <div class="villa-address-icon" aria-hidden="true">
+
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="27"
+                            height="27"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.3"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+                            <circle cx="12" cy="10" r="2.5"/>
+                        </svg>
+
+                    </div>
+
+                    <h3 class="villa-address-title">
+                        Omah Noto
+                        <span>Cijeruk</span>
+                    </h3>
+
+                    <div class="villa-address-divider"></div>
+
+                    <p class="villa-address-text">
+                        Surya Asri, Tj. Sari, Kecamatan Cijeruk,
+                        Kabupaten Bogor, Jawa Barat 16740.
+                    </p>
+
+                    <div class="villa-address-bottom">
+                        <span class="villa-address-dot"></span>
+
+                        <span>
+                            CIJERUK · BOGOR · INDONESIA
+                        </span>
+                    </div>
+
+                    <a
+                        href="https://maps.app.goo.gl/LTp8xjmDvHP1sJTV7"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="location-card-button"
+                        aria-label="Buka lokasi Omah Noto Cijeruk di Google Maps"
+                    >
+                        LIHAT LOKASI
+                        <span aria-hidden="true">↗</span>
+                    </a>
+
+                </article>
+
+
+                <!-- KARTU INFORMASI -->
+                <article class="location-card location-detail-card">
+
+                    <span class="card-label">
+                        YOUR DESTINATION
+                    </span>
+
+                    <h3>
+                        Menuju Ketenangan
+                    </h3>
+
+                    <p>
+                        Rencanakan perjalanan sebelum berangkat
+                        agar kamu dapat menikmati waktu beristirahat
+                        dengan lebih nyaman.
+                    </p>
+
+                    <div class="location-detail-divider"></div>
+
+                    <div class="location-detail-row">
+                        <span>Wilayah</span>
+                        <strong>Cijeruk, Bogor</strong>
+                    </div>
+
+                    <div class="location-detail-row">
+                        <span>Provinsi</span>
+                        <strong>Jawa Barat</strong>
+                    </div>
+
+                    <div class="location-detail-row">
+                        <span>Kode Pos</span>
+                        <strong>16740</strong>
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- =========================
+                 AKSES KENDARAAN
+            ========================== -->
+            <section class="access-section">
+
+                <div class="access-heading">
+
+                    <span class="eyebrow">
+                        GETTING HERE
+                    </span>
+
+                    <h2 class="section-heading">
+                        Perjalanan Menuju Villa
+                    </h2>
+
+                    <p class="section-description">
+                        Pilih kendaraan yang sesuai dan periksa
+                        petunjuk arah sebelum memulai perjalanan.
+                    </p>
+
+                </div>
+
+
+                <div class="access-list">
+
+                    <article class="access-item">
+
+                        <div class="access-item-number">
+                            01
+                        </div>
+
+                        <div class="access-item-content">
+
+                            <h3>Mobil</h3>
+
+                            <p>
+                                Gunakan Google Maps untuk melihat
+                                rute kendaraan roda empat dari
+                                lokasi keberangkatanmu.
+                            </p>
+
+                        </div>
+
+                        <span class="access-item-icon" aria-hidden="true">
+                            ↗
+                        </span>
+
+                    </article>
+
+
+                    <article class="access-item">
+
+                        <div class="access-item-number">
+                            02
+                        </div>
+
+                        <div class="access-item-content">
+
+                            <h3>Sepeda Motor</h3>
+
+                            <p>
+                                Periksa rute sepeda motor dan
+                                kondisi perjalanan sebelum
+                                menuju lokasi villa.
+                            </p>
+
+                        </div>
+
+                        <span class="access-item-icon" aria-hidden="true">
+                            ↗
+                        </span>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 GOOGLE MAPS CTA
+            ========================== -->
+            <section class="maps-section">
+
+                <span class="eyebrow">
+                    YOUR JOURNEY STARTS HERE
+                </span>
+
+                <h2>
+                    Sampai Jumpa di Omah Noto
+                </h2>
+
+                <p>
+                    Temukan titik lokasi dan petunjuk perjalanan
+                    melalui Google Maps agar perjalananmu lebih mudah.
+                </p>
+
+                <a
+                    href="https://maps.app.goo.gl/LTp8xjmDvHP1sJTV7"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="maps-button"
+                >
+                    BUKA GOOGLE MAPS
+                    <span aria-hidden="true">↗</span>
+                </a>
+
+                <div class="maps-decoration" aria-hidden="true">
+                    OMAH NOTO CIJERUK
+                </div>
+
+            </section>
+
+        </section>
+
     </main>
 
-    <!-- FOOTER -->
-    <footer>
-      <p>&copy; 2026 Omah Noto Cijeruk. All Rights Reserved.</p>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer class="location-footer">
+
+        <a href="index.html" class="footer-brand">
+            Omah Noto Cijeruk
+        </a>
+
+        <p>
+            Sebuah tempat untuk beristirahat, menikmati waktu,
+            dan menemukan ketenangan.
+        </p>
+
+        <span class="footer-copyright">
+            &copy; 2026 Omah Noto Cijeruk. All Rights Reserved.
+        </span>
+
     </footer>
-  </body>
+    <a
+      href="https://wa.me/6285123901112?text=Halo%20Kak%2C%20saya%20tertarik%20dengan%20Omah%20Noto%20Cijeruk.%20Saya%20ingin%20menanyakan%20informasi%20villa."
+      class="whatsapp-float"
+      aria-label="Hubungi Omah Noto Cijeruk melalui WhatsApp"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <div class="whatsapp-avatar">
+        <img src="images/logo-omah-noto.png" alt="Logo Omah Noto Cijeruk" />
+      </div>
+
+      <div class="whatsapp-text">
+        <strong>Interested in our villa?</strong>
+
+        <span>Let's chat!</span>
+      </div>
+
+      <div class="whatsapp-button">
+        <span>◉</span>
+
+        Chat on WhatsApp
+      </div>
+    </a>
+</body>
 </html>
