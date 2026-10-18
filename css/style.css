@@ -7103,25 +7103,31 @@ body.location-page {
 /* NAVBAR */
 
 .location-page header {
-    position: relative;
+   position: relative;
+    z-index: 1000;
     width: 100%;
-    padding: 15px 30px;
-    background: #fffdf9;
-    border-bottom: 1px solid #e7dfd3;
-    box-shadow: 0 4px 20px rgba(44, 38, 33, 0.05);
+    padding: 15px 4.2%;
+    background: rgba(29, 29, 29, 0.94);
+    border-bottom: 1px solid rgb(255, 253, 250);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
 }
 
-.location-page header::after {
+body.location-page header::before,
+body.location-page header::after {
     display: none;
+    content: none;
 }
 
-.location-page nav {
-    max-width: 1400px;
-    margin: 0 auto;
+body.location-page header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 25px;
+    gap: 28px;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
 .location-page .logo {
@@ -7132,58 +7138,114 @@ body.location-page {
     white-space: nowrap;
 }
 
-.location-page nav ul {
+body.location-page header nav .logo {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    gap: 22px;
-    list-style: none;
+    gap: 13px;
+    flex-shrink: 0;
+    color: #ffffff;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 29px;
+    font-weight: 600;
+    line-height: 1;
+    text-decoration: none;
+    white-space: nowrap;
 }
 
-.location-page nav ul li a {
+body.location-page header nav .logo img {
+    display: block;
+    width: 59px;
+    height: 59px;
+    flex-shrink: 0;
+    object-fit: contain;
+    border: 2px solid #b89b5e;
+    border-radius: 50%;
+    background: #fffaf1;
+    box-shadow: 0 0 0 4px rgba(184, 155, 94, 0.12);
+}
+
+body.location-page header nav .logo-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+body.location-page > header nav .logo-text span {
+    display: block;
+}
+
+body.location-page > header nav .logo-text .logo-subtitle {
+    color: #c7a45d;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+
+body.location-page > header nav ul li {
+    margin: 0;
+    padding: 0;
+}
+
+body.location-page > header nav ul li a {
     position: relative;
     display: inline-block;
     padding: 12px 0;
-    color: #5a5047;
-    font-size: 12px;
+    color: #f5f1e8;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 13px;
     font-weight: 500;
+    line-height: 1.5;
+    text-decoration: none;
     text-shadow: none;
     transition: color 0.3s ease;
 }
 
-.location-page nav ul li a:not(.nav-booking)::after {
-    content: "";
+body.location-page > header nav ul li a:not(.nav-booking)::after {
     position: absolute;
-    bottom: 5px;
+    bottom: 4px;
     left: 0;
     width: 0;
     height: 1px;
-    background: #b89b5e;
+    background: #c5a15c;
+    content: "";
     transition: width 0.3s ease;
 }
 
-.location-page nav ul li a:not(.nav-booking):hover::after,
-.location-page nav ul li a:not(.nav-booking).active::after {
+body.location-page > header nav ul li a:not(.nav-booking):hover::after,
+body.location-page > header nav ul li a:not(.nav-booking).active::after {
     width: 100%;
 }
 
 .location-page nav ul li a:hover,
 .location-page nav ul li a.active {
-    color: #a48757;
+    color: #c9a660;
 }
 
-.location-page nav ul li a.nav-booking {
-    padding: 13px 23px;
+body.location-page > header nav ul li a.nav-booking {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 48px;
+    padding: 13px 27px;
+    border: 1px solid #b89b5e;
+    border-radius: 3px;
     background: #a48757;
-    color: #fffdf9;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.15);
     transition:
         background 0.3s ease,
         transform 0.3s ease;
 }
 
 .location-page nav ul li a.nav-booking:hover {
-    background: #80643d;
+    background: #87683a;
     transform: translateY(-2px);
 }
 
@@ -8006,867 +8068,511 @@ body.location-page {
         transform: none;
     }
 }
-/* =========================================================
-   OMAH NOTO CIJERUK — LOCATION PAGE FINAL ENHANCEMENTS
-   Menyamakan navbar dan WhatsApp dengan halaman Home
-   Semua aturan dibatasi ke .location-page
-========================================================= */
+
+/* =========================================
+   HALAMAN HARGA - OMAH NOTO CIJERUK
+========================================= */
+
+.harga-page {
+    margin: 0;
+    background: #f5f0e7;
+    color: #3d3027;
+    font-family: 'Poppins', sans-serif;
+}
+
+.harga-page * {
+    box-sizing: border-box;
+}
+
+.harga-page a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.harga-page .harga-eyebrow {
+    color: #a17c52;
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
 
 
-/* =========================================================
-   1. NAVBAR — DARK GLASS STYLE
-========================================================= */
+/* NAVBAR */
 
-body.location-page > header {
-    position: relative;
-    z-index: 1000;
+.harga-navbar {
     width: 100%;
-    padding: 15px 4.2%;
-    background: rgba(29, 29, 29, 0.94);
-    border-bottom: 1px solid rgba(184, 155, 94, 0.4);
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-}
-
-body.location-page > header::before,
-body.location-page > header::after {
-    display: none;
-    content: none;
-}
-
-body.location-page > header nav {
+    min-height: 90px;
+    padding: 20px 7%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 28px;
+    justify-content: space-between;
+    gap: 25px;
+    background: #f5f0e7;
+    border-bottom: 1px solid rgba(61, 48, 39, 0.12);
+}
+
+.harga-logo {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.harga-logo span {
+    margin-top: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 8px;
+    letter-spacing: 2px;
+}
+
+.harga-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.harga-nav a {
+    font-size: 12px;
+    transition: color 0.3s ease;
+}
+
+.harga-nav a:hover,
+.harga-nav a.active {
+    color: #a17c52;
+}
+
+.harga-nav-button {
+    padding: 12px 20px;
+    background: #49392d;
+    color: #fff !important;
+    font-size: 11px;
+    letter-spacing: 1px;
+    transition: background 0.3s ease;
+}
+
+.harga-nav-button:hover {
+    background: #806346;
+}
+
+
+/* HERO */
+
+.harga-hero {
+    min-height: 570px;
+    padding: 100px 7%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(37, 29, 23, 0.78),
+            rgba(37, 29, 23, 0.25)
+        ),
+        url('../img/bg-harga.jpg') center/cover no-repeat;
+    color: #fff;
+}
+
+.harga-hero-content {
     width: 100%;
-    max-width: 1500px;
+    max-width: 850px;
+    position: relative;
+    z-index: 1;
+}
+
+.harga-hero .harga-eyebrow {
+    color: #e3c49d;
+}
+
+.harga-hero h1 {
+    margin: 20px 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(45px, 6vw, 78px);
+    font-weight: 500;
+    line-height: 1.05;
+}
+
+.harga-hero h1 span {
+    color: #e3c49d;
+    font-style: italic;
+}
+
+.harga-hero-description {
+    max-width: 540px;
+    font-size: 13px;
+    line-height: 2;
+    color: #eee5dc;
+}
+
+.harga-hero-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 15px 23px;
+    border: 1px solid #e3c49d;
+    color: #fff !important;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+}
+
+.harga-hero-button:hover {
+    background: #e3c49d;
+    color: #3d3027 !important;
+}
+
+.harga-hero-decoration {
+    position: absolute;
+    right: 7%;
+    bottom: 35px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+
+/* DAFTAR HARGA */
+
+.harga-section {
+    padding: 100px 7%;
+}
+
+.harga-section-heading {
+    max-width: 650px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.harga-section-heading h2,
+.harga-extra-content h2,
+.harga-booking-section h2 {
+    margin: 12px 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(35px, 4vw, 52px);
+    font-weight: 500;
+    line-height: 1.15;
+}
+
+.harga-section-heading h2 span,
+.harga-extra-content h2 span,
+.harga-booking-section h2 span {
+    color: #a17c52;
+    font-style: italic;
+}
+
+.harga-section-heading > p:last-child,
+.harga-extra-content > p:not(.harga-eyebrow),
+.harga-booking-section > p:not(.harga-eyebrow) {
+    color: #75695e;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.harga-card-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 25px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-body.location-page > header nav .logo {
-    display: flex;
-    align-items: center;
-    gap: 13px;
-    flex-shrink: 0;
-    color: #ffffff;
-    font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: 29px;
-    font-weight: 600;
-    line-height: 1;
-    text-decoration: none;
-    white-space: nowrap;
-}
-
-/* Logo bulat villa */
-
-body.location-page > header nav .logo img {
-    display: block;
-    width: 59px;
-    height: 59px;
-    flex-shrink: 0;
-    object-fit: contain;
-    border: 2px solid #b89b5e;
-    border-radius: 50%;
-    background: #fffaf1;
-    box-shadow: 0 0 0 4px rgba(184, 155, 94, 0.12);
-}
-
-/* Teks logo */
-
-body.location-page > header nav .logo-text {
+.harga-card {
+    position: relative;
+    padding: 40px 30px;
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    background: #fffdf8;
+    border: 1px solid #e3d8c8;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-body.location-page > header nav .logo-text span {
-    display: block;
+.harga-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(61, 48, 39, 0.08);
 }
 
-body.location-page > header nav .logo-text .logo-subtitle {
-    color: #c7a45d;
-    font-family: "Montserrat", Arial, sans-serif;
+.harga-card-featured {
+    border: 1px solid #a17c52;
+}
+
+.harga-popular-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 9px 13px;
+    background: #49392d;
+    color: #fff;
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+.harga-card-label {
+    margin: 0 0 10px;
+    color: #a17c52;
     font-size: 9px;
     font-weight: 600;
-    letter-spacing: 5px;
-    line-height: 1.5;
-    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-/* Daftar navigasi */
-
-body.location-page > header nav ul {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 25px;
+.harga-card h3 {
     margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.harga-amount {
+    margin: 25px 0 0;
+    font-size: 27px;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+.harga-amount span {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.harga-duration {
+    margin: 5px 0 20px;
+    color: #8a7c70;
+    font-size: 11px;
+}
+
+.harga-card-divider {
+    width: 100%;
+    height: 1px;
+    margin-bottom: 20px;
+    background: #e8ded1;
+}
+
+.harga-facilities {
+    margin: 0 0 30px;
     padding: 0;
     list-style: none;
 }
 
-body.location-page > header nav ul li {
-    margin: 0;
-    padding: 0;
+.harga-facilities li {
+    margin-bottom: 15px;
+    color: #65584d;
+    font-size: 11px;
+    line-height: 1.7;
 }
 
-body.location-page > header nav ul li a {
-    position: relative;
+.harga-card-button {
+    display: block;
+    margin-top: auto;
+    padding: 14px;
+    border: 1px solid #49392d;
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.harga-card-button:hover {
+    background: #49392d;
+    color: #fff !important;
+}
+
+.harga-note {
+    max-width: 1000px;
+    margin: 30px auto 0;
+    color: #827467;
+    font-size: 10px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+
+/* FASILITAS TAMBAHAN */
+
+.harga-extra-section {
+    padding: 90px 7%;
+    background: #e9dfd0;
+}
+
+.harga-extra-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.harga-extra-list {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.harga-extra-list span {
+    padding: 12px 20px;
+    border: 1px solid #c8b69f;
+    font-size: 11px;
+}
+
+
+/* BOOKING */
+
+.harga-booking-section {
+    padding: 100px 7%;
+    background: #49392d;
+    color: #fff;
+    text-align: center;
+}
+
+.harga-booking-section .harga-eyebrow {
+    color: #e3c49d;
+}
+
+.harga-booking-section h2 span {
+    color: #e3c49d;
+}
+
+.harga-booking-section > p:not(.harga-eyebrow) {
+    max-width: 580px;
+    margin: 20px auto;
+    color: #e5d9cd;
+}
+
+.harga-booking-button {
     display: inline-block;
-    padding: 12px 0;
-    color: #f5f1e8;
-    font-family: "Montserrat", Arial, sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 1.5;
-    text-decoration: none;
-    text-shadow: none;
-    transition: color 0.3s ease;
-}
-
-body.location-page > header nav ul li a:not(.nav-booking)::after {
-    position: absolute;
-    bottom: 4px;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background: #c5a15c;
-    content: "";
-    transition: width 0.3s ease;
-}
-
-body.location-page > header nav ul li a:not(.nav-booking):hover::after,
-body.location-page > header nav ul li a:not(.nav-booking).active::after {
-    width: 100%;
-}
-
-body.location-page > header nav ul li a:not(.nav-booking):hover,
-body.location-page > header nav ul li a.active {
-    color: #c9a660;
-}
-
-/* Tombol Booking */
-
-body.location-page > header nav ul li a.nav-booking {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 48px;
-    padding: 13px 27px;
-    border: 1px solid #b89b5e;
-    border-radius: 3px;
-    background: #a48757;
-    color: #ffffff;
-    font-size: 13px;
+    margin-top: 20px;
+    padding: 16px 25px;
+    background: #e3c49d;
+    color: #3d3027 !important;
+    font-size: 10px;
     font-weight: 600;
-    text-decoration: none;
-    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.15);
-    transition:
-        background 0.3s ease,
-        transform 0.3s ease;
+    letter-spacing: 1px;
+    transition: background 0.3s ease;
 }
 
-body.location-page > header nav ul li a.nav-booking:hover {
-    background: #87683a;
-    transform: translateY(-2px);
+.harga-booking-button:hover {
+    background: #fff;
 }
 
 
-/* =========================================================
-   2. WHATSAPP FLOATING WIDGET
-========================================================= */
+/* FOOTER */
 
-body.location-page .whatsapp-float {
-    position: fixed;
-    right: 28px;
-    bottom: 25px;
-    z-index: 2000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 14px;
-    width: min(570px, calc(100% - 40px));
-    min-height: 102px;
-    padding: 13px 15px;
-    border: 1px solid rgba(255, 255, 255, 0.07);
-    border-radius: 60px;
-    background: rgba(20, 20, 20, 0.97);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.28);
-    color: #ffffff;
-    font-family: "Montserrat", Arial, sans-serif;
-    text-decoration: none;
-    box-sizing: border-box;
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+.harga-footer {
+    padding: 45px 7% 25px;
+    background: #30251e;
+    color: #e9dfd0;
+    text-align: center;
 }
 
-body.location-page .whatsapp-float:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.34);
-}
-
-/* Logo villa di sisi kiri */
-
-body.location-page .whatsapp-avatar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 62px;
-    height: 62px;
-    flex: 0 0 62px;
-    overflow: hidden;
-    border: 2px solid #c6a363;
-    border-radius: 50%;
-    background: #fffaf1;
-}
-
-body.location-page .whatsapp-avatar img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    border-radius: 50%;
-}
-
-/* Tulisan di tengah */
-
-body.location-page .whatsapp-text {
-    display: flex;
-    flex: 1 1 auto;
-    flex-direction: column;
-    justify-content: center;
-    min-width: 0;
-    gap: 3px;
-    color: #ffffff;
-    line-height: 1.5;
-}
-
-body.location-page .whatsapp-text strong {
-    display: block;
-    color: #ffffff;
-    font-size: 14px;
+.harga-footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
     font-weight: 600;
 }
 
-body.location-page .whatsapp-text span {
-    display: block;
-    color: #c9c9c9;
-    font-size: 12px;
+.harga-footer > p {
+    color: #c3b4a4;
+    font-size: 10px;
 }
 
-/* Tombol hijau */
-
-body.location-page .whatsapp-button {
-    display: inline-flex;
+.harga-footer-links {
+    margin: 25px 0;
+    display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 9px;
-    flex: 0 0 auto;
-    min-height: 61px;
-    padding: 15px 22px;
-    border: 0;
-    border-radius: 40px;
-    background: #20c875;
-    color: #ffffff;
-    font-family: "Montserrat", Arial, sans-serif;
-    font-size: 13px;
-    font-weight: 600;
-    white-space: nowrap;
-    transition:
-        background 0.3s ease,
-        transform 0.3s ease;
+    flex-wrap: wrap;
+    gap: 25px;
 }
 
-body.location-page .whatsapp-button:hover {
-    background: #16ad62;
-    transform: scale(1.02);
+.harga-footer-links a {
+    font-size: 10px;
 }
 
-body.location-page .whatsapp-button img {
-    width: 20px;
-    height: 20px;
-    object-fit: contain;
+.harga-footer-links a:hover {
+    color: #e3c49d;
 }
 
-/* Jika tombol WhatsApp memakai SVG */
-
-body.location-page .whatsapp-button svg {
-    width: 20px;
-    height: 20px;
-    flex-shrink: 0;
+.harga-footer .harga-copyright {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 
-/* =========================================================
-   3. RESPONSIVE — TABLET
-========================================================= */
+/* RESPONSIVE */
 
-@media (max-width: 1100px) {
-    body.location-page > header {
-        padding: 14px 25px;
-    }
-
-    body.location-page > header nav {
+@media (max-width: 1000px) {
+    .harga-navbar {
         flex-wrap: wrap;
-        gap: 15px 25px;
     }
 
-    body.location-page > header nav ul {
-        gap: 12px 20px;
-    }
-
-    body.location-page > header nav ul li a {
-        font-size: 12px;
-    }
-
-    body.location-page .whatsapp-float {
-        right: 20px;
-        bottom: 20px;
-        width: min(520px, calc(100% - 40px));
-    }
-
-    body.location-page .whatsapp-button {
-        padding: 13px 17px;
-        font-size: 12px;
-    }
-}
-
-
-/* =========================================================
-   4. RESPONSIVE — MOBILE
-========================================================= */
-
-@media (max-width: 600px) {
-    body.location-page > header {
-        padding: 13px 16px;
-    }
-
-    body.location-page > header nav {
-        justify-content: center;
-        gap: 13px;
-    }
-
-    body.location-page > header nav .logo {
-        justify-content: center;
-        font-size: 25px;
-    }
-
-    body.location-page > header nav .logo img {
-        width: 49px;
-        height: 49px;
-    }
-
-    body.location-page > header nav .logo-text .logo-subtitle {
-        font-size: 8px;
-        letter-spacing: 4px;
-    }
-
-    body.location-page > header nav ul {
-        justify-content: center;
-        gap: 5px 14px;
+    .harga-nav {
+        order: 3;
         width: 100%;
     }
 
-    body.location-page > header nav ul li a {
-        padding: 7px 0;
-        font-size: 11px;
+    .harga-card-container {
+        grid-template-columns: 1fr 1fr;
     }
 
-    body.location-page > header nav ul li a.nav-booking {
-        min-height: 0;
-        padding: 9px 15px;
-        font-size: 11px;
+    .harga-card:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 650px) {
+    .harga-navbar {
+        padding: 20px 5%;
     }
 
-    body.location-page .whatsapp-float {
-        right: 12px;
-        bottom: 12px;
-        gap: 9px;
-        width: calc(100% - 24px);
-        min-height: 76px;
-        padding: 9px;
-        border-radius: 45px;
+    .harga-nav {
+        gap: 15px;
     }
 
-    body.location-page .whatsapp-avatar {
-        width: 45px;
-        height: 45px;
-        flex-basis: 45px;
-    }
-
-    body.location-page .whatsapp-text {
-        gap: 1px;
-    }
-
-    body.location-page .whatsapp-text strong {
-        font-size: 11px;
-    }
-
-    body.location-page .whatsapp-text span {
+    .harga-nav a {
         font-size: 10px;
     }
 
-    body.location-page .whatsapp-button {
-        min-height: 43px;
-        gap: 5px;
+    .harga-nav-button {
         padding: 10px 12px;
-        font-size: 10px;
-    }
-
-    body.location-page .whatsapp-button img,
-    body.location-page .whatsapp-button svg {
-        width: 16px;
-        height: 16px;
-    }
-}
-
-
-/* LAYAR HP SANGAT KECIL */
-
-@media (max-width: 380px) {
-    body.location-page .whatsapp-float {
-        gap: 7px;
-        padding: 8px;
-    }
-
-    body.location-page .whatsapp-avatar {
-        width: 38px;
-        height: 38px;
-        flex-basis: 38px;
-    }
-
-    body.location-page .whatsapp-text strong {
-        font-size: 10px;
-    }
-
-    body.location-page .whatsapp-text span {
         font-size: 9px;
     }
 
-    body.location-page .whatsapp-button {
-        padding: 9px 10px;
-        font-size: 9px;
-    }
-}
-
-
-/* =========================================================
-   5. AKSESIBILITAS
-========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-    body.location-page .whatsapp-float,
-    body.location-page .whatsapp-button,
-    body.location-page > header nav ul li a {
-        transition: none;
+    .harga-hero {
+        min-height: 500px;
+        padding: 80px 6%;
     }
 
-    body.location-page .whatsapp-float:hover,
-    body.location-page .whatsapp-button:hover {
-        transform: none;
-    }
-}
-/* ===== FLOATING WHATSAPP - LOKASI ===== */
-
-.location-whatsapp {
-    position: fixed;
-    right: 22px;
-    bottom: 22px;
-    z-index: 9999;
-
-    display: flex;
-    align-items: center;
-    gap: 11px;
-
-    width: fit-content;
-    max-width: calc(100vw - 32px);
-    padding: 10px 13px;
-
-    background: #fffdf8;
-    border: 1px solid rgba(87, 78, 60, 0.12);
-    border-radius: 15px;
-    box-shadow: 0 5px 22px rgba(0, 0, 0, 0.14);
-
-    color: #302f28;
-    text-decoration: none;
-
-    font-family: 'Montserrat', sans-serif;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.location-whatsapp:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.18);
-}
-
-.location-whatsapp-logo {
-    width: 43px;
-    height: 43px;
-    flex-shrink: 0;
-
-    object-fit: cover;
-    border-radius: 50%;
-    border: 1px solid #e8dfce;
-}
-
-.location-whatsapp-text {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.location-whatsapp-text strong {
-    font-size: 11px;
-    font-weight: 600;
-    line-height: 1.4;
-}
-
-.location-whatsapp-text small {
-    font-size: 9px;
-    color: #77746b;
-    line-height: 1.4;
-}
-
-.location-whatsapp-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-
-    flex-shrink: 0;
-    padding: 10px 12px;
-
-    background: #218c55;
-    color: #fff;
-    border-radius: 9px;
-
-    font-size: 10px;
-    font-weight: 600;
-    white-space: nowrap;
-}
-
-.location-whatsapp-button svg {
-    width: 16px;
-    height: 16px;
-    flex-shrink: 0;
-}
-
-@media (max-width: 480px) {
-    .location-whatsapp {
-        right: 12px;
-        bottom: 12px;
-        gap: 8px;
-        padding: 8px 10px;
+    .harga-hero h1 {
+        font-size: 46px;
     }
 
-    .location-whatsapp-logo {
-        width: 35px;
-        height: 35px;
+    .harga-section,
+    .harga-extra-section,
+    .harga-booking-section {
+        padding: 70px 6%;
     }
 
-    .location-whatsapp-text strong {
-        font-size: 9px;
+    .harga-card-container {
+        grid-template-columns: 1fr;
     }
 
-    .location-whatsapp-text small {
+    .harga-card:last-child {
+        grid-column: auto;
+    }
+
+    .harga-card {
+        padding: 35px 25px;
+    }
+
+    .harga-amount {
+        font-size: 25px;
+    }
+
+    .harga-hero-decoration {
+        right: 6%;
         font-size: 8px;
-    }
-
-    .location-whatsapp-button {
-        gap: 4px;
-        padding: 9px;
-        font-size: 9px;
-    }
-
-    .location-whatsapp-button svg {
-        width: 14px;
-        height: 14px;
-    }
-}
-/* =========================================
-   LOKASI — NAVBAR GLASS EFFECT
-   ========================================= */
-
-body.location-page > header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-
-    background: rgba(35, 35, 33, 0.72) !important;
-    -webkit-backdrop-filter: blur(18px) saturate(150%);
-    backdrop-filter: blur(18px) saturate(150%);
-
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-
-    transition:
-        background 0.3s ease,
-        backdrop-filter 0.3s ease;
-}
-
-/* Navbar tetap terbaca di atas background terang */
-body.location-page > header nav {
-    background: transparent !important;
-}
-
-/* Link menu */
-body.location-page > header nav ul li a {
-    transition: color 0.25s ease;
-}
-
-/* Menu lokasi aktif */
-body.location-page > header nav ul li a.active {
-    color: #c6a15b;
-}
-
-/* Tombol booking */
-body.location-page > header nav ul li a.nav-booking {
-    background: #a98b58;
-    color: #fff;
-    border-radius: 4px;
-}
-/* =========================================
-   LOKASI — WHATSAPP WIDGET
-   ========================================= */
-
-.location-whatsapp {
-    position: fixed;
-    right: 28px;
-    bottom: 24px;
-    z-index: 9999;
-
-    display: flex;
-    align-items: center;
-    gap: 14px;
-
-    width: max-content;
-    max-width: calc(100vw - 32px);
-    padding: 12px 14px;
-
-    background: rgba(255, 253, 248, 0.92);
-    -webkit-backdrop-filter: blur(16px);
-    backdrop-filter: blur(16px);
-
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    border-radius: 20px;
-
-    box-shadow: 0 8px 28px rgba(40, 32, 20, 0.12);
-
-    color: #302f28;
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.location-whatsapp-logo {
-    width: 42px;
-    height: 42px;
-    flex-shrink: 0;
-
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-.location-whatsapp-text {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.location-whatsapp-text strong {
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.location-whatsapp-text small {
-    font-size: 10px;
-    color: #77746b;
-}
-
-.location-whatsapp-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-
-    padding: 11px 14px;
-
-    background: #218c55;
-    color: white;
-    border-radius: 10px;
-
-    font-size: 11px;
-    font-weight: 600;
-    white-space: nowrap;
-}
-
-.location-whatsapp-button svg {
-    width: 17px;
-    height: 17px;
-}
-
-.location-whatsapp:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 32px rgba(40, 32, 20, 0.16);
-}
-
-@media (max-width: 480px) {
-    .location-whatsapp {
-        right: 12px;
-        bottom: 12px;
-        gap: 8px;
-        padding: 9px;
-    }
-
-    .location-whatsapp-logo {
-        width: 34px;
-        height: 34px;
-    }
-
-    .location-whatsapp-text strong {
-        font-size: 9px;
-    }
-
-    .location-whatsapp-text small {
-        font-size: 8px;
-    }
-
-    .location-whatsapp-button {
-        padding: 9px;
-        font-size: 9px;
-    }
-
-    .location-whatsapp-button svg {
-        width: 14px;
-        height: 14px;
-    }
-}
-/* =====================================
-   LOKASI — HERO TEXT READABILITY
-   ===================================== */
-
-body.location-page .location-hero .location-hero-content h1 {
-    color: #fffaf2 !important;
-    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
-}
-
-body.location-page .location-hero .location-hero-content h1 span {
-    color: #d5b783 !important;
-}
-
-body.location-page .location-hero .location-hero-content p {
-    color: #fffaf2 !important;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.65);
-}
-
-body.location-page .location-hero .eyebrow {
-    color: #d5b783 !important;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-}
-
-body.location-page .location-hero .location-hero-link {
-    color: #fffaf2 !important;
-    border-color: #d5b783 !important;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-}
-
-body.location-page .location-hero-decoration {
-    color: #e5d4b8 !important;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
-}
-/* ==========================================
-   LOCATION HERO — DESCRIPTION & GLASS BUTTON
-   ========================================== */
-
-/* Deskripsi hero */
-body.location-page .location-hero .location-hero-content > p {
-    max-width: 700px;
-    margin: 26px auto 0;
-
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 2;
-    letter-spacing: 0.15px;
-
-    color: #fffaf2 !important;
-    text-align: center;
-
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.65);
-}
-
-/* Tombol kaca */
-body.location-page .location-hero .location-hero-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-
-    margin-top: 28px;
-    padding: 13px 22px;
-
-    background: rgba(255, 255, 255, 0.10) !important;
-
-    -webkit-backdrop-filter: blur(12px) saturate(140%);
-    backdrop-filter: blur(12px) saturate(140%);
-
-    border: 1px solid rgba(230, 199, 143, 0.65) !important;
-    border-radius: 4px !important;
-
-    color: #fffaf2 !important;
-
-    font-family: 'Montserrat', sans-serif;
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-decoration: none;
-
-    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
-
-    box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.12),
-        0 5px 18px rgba(0, 0, 0, 0.10);
-
-    transition:
-        background 0.3s ease,
-        border-color 0.3s ease,
-        transform 0.3s ease;
-}
-
-/* Ikon panah */
-body.location-page .location-hero .location-hero-link span {
-    color: #e6c78f !important;
-    font-size: 15px;
-    transition: transform 0.3s ease;
-}
-
-/* Efek hover */
-body.location-page .location-hero .location-hero-link:hover {
-    background: rgba(255, 255, 255, 0.18) !important;
-    border-color: rgba(255, 255, 255, 0.85) !important;
-    transform: translateY(-2px);
-}
-
-body.location-page .location-hero .location-hero-link:hover span {
-    transform: translateY(3px);
-}
-
-/* Tampilan HP */
-@media (max-width: 600px) {
-    body.location-page .location-hero .location-hero-content > p {
-        max-width: 88%;
-        font-size: 12px;
-        line-height: 1.9;
-    }
-
-    body.location-page .location-hero .location-hero-link {
-        padding: 12px 18px;
-        font-size: 9px;
-        letter-spacing: 1.5px;
     }
 }
