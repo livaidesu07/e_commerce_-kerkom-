@@ -6924,24 +6924,88 @@ body.location-page .location-hero {
   margin-top: 25px;
 }
 
+
+/* FIX UKURAN KARTU KENDARAAN */
+.location-page .access-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
 .location-page .access-item {
-  padding: 28px;
-  background: #ebe4d7;
-  border-left: 2px solid #b89b5e;
+    position: relative;
+    min-width: 0;
+    min-height: 340px;
+    padding: 35px;
+    overflow: hidden;
+    gap: 15px;
 }
 
-.location-page .access-item h3 {
-  margin: 0 0 10px;
-  color: #2c2621;
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 28px;
-  font-weight: 500;
+.location-page .access-item-number {
+    flex-shrink: 0;
 }
 
-.location-page .access-item p {
-  color: #6c6257;
-  font-size: 13px;
-  line-height: 1.9;
+.location-page .access-item-content {
+    position: relative;
+    z-index: 2;
+    width: 62%;
+    min-width: 0;
+    flex: 0 1 62%;
+}
+
+.location-page .access-item-content h3 {
+    margin-bottom: 15px;
+    font-size: 34px;
+    overflow-wrap: break-word;
+}
+
+.location-page .access-item-content p {
+    font-size: 13px;
+    line-height: 1.8;
+    overflow-wrap: break-word;
+}
+
+.location-page .access-map-button {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 12px 15px;
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.location-page .access-vehicle-image {
+    position: absolute;
+    z-index: 1;
+    right: 2%;
+    bottom: 12%;
+    width: 36%;
+    height: 45%;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+@media (max-width: 900px) {
+    .location-page .access-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 520px) {
+    .location-page .access-item {
+        min-height: 390px;
+        padding: 25px 20px;
+    }
+
+    .location-page .access-item-content {
+        width: 75%;
+        flex-basis: 75%;
+    }
+
+    .location-page .access-vehicle-image {
+        width: 48%;
+        height: 35%;
+        bottom: 5%;
+        right: 3%;
+    }
 }
 
 /* GOOGLE MAPS */
