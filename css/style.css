@@ -9072,3 +9072,423 @@ body.location-page .location-hero .location-hero-link:hover span {
         letter-spacing: 1.5px;
     }
 }
+/* =================================
+   PERBAIKAN NAVBAR HALAMAN LOKASI
+================================= */
+
+.location-page header {
+    transform: none;
+    border-bottom: none;
+}
+
+.location-page header nav a {
+    position: relative;
+    transform: none;
+    text-decoration: none;
+}
+
+.location-page header nav a::after {
+    transform: none;
+}
+
+/* Hilangkan garis bawah pada menu lokasi */
+.location-page header nav a.active::after {
+    display: none;
+}
+
+/* Hilangkan efek garis bawah ketika hover */
+.location-page header nav a:hover::after {
+    display: none;
+}
+/* =================================
+   PERBAIKAN HERO HALAMAN LOKASI
+================================= */
+
+.location-page .location-hero {
+    padding: 100px 7%;
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.location-page .location-hero-content {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.location-page .location-hero-content .eyebrow {
+    display: block;
+    margin-bottom: 24px;
+    letter-spacing: 3px;
+}
+
+.location-page .location-hero-content h1 {
+    margin: 0 0 28px;
+    line-height: 1.15;
+}
+
+.location-page .location-hero-content p {
+    max-width: 750px;
+    margin: 0 auto 30px;
+    line-height: 1.9;
+}
+
+.location-page .location-hero-content .location-hero-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
+}
+/* ==========================================
+   NAVBAR LOKASI — SAMAKAN DENGAN SEKITAR VILLA
+========================================== */
+
+body.location-page > header {
+    transform: none;
+}
+
+body.location-page > header nav {
+    transform: none;
+}
+
+body.location-page > header nav ul li a {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: normal;
+    text-decoration: none;
+    transform: none;
+}
+
+body.location-page > header nav ul li a::before,
+body.location-page > header nav ul li a::after {
+    transform: none;
+}
+
+/* Samakan perilaku menu aktif */
+body.location-page > header nav ul li a.active {
+    text-decoration: none;
+}
+/* NAVBAR HALAMAN LOKASI — SAMAKAN DENGAN HALAMAN SEKITAR */
+
+.location-page header {
+  background: rgba(35, 31, 29, 0.42);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(201, 164, 92, 0.35);
+}
+/* PENYESUAIAN NAVBAR LOKASI AGAR MIRIP HALAMAN SEKITAR */
+
+body.location-page > header {
+    background: rgba(35, 31, 29, 0.42) !important;
+    -webkit-backdrop-filter: blur(14px) saturate(140%) !important;
+    backdrop-filter: blur(14px) saturate(140%) !important;
+    border-bottom: 1px solid rgba(201, 164, 92, 0.35);
+    box-shadow: none;
+}
+
+body.location-page > header nav {
+    padding: 15px 4%;
+}
+
+/* UKURAN LOGO */
+body.location-page > header .logo {
+    gap: 12px;
+}
+
+body.location-page > header .logo img {
+    width: 62px;
+    height: 62px;
+}
+
+/* UKURAN NAMA OMAH NOTO */
+body.location-page > header .logo-text > span {
+    font-size: 30px;
+}
+
+body.location-page > header .logo-text small {
+    font-size: 10px;
+}
+
+/* UKURAN FONT DAN JARAK MENU */
+body.location-page > header nav ul {
+    gap: 28px;
+}
+
+body.location-page > header nav ul li a {
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+/* TOMBOL BOOKING */
+body.location-page > header nav ul li:last-child a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 26px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff !important;
+    background: rgba(140, 106, 47, 0.85);
+    border: 1px solid rgba(201, 164, 92, 0.65);
+    border-radius: 3px;
+    line-height: 1.4;
+    white-space: nowrap;
+}
+
+/* RESPONSIF UNTUK HP */
+@media (max-width: 700px) {
+    body.location-page > header .logo img {
+        width: 48px;
+        height: 48px;
+    }
+
+    body.location-page > header .logo-text > span {
+        font-size: 22px;
+    }
+
+    body.location-page > header nav ul {
+        gap: 12px;
+    }
+
+    body.location-page > header nav ul li a {
+        font-size: 13px;
+    }
+
+    body.location-page > header nav ul li:last-child a {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+}
+/* Membuat intro halaman lokasi rata tengah */
+.location-page .location-section-intro {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 40px;
+}
+
+.location-page .location-section-intro .eyebrow {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.location-page .location-section-intro h2 {
+    text-align: center;
+    margin: 0 auto 24px;
+}
+
+.location-page .location-section-intro p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.9;
+}
+/* Heading bagian akses perjalanan */
+.location-page .access-heading {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 40px;
+}
+
+.location-page .access-heading .eyebrow {
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.location-page .access-heading h2 {
+    text-align: center;
+    margin: 0 auto 24px;
+}
+
+.location-page .access-heading .section-description {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.9;
+}
+/* Turunkan posisi teks hero halaman Lokasi */
+.location-page .location-hero-content {
+    transform: translateY(40px);
+}
+
+/* ==========================================
+   NAVBAR LOKASI — SAMAKAN DENGAN GAMBAR KEDUA
+========================================== */
+
+body.location-page > header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 98px;
+    min-height: 98px;
+    padding: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+    background: rgba(37, 36, 34, 0.94);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: none;
+}
+
+body.location-page > header nav {
+    width: 100%;
+    height: 98px;
+    min-height: 98px;
+    max-width: none;
+    margin: 0;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    box-sizing: border-box;
+    background: transparent;
+    backdrop-filter: none;
+}
+
+/* LOGO */
+body.location-page > header .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+body.location-page > header .logo img {
+    display: block;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+body.location-page > header .logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.05;
+}
+
+body.location-page > header .logo-text > span {
+    color: #fff;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 29px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+body.location-page > header .logo-text small {
+    margin-top: 5px;
+    color: #c6a15b;
+    font-family: "Montserrat", sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+}
+
+/* MENU NAVBAR */
+body.location-page > header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body.location-page > header nav ul li {
+    margin: 0;
+    padding: 0;
+}
+
+body.location-page > header nav ul li a {
+    display: inline-block;
+    padding: 8px 0;
+    color: #f7f4ed;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.5;
+    text-decoration: none;
+    white-space: nowrap;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    transform: none;
+    transition: color 0.25s ease;
+}
+
+body.location-page > header nav ul li a:hover,
+body.location-page > header nav ul li a.active {
+    color: #c6a15b;
+}
+
+/* HILANGKAN GARIS DEKORATIF MENU */
+body.location-page > header nav ul li a::before,
+body.location-page > header nav ul li a::after {
+    display: none;
+    content: none;
+}
+
+/* TOMBOL BOOKING */
+body.location-page > header nav ul li:last-child a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    padding: 0 22px;
+    border: 1px solid #a17c43;
+    border-radius: 3px;
+    background: #80612f;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    box-shadow: none;
+    transition: background 0.25s ease;
+}
+
+body.location-page > header nav ul li:last-child a:hover {
+    background: #96743d;
+    color: #fff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+    body.location-page > header nav {
+        padding: 0 4%;
+        gap: 15px;
+    }
+
+    body.location-page > header nav ul {
+        gap: 15px;
+    }
+
+    body.location-page > header nav ul li a {
+        font-size: 12px;
+    }
+
+    body.location-page > header .logo img {
+        width: 50px;
+        height: 50px;
+    }
+
+    body.location-page > header .logo-text > span {
+        font-size: 25px;
+    }
+
+    body.location-page > header nav ul li:last-child a {
+        min-height: 44px;
+        padding: 0 16px;
+    }
+}
