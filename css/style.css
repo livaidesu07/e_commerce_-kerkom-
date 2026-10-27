@@ -1569,43 +1569,16 @@ footer {
 
 /* JUDUL SECTION */
 
-.about-story .section-heading {
-  max-width: 720px;
-  margin: 0 auto 100px;
-  text-align: center;
-}
-
 /* ==================================================
    BARIS FOTO + TEKS
 ================================================== */
 
-.about-story-row {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  align-items: center;
-  gap: 90px;
-
-  margin-bottom: 140px;
-}
-
 /* FOTO 2 & 3
    FOTO DI KANAN */
-
-.about-story-row.reverse {
-  grid-template-columns: 1.1fr 0.9fr;
-}
 
 /* ==================================================
    POSISI FOTO
 ================================================== */
-
-.about-story-row.reverse .about-story-image {
-  order: 2;
-}
-
-.about-story-row.reverse .about-story-content {
-  order: 1;
-}
 
 /* ==================================================
    FOTO
@@ -1623,30 +1596,11 @@ footer {
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
 }
 
-.about-story-image img {
-  width: 100%;
-  height: auto;
-
-  display: block;
-
-  object-fit: cover;
-
-  transition: transform 0.5s ease;
-}
-
 /* Efek ketika mouse diarahkan ke foto */
-
-.about-story-image:hover img {
-  transform: scale(1.03);
-}
 
 /* ==================================================
    TEKS
 ================================================== */
-
-.about-story-content {
-  max-width: 500px;
-}
 
 .about-story-content .section-label {
   margin-bottom: 20px;
@@ -1678,32 +1632,7 @@ footer {
 ================================================== */
 
 @media (max-width: 900px) {
-  .about-story {
-    padding: 90px 25px;
-  }
 
-  .about-story-row,
-  .about-story-row.reverse {
-    grid-template-columns: 1fr;
-    gap: 45px;
-
-    margin-bottom: 100px;
-  }
-
-  .about-story-row.reverse .about-story-image,
-  .about-story-row.reverse .about-story-content {
-    order: initial;
-  }
-
-  .about-story-image {
-    max-width: 430px;
-  }
-
-  .about-story-content {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-  }
 }
 
 /* ==================================================
@@ -1711,32 +1640,11 @@ footer {
 ================================================== */
 
 @media (max-width: 600px) {
-  .about-story {
-    padding: 70px 20px;
-  }
-
-  .about-story .section-heading {
-    margin-bottom: 70px;
-  }
-
-  .about-story-row,
-  .about-story-row.reverse {
-    gap: 30px;
-    margin-bottom: 80px;
-  }
-
-  .about-story-image {
-    max-width: 350px;
-  }
 
   .about-story-content h3 {
     font-size: 30px;
   }
 
-  .about-story-content p:not(.section-label) {
-    font-size: 14px;
-    line-height: 1.8;
-  }
 }
 
 /* ==================================================
@@ -2221,17 +2129,6 @@ footer {
    ABOUT PAGE - PREMIUM REDESIGN
 ================================================== */
 
-.about-page {
-  background:
-    linear-gradient(rgba(80, 48, 24, 0.18), rgba(80, 48, 24, 0.18)),
-    url("../images/bg-tentang.jpg");
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
 /* ==================================================
    ABOUT HERO
 ================================================== */
@@ -2602,25 +2499,6 @@ footer {
   max-width: 1250px;
   margin: 0 auto;
   padding: 170px 30px 130px;
-}
-
-.about-story-new::before {
-  content: "";
-
-  position: absolute;
-
-  top: 0;
-  bottom: 0;
-
-  left: 50%;
-
-  width: 100vw;
-
-  transform: translateX(-50%);
-
-  background: #ebe4d7;
-
-  z-index: -1;
 }
 
 .about-story-header {
@@ -3026,12 +2904,6 @@ footer {
     height: 290px;
 
     max-width: 100%;
-
-    margin: 0 auto;
-  }
-
-  .about-feature-text {
-    max-width: 650px;
 
     margin: 0 auto;
   }
@@ -3553,38 +3425,6 @@ footer {
   text-align: left;
 }
 
-.about-story-header .about-eyebrow {
-  margin-bottom: 22px;
-
-  color: #b89b5e;
-
-  font-family: "Montserrat", Arial, sans-serif;
-
-  font-size: 10px;
-
-  font-weight: 600;
-
-  letter-spacing: 4px;
-
-  text-transform: uppercase;
-}
-
-.about-story-header h2 {
-  margin: 0;
-
-  color: #2c2621;
-
-  font-family: "Cormorant Garamond", Georgia, serif;
-
-  font-size: clamp(55px, 6vw, 82px);
-
-  font-weight: 400;
-
-  line-height: 0.95;
-
-  letter-spacing: -1.5px;
-}
-
 /* ==================================================
    STORY FEATURE
 ================================================== */
@@ -3657,20 +3497,6 @@ footer {
 
 /* FOTO */
 
-.about-story-new .about-feature-image img {
-  width: 100%;
-
-  height: 100%;
-
-  display: block;
-
-  object-fit: cover;
-
-  transition:
-    transform 0.7s ease,
-    filter 0.7s ease;
-}
-
 /* HAPUS FRAME LAMA */
 
 .about-story-new .about-feature-image::before {
@@ -3697,103 +3523,15 @@ footer {
 
 /* NOMOR */
 
-.about-feature-text .about-number {
-  position: relative;
-
-  display: inline-block;
-
-  margin-bottom: 24px;
-
-  padding-left: 42px;
-
-  color: #b89b5e;
-
-  font-family: "Montserrat", Arial, sans-serif;
-
-  font-size: 10px;
-
-  font-weight: 600;
-
-  letter-spacing: 3px;
-
-  text-transform: uppercase;
-}
-
 /* GARIS KECIL */
-
-.about-feature-text .about-number::before {
-  content: "";
-
-  position: absolute;
-
-  left: 0;
-
-  top: 50%;
-
-  width: 28px;
-
-  height: 1px;
-
-  background: #b89b5e;
-
-  transform: translateY(-50%);
-}
 
 /* JUDUL */
 
-.about-feature-text h3 {
-  margin: 0 0 30px;
-
-  color: #2c2621;
-
-  font-family: "Cormorant Garamond", Georgia, serif;
-
-  font-size: clamp(52px, 5vw, 68px);
-
-  font-weight: 400;
-
-  line-height: 0.92;
-
-  letter-spacing: -1px;
-}
-
 /* PARAGRAF */
-
-.about-feature-text p {
-  max-width: 470px;
-
-  margin: 0 0 17px;
-
-  color: #665b51;
-
-  font-family: "Montserrat", Arial, sans-serif;
-
-  font-size: 13px;
-
-  font-weight: 400;
-
-  line-height: 1.9;
-}
 
 /* ==================================================
    PEMISAH ANTAR CERITA
 ================================================== */
-
-.about-feature:not(:last-child)::after {
-  content: "";
-
-  position: absolute;
-
-  left: 50%;
-
-  bottom: -95px;
-
-  width: 1px;
-
-  height: 55px;
-
-  background: linear-gradient(to bottom, rgba(184, 155, 94, 0.65), transparent);
-}
 
 /* ==================================================
    CERITA TERAKHIR
@@ -3808,42 +3546,6 @@ footer {
 ================================================== */
 
 @media (max-width: 900px) {
-  .about-story-new {
-    padding: 110px 30px 90px;
-  }
-
-  .about-story-header {
-    margin-bottom: 90px;
-  }
-
-  .about-story-header h2 {
-    font-size: 60px;
-  }
-
-  .about-feature,
-  .about-feature-reverse {
-    grid-template-columns: 1fr;
-
-    gap: 55px;
-
-    margin-bottom: 130px;
-  }
-
-  .about-feature-reverse .about-feature-image {
-    order: 1;
-  }
-
-  .about-feature-reverse .about-feature-text {
-    order: 2;
-  }
-
-  .about-story-new .about-feature-image {
-    width: 100%;
-
-    max-width: 520px;
-
-    height: 350px;
-  }
 
   .about-feature-text {
     max-width: 650px;
@@ -3851,13 +3553,6 @@ footer {
     margin: 0 auto;
   }
 
-  .about-feature-text h3 {
-    font-size: 58px;
-  }
-
-  .about-feature:not(:last-child)::after {
-    display: none;
-  }
 }
 
 /* ==================================================
@@ -3865,62 +3560,7 @@ footer {
 ================================================== */
 
 @media (max-width: 600px) {
-  .about-story-new {
-    padding: 85px 22px 70px;
-  }
 
-  .about-story-header {
-    margin-bottom: 70px;
-  }
-
-  .about-story-header h2 {
-    font-size: 48px;
-
-    line-height: 0.98;
-  }
-
-  .about-feature,
-  .about-feature-reverse {
-    gap: 40px;
-
-    margin-bottom: 100px;
-  }
-
-  .about-story-new .about-feature-image {
-    width: 100%;
-
-    max-width: 100%;
-
-    height: 270px;
-
-    padding: 6px;
-  }
-
-  .about-story-new .about-feature-image::after {
-    top: 9px;
-
-    left: 9px;
-  }
-
-  .about-feature-text h3 {
-    font-size: 48px;
-
-    line-height: 0.95;
-  }
-
-  .about-feature-text p {
-    font-size: 13px;
-
-    line-height: 1.85;
-  }
-
-  .about-feature-text .about-number {
-    margin-bottom: 18px;
-
-    font-size: 9px;
-
-    letter-spacing: 2.5px;
-  }
 }
 /* ==================================================
    OMAH NOTO - PREMIUM FROSTED GLASS CARD
@@ -4007,11 +3647,6 @@ footer {
    ISI CARD
 ================================================== */
 
-.about-feature-text > * {
-  position: relative;
-  z-index: 2;
-}
-
 /* ==================================================
    NUMBER
 ================================================== */
@@ -4067,11 +3702,7 @@ footer {
 ================================================== */
 
 @media (max-width: 900px) {
-  .about-feature-text {
-    max-width: 650px;
-    margin: 0 auto;
-    padding: 45px;
-  }
+  
 }
 
 /* ==================================================
@@ -4605,11 +4236,6 @@ footer {
     height: 270px;
 
     padding: 6px;
-  }
-
-  .about-story-new .about-feature-image::after {
-    top: 9px;
-    left: 9px;
   }
 
   .about-feature-text {
@@ -5705,12 +5331,6 @@ footer {
     visibility 0.35s ease;
 }
 
-.gallery-page .luxury-lightbox.is-open {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-
 /* BINGKAI UTAMA */
 
 .gallery-page .lightbox-frame {
@@ -5738,10 +5358,6 @@ footer {
   transition: transform 0.35s ease;
 }
 
-.gallery-page .luxury-lightbox.is-open .lightbox-frame {
-  transform: scale(1);
-}
-
 /* BINGKAI BAGIAN DALAM */
 
 .gallery-page .lightbox-inner-frame {
@@ -5756,267 +5372,34 @@ footer {
 
 /* FOTO BESAR */
 
-.gallery-page .lightbox-inner-frame img {
-  display: block;
-
-  width: 100%;
-  max-height: 62vh;
-
-  object-fit: contain;
-
-  background: #191c19;
-}
-
 /* JUDUL FOTO */
 
 /* =====================================================
    OMAH NOTO — LUXURY GALLERY LIGHTBOX
 ===================================================== */
 
-.gallery-page .luxury-lightbox {
-  position: fixed;
-  inset: 0;
-  z-index: 99999;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 70px 90px;
-
-  background: rgba(12, 15, 13, 0.94);
-
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-
-  transition:
-    opacity 0.35s ease,
-    visibility 0.35s ease;
-}
-
-.gallery-page .luxury-lightbox.is-open {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-
 /* BINGKAI CHAMPAGNE GOLD */
-
-.gallery-page .lightbox-frame {
-  position: relative;
-
-  width: min(850px, 100%);
-  max-height: 85vh;
-
-  padding: 12px;
-
-  background: linear-gradient(
-    135deg,
-    #8f7748,
-    #b49a63 35%,
-    #d0b982 65%,
-    #8b7142
-  );
-
-  box-shadow:
-    0 0 0 1px rgba(230, 203, 139, 0.45),
-    0 0 0 7px rgba(184, 155, 94, 0.12),
-    0 25px 90px rgba(0, 0, 0, 0.65);
-
-  transform: scale(0.94);
-  transition: transform 0.35s ease;
-}
-
-.gallery-page .luxury-lightbox.is-open .lightbox-frame {
-  transform: scale(1);
-}
 
 /* BINGKAI BAGIAN DALAM */
 
-.gallery-page .lightbox-inner-frame {
-  position: relative;
-
-  padding: 7px;
-
-  border: 1px solid rgba(218, 190, 125, 0.55);
-
-  background: #191c19;
-}
-
 /* FOTO BESAR */
-
-.gallery-page .lightbox-inner-frame img {
-  display: block;
-
-  width: 100%;
-  max-height: 62vh;
-
-  object-fit: contain;
-
-  background: #191c19;
-}
 
 /* CAPTION */
 
-.gallery-page .lightbox-caption {
-  padding: 22px 15px 12px;
-
-  text-align: center;
-}
-
 /* NOMOR FOTO */
-
-.gallery-page .lightbox-caption span {
-  display: block;
-
-  margin-bottom: 12px;
-
-  font-family: "Montserrat", sans-serif;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 4px;
-
-  color: #6e542b;
-}
 
 /* JUDUL FOTO */
 
-.gallery-page .lightbox-caption h2 {
-  margin: 0;
-
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(32px, 4vw, 46px);
-  font-weight: 400;
-  line-height: 1.1;
-
-  color: #fffaf0;
-  text-shadow: 0 2px 8px rgba(54, 39, 17, 0.2);
-}
-
 /* TOMBOL TUTUP */
-
-.gallery-page .lightbox-close {
-  position: absolute;
-  top: 25px;
-  right: 35px;
-
-  width: 48px;
-  height: 48px;
-
-  border: 1px solid rgba(201, 164, 92, 0.7);
-  border-radius: 50%;
-
-  background: rgba(30, 32, 28, 0.9);
-
-  color: #e6d2a0;
-  font-size: 32px;
-  font-weight: 300;
-
-  cursor: pointer;
-
-  transition:
-    background 0.25s ease,
-    transform 0.25s ease;
-}
-
-.gallery-page .lightbox-close:hover {
-  background: #8f7138;
-  transform: rotate(90deg);
-}
 
 /* TOMBOL NAVIGASI */
 
-.gallery-page .lightbox-nav {
-  position: absolute;
-  top: 50%;
-
-  width: 48px;
-  height: 48px;
-
-  transform: translateY(-50%);
-
-  border: 1px solid rgba(201, 164, 92, 0.65);
-  border-radius: 50%;
-
-  background: rgba(30, 32, 28, 0.9);
-
-  color: #e6d2a0;
-  font-size: 18px;
-
-  cursor: pointer;
-
-  transition:
-    background 0.25s ease,
-    color 0.25s ease;
-}
-
-.gallery-page .lightbox-nav:hover {
-  background: #8f7138;
-  color: #fff;
-}
-
-.gallery-page .lightbox-prev {
-  left: 25px;
-}
-
-.gallery-page .lightbox-next {
-  right: 25px;
-}
-
 /* FOTO BISA DIKLIK */
-
-.gallery-page .gallery-card img {
-  cursor: zoom-in;
-}
 
 /* RESPONSIVE HP */
 
 @media (max-width: 600px) {
-  .gallery-page .luxury-lightbox {
-    padding: 65px 18px;
-  }
 
-  .gallery-page .lightbox-frame {
-    padding: 8px;
-  }
-
-  .gallery-page .lightbox-inner-frame {
-    padding: 4px;
-  }
-
-  .gallery-page .lightbox-inner-frame img {
-    max-height: 55vh;
-  }
-
-  .gallery-page .lightbox-close {
-    top: 12px;
-    right: 12px;
-
-    width: 42px;
-    height: 42px;
-  }
-
-  .gallery-page .lightbox-prev {
-    left: 8px;
-  }
-
-  .gallery-page .lightbox-next {
-    right: 8px;
-  }
-
-  .gallery-page .lightbox-nav {
-    width: 38px;
-    height: 38px;
-  }
-
-  .gallery-page .lightbox-caption span {
-    font-size: 8px;
-    letter-spacing: 2px;
-  }
 }
 /* =====================================================
    OMAH NOTO — LUXURY GALLERY LIGHTBOX
@@ -6737,19 +6120,6 @@ footer {
   box-shadow: 0 4px 20px rgba(44, 38, 33, 0.05);
 }
 
-.location-page header::after {
-  display: none;
-}
-
-.location-page nav {
-  max-width: 1400px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 25px;
-}
-
 .location-page .logo {
   font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 25px;
@@ -6923,7 +6293,6 @@ body.location-page .location-hero {
   gap: 25px;
   margin-top: 25px;
 }
-
 
 /* FIX UKURAN KARTU KENDARAAN */
 .location-page .access-list {
@@ -7365,7 +6734,6 @@ body.location-page {
     text-decoration: none;
 }
 
-
 /* NAVBAR */
 
 .location-page header {
@@ -7452,7 +6820,6 @@ body.location-page {
     background: #80643d;
     transform: translateY(-2px);
 }
-
 
 /* HERO SECTION */
 
@@ -7597,7 +6964,6 @@ body.location-page {
     letter-spacing: 2px;
 }
 
-
 /* KONTEN UTAMA */
 
 .location-page .location-container {
@@ -7627,7 +6993,6 @@ body.location-page {
     font-size: 13px;
     line-height: 2;
 }
-
 
 /* FOTO LOKASI */
 
@@ -7674,7 +7039,6 @@ body.location-page {
     letter-spacing: 1.5px;
 }
 
-
 /* GRID INFORMASI */
 
 .location-page .location-information-grid {
@@ -7691,7 +7055,6 @@ body.location-page {
     background: #fffdf9;
     border: 1px solid #e8dfd3;
 }
-
 
 /* KARTU ALAMAT */
 
@@ -7830,7 +7193,6 @@ body.location-page {
     transform: translateY(-2px);
 }
 
-
 /* KARTU DETAIL LOKASI */
 
 .location-page .location-detail-card {
@@ -7895,7 +7257,6 @@ body.location-page {
     font-weight: 600;
     text-align: right;
 }
-
 
 /* AKSES KENDARAAN */
 
@@ -7964,7 +7325,6 @@ body.location-page {
     color: #a48757;
     font-size: 18px;
 }
-
 
 /* GOOGLE MAPS CTA */
 
@@ -8046,7 +7406,6 @@ body.location-page {
     pointer-events: none;
 }
 
-
 /* FOOTER */
 
 .location-page .location-footer {
@@ -8083,7 +7442,6 @@ body.location-page {
     font-size: 10px;
 }
 
-
 /* RESPONSIVE TABLET */
 
 @media (max-width: 1000px) {
@@ -8116,7 +7474,6 @@ body.location-page {
         padding: 27px !important;
     }
 }
-
 
 /* RESPONSIVE HP */
 
@@ -8252,7 +7609,6 @@ body.location-page {
     }
 }
 
-
 /* AKSESIBILITAS */
 
 @media (prefers-reduced-motion: reduce) {
@@ -8277,7 +7633,6 @@ body.location-page {
    Menyamakan navbar dan WhatsApp dengan halaman Home
    Semua aturan dibatasi ke .location-page
 ========================================================= */
-
 
 /* =========================================================
    1. NAVBAR — DARK GLASS STYLE
@@ -8374,11 +7729,6 @@ body.location-page > header nav ul {
     list-style: none;
 }
 
-body.location-page > header nav ul li {
-    margin: 0;
-    padding: 0;
-}
-
 body.location-page > header nav ul li a {
     position: relative;
     display: inline-block;
@@ -8439,7 +7789,6 @@ body.location-page > header nav ul li a.nav-booking:hover {
     background: #87683a;
     transform: translateY(-2px);
 }
-
 
 /* =========================================================
    2. WHATSAPP FLOATING WIDGET
@@ -8566,7 +7915,6 @@ body.location-page .whatsapp-button svg {
     flex-shrink: 0;
 }
 
-
 /* =========================================================
    3. RESPONSIVE — TABLET
 ========================================================= */
@@ -8585,10 +7933,6 @@ body.location-page .whatsapp-button svg {
         gap: 12px 20px;
     }
 
-    body.location-page > header nav ul li a {
-        font-size: 12px;
-    }
-
     body.location-page .whatsapp-float {
         right: 20px;
         bottom: 20px;
@@ -8600,7 +7944,6 @@ body.location-page .whatsapp-button svg {
         font-size: 12px;
     }
 }
-
 
 /* =========================================================
    4. RESPONSIVE — MOBILE
@@ -8690,7 +8033,6 @@ body.location-page .whatsapp-button svg {
     }
 }
 
-
 /* LAYAR HP SANGAT KECIL */
 
 @media (max-width: 380px) {
@@ -8718,7 +8060,6 @@ body.location-page .whatsapp-button svg {
         font-size: 9px;
     }
 }
-
 
 /* =========================================================
    5. AKSESIBILITAS
@@ -8779,12 +8120,6 @@ body.location-page .whatsapp-button svg {
     border: 1px solid #e8dfce;
 }
 
-.location-whatsapp-text {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
 .location-whatsapp-text strong {
     font-size: 11px;
     font-weight: 600;
@@ -8834,24 +8169,12 @@ body.location-page .whatsapp-button svg {
         height: 35px;
     }
 
-    .location-whatsapp-text strong {
-        font-size: 9px;
-    }
-
-    .location-whatsapp-text small {
-        font-size: 8px;
-    }
-
     .location-whatsapp-button {
         gap: 4px;
         padding: 9px;
         font-size: 9px;
     }
 
-    .location-whatsapp-button svg {
-        width: 14px;
-        height: 14px;
-    }
 }
 /* =========================================
    LOKASI — NAVBAR GLASS EFFECT
@@ -9556,3 +8879,99 @@ body.location-page > header nav ul li:last-child a:hover {
         padding: 0 16px;
     }
 }
+
+/* =========================================================
+   WHATSAPP LOKASI — SAMAKAN DENGAN INDEX / SEKITAR
+   Scope khusus halaman lokasi; tidak mengubah halaman lain.
+========================================================= */
+html body.location-page .whatsapp-float {
+    position: fixed !important;
+    right: 25px !important;
+    bottom: 25px !important;
+    z-index: 9999 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 14px !important;
+    width: max-content !important;
+    max-width: calc(100vw - 32px) !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    padding: 10px 12px 10px 10px !important;
+    border-radius: 50px !important;
+    background: #171717 !important;
+    color: #ffffff !important;
+    box-sizing: border-box !important;
+}
+
+html body.location-page .whatsapp-avatar {
+    width: 48px !important;
+    height: 48px !important;
+    flex: 0 0 48px !important;
+}
+
+html body.location-page .whatsapp-text {
+    display: flex !important;
+    flex: 0 1 auto !important;
+    flex-direction: column !important;
+    gap: 3px !important;
+    min-width: 0 !important;
+    line-height: 1.2 !important;
+}
+
+html body.location-page .whatsapp-text strong {
+    font-size: 14px !important;
+    white-space: nowrap !important;
+}
+
+html body.location-page .whatsapp-text span {
+    display: inline !important;
+    font-size: 13px !important;
+    white-space: nowrap !important;
+}
+
+html body.location-page .whatsapp-button {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    flex: 0 0 auto !important;
+    min-height: 0 !important;
+    padding: 13px 20px !important;
+    border: 0 !important;
+    border-radius: 30px !important;
+    background: #20c76a !important;
+    color: #ffffff !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    white-space: nowrap !important;
+}
+
+html body.location-page .whatsapp-button span {
+    font-size: 20px !important;
+}
+
+@media (max-width: 768px) {
+    html body.location-page .whatsapp-float {
+        right: 15px !important;
+        bottom: 15px !important;
+        gap: 9px !important;
+        padding: 7px !important;
+    }
+
+    html body.location-page .whatsapp-avatar {
+        width: 45px !important;
+        height: 45px !important;
+        flex-basis: 45px !important;
+    }
+
+    html body.location-page .whatsapp-text {
+        display: none !important;
+    }
+
+    html body.location-page .whatsapp-button {
+        padding: 12px 16px !important;
+        font-size: 14px !important;
+    }
+}
+

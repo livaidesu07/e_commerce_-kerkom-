@@ -1,0 +1,9558 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f8f7f4;
+}
+
+/* =========================
+   GLASS PREMIUM NAVBAR
+========================= */
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  z-index: 100;
+
+  background: rgba(20, 20, 20, 0.22);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  padding: 15px 55px;
+}
+
+/* GARIS GOLD SANGAT HALUS */
+
+header::after {
+  content: "";
+
+  position: absolute;
+
+  left: 8%;
+  right: 8%;
+
+  bottom: -1px;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(201, 164, 92, 0.55),
+    transparent
+  );
+}
+
+nav {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+}
+
+/* =========================
+   BRAND / LOGO
+========================= */
+
+.logo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  text-decoration: none;
+}
+
+/* FRAME LOGO */
+
+.logo img {
+  width: 48px;
+  height: 48px;
+
+  padding: 5px;
+
+  object-fit: contain;
+
+  display: block;
+
+  background-color: rgba(255, 255, 255, 0.92);
+
+  border: 1px solid #c9a45c;
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.18),
+    0 0 0 3px rgba(201, 164, 92, 0.12);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* LOGO HOVER */
+
+.logo:hover img {
+  transform: scale(1.05);
+
+  box-shadow:
+    0 5px 20px rgba(201, 164, 92, 0.3),
+    0 0 0 4px rgba(201, 164, 92, 0.15);
+}
+
+/* =========================
+   BRAND TEXT
+========================= */
+
+.logo-text {
+  display: flex;
+
+  flex-direction: column;
+
+  line-height: 1;
+
+  gap: 5px;
+}
+
+.logo-text span {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 23px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.2px;
+
+  color: #ffffff;
+
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.logo-text small {
+  font-family: Arial, sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+
+  color: #d2ad63;
+
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================
+   NAV MENU
+========================= */
+
+nav ul {
+  display: flex;
+
+  align-items: center;
+
+  list-style: none;
+
+  gap: 30px;
+
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  position: relative;
+
+  display: inline-block;
+
+  padding: 10px 0;
+
+  text-decoration: none;
+
+  color: rgba(255, 255, 255, 0.92);
+
+  font-family: Arial, sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 400;
+
+  letter-spacing: 0.2px;
+
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* GARIS GOLD */
+
+nav ul li a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+
+  bottom: 2px;
+
+  width: 0;
+  height: 1px;
+
+  background-color: #c9a45c;
+
+  transform: translateX(-50%);
+
+  transition: width 0.3s ease;
+}
+
+/* HOVER */
+
+nav ul li a:hover {
+  color: #d5b46f;
+
+  transform: translateY(-1px);
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* =========================
+   BOOKING
+========================= */
+
+nav ul li:last-child a {
+  padding: 11px 22px;
+
+  color: white;
+
+  background: rgba(140, 106, 47, 0.85);
+
+  border: 1px solid rgba(201, 164, 92, 0.65);
+
+  border-radius: 3px;
+
+  text-shadow: none;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.18);
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+nav ul li:last-child a::after {
+  display: none;
+}
+
+nav ul li:last-child a:hover {
+  color: white;
+
+  background: rgba(169, 130, 61, 0.95);
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  padding: 120px 20px 160px;
+
+  overflow: hidden;
+
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.58)),
+    url("../images/hero-villa.jpg");
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+}
+
+/* =========================
+   EFEK ZOOM FOTO
+========================= */
+
+.hero::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background-image: url("../images/hero-villa.jpg");
+
+  background-size: cover;
+
+  background-position: center;
+
+  z-index: -1;
+
+  animation: heroZoom 12s ease-in-out infinite alternate;
+}
+
+@keyframes heroZoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.06);
+  }
+}
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content {
+  max-width: 850px;
+
+  color: white;
+
+  animation: heroContent 1.2s ease forwards;
+}
+
+@keyframes heroContent {
+  from {
+    opacity: 0;
+
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+.hero-subtitle {
+  font-size: 14px;
+
+  letter-spacing: 6px;
+
+  margin-bottom: 18px;
+
+  opacity: 0.9;
+}
+
+/* =========================
+   HERO TITLE
+========================= */
+
+.hero-title {
+  margin-bottom: 22px;
+
+  animation: titleAppear 1.4s ease forwards;
+}
+
+.hero-title h1 {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(52px, 7vw, 82px);
+
+  font-weight: 400;
+
+  letter-spacing: 1px;
+
+  line-height: 0.95;
+
+  margin: 0;
+
+  color: #ffffff;
+}
+
+.hero-title span {
+  display: block;
+
+  margin-top: 14px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 400;
+
+  letter-spacing: 10px;
+
+  text-transform: uppercase;
+
+  color: #c9a45c;
+
+  padding-left: 10px;
+}
+
+/* GARIS GOLD */
+
+.hero-title::after {
+  content: "";
+
+  display: block;
+
+  width: 60px;
+
+  height: 1px;
+
+  background-color: #c9a45c;
+
+  margin: 22px auto 0;
+
+  animation: lineAppear 1.2s ease 0.5s both;
+}
+
+/* =========================
+   TITLE ANIMATION
+========================= */
+
+@keyframes titleAppear {
+  from {
+    opacity: 0;
+
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+@keyframes lineAppear {
+  from {
+    opacity: 0;
+
+    width: 0;
+  }
+
+  to {
+    opacity: 1;
+
+    width: 60px;
+  }
+}
+
+/* =========================
+   HERO DESCRIPTION
+========================= */
+
+.hero-description {
+  max-width: 700px;
+
+  margin: 0 auto 35px;
+
+  font-size: 19px;
+
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* =========================
+   HERO BUTTON
+========================= */
+
+.hero-button {
+  position: relative;
+
+  display: inline-block;
+
+  padding: 15px 34px;
+
+  background-color: #8c6a2f;
+
+  color: white;
+
+  text-decoration: none;
+
+  border-radius: 2px;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.4s ease,
+    background-color 0.4s ease,
+    color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+/* SHINE EFFECT */
+
+.hero-button::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: -120%;
+
+  width: 80%;
+
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.55),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+
+  transition: left 0.7s ease;
+}
+
+.hero-button:hover::before {
+  left: 130%;
+}
+
+/* HOVER */
+
+.hero-button:hover {
+  background-color: #a9823d;
+
+  color: white;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 8px 25px rgba(140, 106, 47, 0.35);
+}
+
+/* =========================
+   HERO INFO
+========================= */
+
+.hero-info {
+  position: absolute;
+
+  left: 50%;
+
+  bottom: 45px;
+
+  transform: translateX(-50%);
+
+  display: flex;
+
+  width: min(850px, 90%);
+
+  justify-content: space-around;
+
+  padding: 18px 25px;
+
+  background-color: rgba(20, 20, 20, 0.45);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  backdrop-filter: blur(8px);
+
+  color: white;
+
+  animation: infoAppear 1.5s ease 0.4s both;
+}
+
+@keyframes infoAppear {
+  from {
+    opacity: 0;
+
+    transform: translate(-50%, 20px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translate(-50%, 0);
+  }
+}
+
+.info-item {
+  flex: 1;
+
+  text-align: center;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.info-item:last-child {
+  border-right: none;
+}
+
+.info-item span {
+  display: block;
+
+  font-size: 20px;
+
+  font-weight: bold;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 5px;
+}
+
+.info-item p {
+  font-size: 12px;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+  opacity: 0.75;
+}
+
+/* =========================
+   SCROLL INDICATOR
+========================= */
+
+.scroll-indicator {
+  position: absolute;
+
+  right: 35px;
+
+  bottom: 45px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: white;
+
+  transform: rotate(90deg);
+
+  transform-origin: right center;
+
+  opacity: 0.7;
+}
+
+.scroll-indicator span {
+  display: block;
+
+  width: 40px;
+
+  height: 1px;
+
+  background-color: white;
+}
+
+.scroll-indicator p {
+  font-size: 10px;
+
+  letter-spacing: 3px;
+}
+
+/* =========================
+   INTRO SECTION
+========================= */
+
+.intro {
+  padding: 100px 20px;
+
+  text-align: center;
+
+  background-color: #f8f7f4;
+}
+
+.section-label {
+  font-size: 12px;
+
+  letter-spacing: 4px;
+
+  color: #8c6a2f;
+
+  margin-bottom: 18px;
+
+  font-weight: 600;
+}
+
+.intro h2 {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 42px;
+
+  font-weight: 400;
+
+  line-height: 1.25;
+
+  margin-bottom: 25px;
+
+  color: #333;
+}
+
+.intro > p:last-child {
+  max-width: 700px;
+
+  margin: auto;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+
+  color: #666;
+}
+
+/* =========================================================
+   SOCIAL MEDIA SECTION
+========================================================= */
+
+.social-section {
+  position: relative;
+
+  padding: 110px 7%;
+
+  background: linear-gradient(135deg, #25231f, #171614);
+
+  color: white;
+
+  overflow: hidden;
+}
+
+/* AKSEN BACKGROUND */
+
+.social-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 450px;
+  height: 450px;
+
+  top: -250px;
+  right: -150px;
+
+  border-radius: 50%;
+
+  background: rgba(201, 164, 92, 0.07);
+
+  filter: blur(10px);
+}
+
+.social-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  bottom: -180px;
+  left: -100px;
+
+  border-radius: 50%;
+
+  background: rgba(201, 164, 92, 0.05);
+}
+
+/* HEADING */
+
+.section-heading {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 750px;
+
+  margin: 0 auto 55px;
+
+  text-align: center;
+}
+
+.social-section .section-label {
+  color: #c9a45c;
+}
+
+.section-heading h2 {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(36px, 5vw, 52px);
+
+  font-weight: 400;
+
+  line-height: 1.2;
+
+  margin-bottom: 22px;
+
+  color: #ffffff;
+}
+
+.section-heading > p:last-child {
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+
+  color: rgba(255, 255, 255, 0.68);
+}
+
+/* SOCIAL CONTAINER */
+
+.social-container {
+  position: relative;
+
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 25px;
+
+  max-width: 1000px;
+
+  margin: 0 auto;
+}
+
+/* SOCIAL CARD */
+
+.social-card {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 22px;
+
+  padding: 28px 30px;
+
+  text-decoration: none;
+
+  color: white;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  border-radius: 6px;
+
+  backdrop-filter: blur(12px);
+
+  -webkit-backdrop-filter: blur(12px);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* GARIS EMAS */
+
+.social-card::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 3px;
+
+  background: linear-gradient(to bottom, transparent, #c9a45c, transparent);
+
+  opacity: 0;
+
+  transition: opacity 0.35s ease;
+}
+
+/* HOVER */
+
+.social-card:hover {
+  transform: translateY(-6px);
+
+  background: rgba(255, 255, 255, 0.1);
+
+  border-color: rgba(201, 164, 92, 0.4);
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.social-card:hover::before {
+  opacity: 1;
+}
+
+/* =========================
+   SOCIAL ICON
+========================= */
+
+.social-icon {
+  width: 58px;
+  height: 58px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(201, 164, 92, 0.65);
+
+  background: rgba(201, 164, 92, 0.08);
+
+  color: #d2ad63;
+
+  font-size: 14px;
+
+  font-weight: bold;
+
+  letter-spacing: 1px;
+
+  overflow: hidden;
+}
+
+/* LOGO INSTAGRAM DI DALAM ICON */
+
+.social-icon img {
+  width: 32px;
+  height: 32px;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+/* SOCIAL CONTENT */
+
+.social-content {
+  flex: 1;
+}
+
+.social-content span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  font-size: 10px;
+
+  letter-spacing: 3px;
+
+  color: #c9a45c;
+}
+
+.social-content h3 {
+  margin-bottom: 8px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 22px;
+
+  font-weight: 400;
+}
+
+.social-content p {
+  font-size: 13px;
+
+  line-height: 1.6;
+
+  color: rgba(255, 255, 255, 0.62);
+}
+
+/* ARROW */
+
+.social-arrow {
+  font-size: 25px;
+
+  color: #c9a45c;
+
+  transition: transform 0.3s ease;
+}
+
+.social-card:hover .social-arrow {
+  transform: translateX(6px);
+}
+
+/* =========================================================
+   F&B SECTION
+========================================================= */
+
+.fnb-section {
+  padding: 110px 7%;
+
+  background-color: #f5f1e9;
+
+  text-align: center;
+}
+
+/* F&B HEADING */
+
+.fnb-section .section-heading {
+  color: #333;
+}
+
+.fnb-section .section-label {
+  color: #8c6a2f;
+}
+
+.fnb-section .section-heading h2 {
+  color: #29251f;
+}
+
+.fnb-section .section-heading > p:last-child {
+  color: #6c675f;
+}
+
+/* PRODUCTS */
+
+.fnb-container {
+  max-width: 1200px;
+
+  margin: 0 auto 45px;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+
+  text-align: left;
+}
+
+/* PRODUCT CARD */
+
+.fnb-card {
+  background-color: #ffffff;
+
+  border: 1px solid rgba(140, 106, 47, 0.12);
+
+  box-shadow: 0 10px 35px rgba(70, 50, 25, 0.08);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.fnb-card:hover {
+  transform: translateY(-7px);
+
+  box-shadow: 0 18px 45px rgba(70, 50, 25, 0.15);
+}
+
+/* PRODUCT IMAGE */
+
+.fnb-image {
+  width: 100%;
+
+  height: 260px;
+
+  overflow: hidden;
+
+  background-color: #e7e0d3;
+}
+
+.fnb-image img {
+  width: 100%;
+
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.6s ease;
+}
+
+.fnb-card:hover .fnb-image img {
+  transform: scale(1.06);
+}
+
+/* PRODUCT INFO */
+
+.fnb-info {
+  padding: 25px;
+}
+
+.fnb-category {
+  margin-bottom: 9px;
+
+  font-size: 10px;
+
+  font-weight: bold;
+
+  letter-spacing: 3px;
+
+  color: #a9823d;
+}
+
+.fnb-info h3 {
+  margin-bottom: 10px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 25px;
+
+  font-weight: 400;
+
+  color: #29251f;
+}
+
+.fnb-description {
+  min-height: 48px;
+
+  margin-bottom: 22px;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+  color: #777;
+}
+
+/* PRICE */
+
+.fnb-bottom {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding-top: 18px;
+
+  border-top: 1px solid #eee5d8;
+}
+
+.fnb-price {
+  font-size: 18px;
+
+  font-weight: bold;
+
+  color: #8c6a2f;
+}
+
+.fnb-detail {
+  font-size: 12px;
+
+  color: #777;
+
+  transition: color 0.3s ease;
+}
+
+.fnb-card:hover .fnb-detail {
+  color: #8c6a2f;
+}
+
+/* SEMUA PRODUK */
+
+.fnb-button {
+  display: inline-block;
+
+  padding: 14px 30px;
+
+  text-decoration: none;
+
+  color: #ffffff;
+
+  background-color: #8c6a2f;
+
+  border: 1px solid #b18a45;
+
+  border-radius: 2px;
+
+  font-size: 14px;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.fnb-button:hover {
+  background-color: #a9823d;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 8px 25px rgba(140, 106, 47, 0.25);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  text-align: center;
+
+  padding: 30px;
+
+  background-color: #333;
+
+  color: white;
+}
+
+/* =========================
+   FLOATING WHATSAPP
+========================= */
+
+.whatsapp-float {
+  position: fixed;
+
+  right: 25px;
+
+  bottom: 25px;
+
+  z-index: 9999;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 10px 12px 10px 10px;
+
+  background-color: #171717;
+
+  border-radius: 50px;
+
+  text-decoration: none;
+
+  color: white;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* =========================
+   AVATAR
+========================= */
+
+.whatsapp-avatar {
+  width: 48px;
+
+  height: 48px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background-color: #eeeeee;
+
+  border-radius: 50%;
+
+  border: 2px solid white;
+
+  color: #8c6a2f;
+
+  font-size: 13px;
+
+  font-weight: bold;
+
+  overflow: hidden;
+}
+
+/* LOGO DI DALAM AVATAR */
+
+.whatsapp-avatar img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: contain;
+
+  border-radius: 50%;
+
+  display: block;
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.whatsapp-text {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+
+  line-height: 1.2;
+}
+
+.whatsapp-text strong {
+  font-size: 14px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.whatsapp-text span {
+  font-size: 13px;
+
+  color: rgba(255, 255, 255, 0.75);
+
+  white-space: nowrap;
+}
+
+/* =========================
+   WHATSAPP BUTTON
+========================= */
+
+.whatsapp-button {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 13px 20px;
+
+  background-color: #20c76a;
+
+  border-radius: 30px;
+
+  font-size: 15px;
+
+  font-weight: bold;
+
+  white-space: nowrap;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.whatsapp-button span {
+  font-size: 20px;
+
+  color: white;
+}
+
+/* =========================
+   HOVER
+========================= */
+
+.whatsapp-float:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+}
+
+.whatsapp-float:hover .whatsapp-button {
+  background-color: #1eae5d;
+
+  transform: scale(1.03);
+}
+
+/* =========================
+   ANIMATION MUNCUL
+========================= */
+
+.whatsapp-float {
+  animation: whatsappAppear 0.8s ease forwards;
+}
+
+@keyframes whatsappAppear {
+  from {
+    opacity: 0;
+
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+  nav ul {
+    gap: 18px;
+  }
+
+  nav ul li a {
+    font-size: 13px;
+  }
+
+  .fnb-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 12px 20px;
+  }
+
+  /* NAV */
+
+  nav {
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+  nav ul {
+    gap: 14px;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+  }
+
+  nav ul li a {
+    font-size: 12px;
+  }
+
+  /* HERO */
+
+  .hero {
+    padding-top: 150px;
+  }
+
+  .hero-info {
+    width: 92%;
+
+    padding: 15px 10px;
+  }
+
+  .info-item span {
+    font-size: 16px;
+  }
+
+  .info-item p {
+    font-size: 9px;
+  }
+
+  .scroll-indicator {
+    display: none;
+  }
+
+  /* INTRO */
+
+  .intro {
+    padding: 80px 20px;
+  }
+
+  .intro h2 {
+    font-size: 32px;
+  }
+
+  /* SOCIAL */
+
+  .social-section {
+    padding: 80px 20px;
+  }
+
+  .social-container {
+    grid-template-columns: 1fr;
+  }
+
+  .social-card {
+    padding: 22px;
+  }
+
+  /* F&B */
+
+  .fnb-section {
+    padding: 80px 20px;
+  }
+
+  .fnb-container {
+    grid-template-columns: 1fr;
+  }
+
+  .fnb-image {
+    height: 240px;
+  }
+
+  /* WHATSAPP */
+
+  .whatsapp-float {
+    right: 15px;
+
+    bottom: 15px;
+
+    padding: 7px;
+  }
+
+  .whatsapp-avatar {
+    width: 45px;
+
+    height: 45px;
+  }
+
+  .whatsapp-text {
+    display: none;
+  }
+
+  .whatsapp-button {
+    padding: 12px 16px;
+
+    font-size: 14px;
+  }
+}
+
+/* ==================================================
+   TENTANG VILLA - STORY SECTION
+================================================== */
+
+.about-story {
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 110px 30px;
+}
+
+/* JUDUL SECTION */
+
+.about-story .section-heading {
+  max-width: 720px;
+  margin: 0 auto 100px;
+  text-align: center;
+}
+
+/* ==================================================
+   BARIS FOTO + TEKS
+================================================== */
+
+.about-story-row {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 90px;
+
+  margin-bottom: 140px;
+}
+
+/* FOTO 2 & 3
+   FOTO DI KANAN */
+
+.about-story-row.reverse {
+  grid-template-columns: 1.1fr 0.9fr;
+}
+
+/* ==================================================
+   POSISI FOTO
+================================================== */
+
+.about-story-row.reverse .about-story-image {
+  order: 2;
+}
+
+.about-story-row.reverse .about-story-content {
+  order: 1;
+}
+
+/* ==================================================
+   FOTO
+================================================== */
+
+.about-story-image {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  border-radius: 6px;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.about-story-image img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+/* Efek ketika mouse diarahkan ke foto */
+
+.about-story-image:hover img {
+  transform: scale(1.03);
+}
+
+/* ==================================================
+   TEKS
+================================================== */
+
+.about-story-content {
+  max-width: 500px;
+}
+
+.about-story-content .section-label {
+  margin-bottom: 20px;
+}
+
+.about-story-content h3 {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 40px;
+  font-weight: 400;
+
+  line-height: 1.2;
+
+  margin: 0 0 25px;
+}
+
+.about-story-content p:not(.section-label) {
+  font-size: 15px;
+
+  line-height: 1.9;
+
+  color: #666;
+
+  margin: 0 0 18px;
+}
+
+/* ==================================================
+   RESPONSIVE - TABLET
+================================================== */
+
+@media (max-width: 900px) {
+  .about-story {
+    padding: 90px 25px;
+  }
+
+  .about-story-row,
+  .about-story-row.reverse {
+    grid-template-columns: 1fr;
+    gap: 45px;
+
+    margin-bottom: 100px;
+  }
+
+  .about-story-row.reverse .about-story-image,
+  .about-story-row.reverse .about-story-content {
+    order: initial;
+  }
+
+  .about-story-image {
+    max-width: 430px;
+  }
+
+  .about-story-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+/* ==================================================
+   RESPONSIVE - HP
+================================================== */
+
+@media (max-width: 600px) {
+  .about-story {
+    padding: 70px 20px;
+  }
+
+  .about-story .section-heading {
+    margin-bottom: 70px;
+  }
+
+  .about-story-row,
+  .about-story-row.reverse {
+    gap: 30px;
+    margin-bottom: 80px;
+  }
+
+  .about-story-image {
+    max-width: 350px;
+  }
+
+  .about-story-content h3 {
+    font-size: 30px;
+  }
+
+  .about-story-content p:not(.section-label) {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+}
+
+/* ==================================================
+   OMAH NOTO CIJERUK
+   PREMIUM COLOR & TYPOGRAPHY
+================================================== */
+
+/* ==================================================
+   COLOR PALETTE
+================================================== */
+
+:root {
+  --ivory: #f5f1e8;
+  --cream: #ebe4d7;
+  --brown: #2c2621;
+  --brown-light: #5a5047;
+  --sage: #73775a;
+  --taupe: #b8a994;
+  --gold: #b89b5e;
+  --white: #ffffff;
+}
+
+/* ==================================================
+   GOOGLE FONT
+================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap");
+
+/* ==================================================
+   GLOBAL
+================================================== */
+
+body {
+  background: var(--ivory);
+  color: var(--brown);
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  line-height: 1.7;
+}
+
+/* ==================================================
+   HEADINGS
+================================================== */
+
+h1,
+h2,
+h3 {
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+
+  color: var(--brown);
+
+  font-weight: 500;
+}
+
+/* ==================================================
+   SECTION LABEL
+================================================== */
+
+.section-label {
+  color: var(--gold);
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+}
+
+/* ==================================================
+   INTRO SECTION
+================================================== */
+
+.intro {
+  background: var(--ivory);
+
+  color: var(--brown);
+}
+
+.intro h1,
+.intro h2 {
+  color: var(--brown);
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-weight: 500;
+
+  letter-spacing: -0.5px;
+}
+
+.intro p:not(.section-label) {
+  color: var(--brown-light);
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+}
+
+/* ==================================================
+   ABOUT STORY
+================================================== */
+
+.about-story {
+  width: 100%;
+
+  max-width: 1150px;
+
+  margin: 0 auto;
+
+  padding: 110px 30px;
+
+  background: var(--cream);
+}
+
+.about-story .section-heading {
+  max-width: 720px;
+
+  margin: 0 auto 100px;
+
+  text-align: center;
+}
+
+.about-story .section-heading h2 {
+  color: var(--brown);
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 52px;
+
+  font-weight: 500;
+
+  line-height: 1.1;
+
+  margin-top: 15px;
+}
+
+.about-story .section-heading > p:last-child {
+  color: var(--brown-light);
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  line-height: 1.8;
+}
+
+/* ==================================================
+   STORY ROW
+================================================== */
+
+.about-story-row {
+  display: grid;
+
+  grid-template-columns: 0.9fr 1.1fr;
+
+  align-items: center;
+
+  gap: 90px;
+
+  margin-bottom: 140px;
+}
+
+/* FOTO KANAN */
+
+.about-story-row.reverse {
+  grid-template-columns: 1.1fr 0.9fr;
+}
+
+.about-story-row.reverse .about-story-image {
+  order: 2;
+}
+
+.about-story-row.reverse .about-story-content {
+  order: 1;
+}
+
+/* ==================================================
+   STORY IMAGE
+================================================== */
+
+.about-story-image {
+  width: 100%;
+
+  max-width: 400px;
+
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  border-radius: 6px;
+
+  box-shadow: 0 20px 50px rgba(44, 38, 33, 0.15);
+}
+
+.about-story-image img {
+  width: 100%;
+
+  height: auto;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.about-story-image:hover img {
+  transform: scale(1.03);
+}
+
+/* ==================================================
+   STORY CONTENT
+================================================== */
+
+.about-story-content {
+  max-width: 500px;
+}
+
+.about-story-content .section-label {
+  color: var(--sage);
+
+  margin-bottom: 20px;
+
+  letter-spacing: 2.5px;
+}
+
+.about-story-content h3 {
+  color: var(--brown);
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 44px;
+
+  font-weight: 500;
+
+  line-height: 1.15;
+
+  margin: 0 0 25px;
+}
+
+.about-story-content p:not(.section-label) {
+  color: var(--brown-light);
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.9;
+
+  margin: 0 0 18px;
+}
+
+/* ==================================================
+   HIGHLIGHT / SOCIAL SECTION
+================================================== */
+
+.social-section {
+  background: var(--brown);
+
+  color: var(--ivory);
+}
+
+.social-section .section-heading h2 {
+  color: var(--ivory);
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 52px;
+
+  font-weight: 500;
+
+  line-height: 1.1;
+}
+
+.social-section .section-heading p:not(.section-label) {
+  color: #cfc7bb;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  line-height: 1.8;
+}
+
+/* ==================================================
+   HIGHLIGHT CARDS
+================================================== */
+
+.social-card {
+  background: rgba(245, 241, 232, 0.06);
+
+  border: 1px solid rgba(184, 155, 94, 0.28);
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease;
+}
+
+.social-card:hover {
+  background: rgba(245, 241, 232, 0.1);
+
+  border-color: rgba(184, 155, 94, 0.65);
+
+  transform: translateY(-6px);
+}
+
+.social-content span {
+  color: var(--gold);
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 11px;
+
+  letter-spacing: 2px;
+}
+
+.social-content h3 {
+  color: var(--ivory);
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 32px;
+
+  font-weight: 500;
+}
+
+.social-content p {
+  color: #cfc7bb;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+/* ==================================================
+   BUTTON
+================================================== */
+
+.hero-button {
+  background: var(--brown);
+
+  color: var(--ivory);
+
+  border: 1px solid var(--brown);
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.hero-button:hover {
+  background: var(--gold);
+
+  border-color: var(--gold);
+
+  color: var(--white);
+
+  transform: translateY(-2px);
+}
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+footer {
+  background: #211d19;
+
+  color: #aaa196;
+
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+/* ==================================================
+   WHATSAPP
+================================================== */
+
+.whatsapp-float {
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+/* ==================================================
+   RESPONSIVE - TABLET
+================================================== */
+
+@media (max-width: 900px) {
+  .about-story {
+    padding: 90px 25px;
+  }
+
+  .about-story-row,
+  .about-story-row.reverse {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+
+    margin-bottom: 100px;
+  }
+
+  /* RESET ORDER DI MOBILE */
+
+  .about-story-row.reverse .about-story-image,
+  .about-story-row.reverse .about-story-content {
+    order: initial;
+  }
+
+  .about-story-image {
+    max-width: 430px;
+  }
+
+  .about-story-content {
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    text-align: center;
+  }
+
+  .about-story .section-heading h2 {
+    font-size: 46px;
+  }
+}
+
+/* ==================================================
+   RESPONSIVE - MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+  .about-story {
+    padding: 70px 20px;
+  }
+
+  .about-story .section-heading {
+    margin-bottom: 70px;
+  }
+
+  .about-story .section-heading h2 {
+    font-size: 38px;
+  }
+
+  .about-story-row,
+  .about-story-row.reverse {
+    gap: 30px;
+
+    margin-bottom: 80px;
+  }
+
+  .about-story-image {
+    max-width: 350px;
+  }
+
+  .about-story-content h3 {
+    font-size: 34px;
+  }
+
+  .about-story-content p:not(.section-label) {
+    font-size: 14px;
+
+    line-height: 1.8;
+  }
+
+  .social-section .section-heading h2 {
+    font-size: 40px;
+  }
+}
+/* ==================================================
+   ABOUT PAGE - PREMIUM REDESIGN
+================================================== */
+
+.about-page {
+  background:
+    linear-gradient(rgba(80, 48, 24, 0.18), rgba(80, 48, 24, 0.18)),
+    url("../images/bg-tentang.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* ==================================================
+   ABOUT HERO
+================================================== */
+
+.about-hero {
+  min-height: 680px;
+
+  display: flex;
+  align-items: center;
+
+  background: linear-gradient(
+    180deg,
+    rgba(245, 241, 232, 0.72),
+    rgba(245, 241, 232, 1)
+  );
+
+  padding: 150px 7% 100px;
+}
+
+.about-hero-inner {
+  width: 100%;
+  max-width: 1250px;
+
+  margin: 0 auto;
+}
+
+.about-eyebrow {
+  margin: 0 0 25px;
+
+  color: #b89b5e;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+}
+
+.about-hero h1 {
+  max-width: 850px;
+
+  margin: 0;
+
+  color: #2c2621;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: clamp(65px, 8vw, 118px);
+
+  font-weight: 400;
+
+  line-height: 0.88;
+
+  letter-spacing: -3px;
+}
+
+.about-hero-bottom {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-end;
+
+  gap: 60px;
+
+  margin-top: 90px;
+
+  padding-top: 30px;
+
+  border-top: 1px solid rgba(44, 38, 33, 0.15);
+}
+
+.about-hero-bottom p {
+  max-width: 520px;
+
+  margin: 0;
+
+  color: #5a5047;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.9;
+}
+
+.about-scroll {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  color: #73775a;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  white-space: nowrap;
+}
+
+.about-scroll i {
+  width: 45px;
+  height: 1px;
+
+  display: block;
+
+  background: #b89b5e;
+}
+
+/* ==================================================
+   INTRO STATEMENT
+================================================== */
+
+.about-intro {
+  display: grid;
+
+  grid-template-columns: 180px 1fr;
+
+  gap: 80px;
+
+  max-width: 1150px;
+
+  margin: 0 auto;
+
+  padding: 150px 30px;
+}
+
+.about-intro-label {
+  padding-top: 10px;
+}
+
+.about-intro-label span {
+  display: block;
+
+  color: #b89b5e;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 30px;
+}
+
+.about-intro-label p {
+  margin: 5px 0;
+
+  color: rgba(255, 248, 2355, 0.68);
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+.about-intro-content {
+  max-width: 800px;
+}
+
+.about-intro-content h2 {
+  margin: 0 0 45px;
+
+  color: #fff8eb;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: clamp(42px, 5vw, 68px);
+
+  font-weight: 400;
+
+  line-height: 1.05;
+}
+
+.about-intro-content h2 em {
+  color: #f0c982;
+
+  font-style: italic;
+}
+
+.about-intro-content p {
+  max-width: 700px;
+
+  margin: 0 0 18px;
+
+  color: rgba(225, 248, 235, 0.82);
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.9;
+}
+
+/* ==================================================
+   STATS
+================================================== */
+
+.about-stats {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  max-width: 1150px;
+
+  margin: 0 auto;
+
+  padding: 45px 30px;
+
+  border-top: 1px solid rgba(44, 38, 33, 0.14);
+
+  border-bottom: 1px solid rgba(44, 38, 33, 0.14);
+}
+
+.about-stat {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: flex-start;
+
+  height: 125px;
+
+  padding: 15px 35px;
+
+  box-sizing: border-box;
+
+  border-left: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.about-stat:first-child {
+  padding-left: 0;
+
+  border-left: none;
+}
+
+.about-stat strong {
+  color: #2c2621;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 42px;
+
+  font-weight: 500;
+
+  line-height: 1;
+}
+
+.about-stat span {
+  color: #73775a;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+}
+
+/* ==================================================
+   STAT ITEM
+================================================== */
+
+.about-stat {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  min-height: 155px;
+
+  padding: 25px 35px;
+
+  border-left: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+/* item pertama tidak punya garis kiri */
+
+.about-stat:first-child {
+  border-left: none;
+}
+
+/* ==================================================
+   ANGKA
+================================================== */
+
+.about-stat strong {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #f7f1e7;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 38px;
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: 1px;
+}
+
+/* ==================================================
+   LABEL
+================================================== */
+
+.about-stat span {
+  display: block;
+
+  color: #b9a991;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+/* ==================================================
+   HOVER
+================================================== */
+
+.about-stat {
+  transition:
+    background 0.35s ease,
+    transform 0.35s ease;
+}
+
+.about-stat:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(184, 155, 94, 0.1),
+    rgba(255, 255, 255, 0.02)
+  );
+}
+
+.about-stat:hover strong {
+  color: #d8b875;
+}
+
+/* ==================================================
+   STORY SECTION
+================================================== */
+
+.about-story-new {
+  position: relative;
+  z-index: 1;
+
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 170px 30px 130px;
+}
+
+.about-story-new::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  left: 50%;
+
+  width: 100vw;
+
+  transform: translateX(-50%);
+
+  background: #ebe4d7;
+
+  z-index: -1;
+}
+
+.about-story-header {
+  margin-bottom: 120px;
+}
+
+.about-story-header h2 {
+  margin: 0;
+
+  color: #2c2621;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: clamp(50px, 6vw, 82px);
+
+  font-weight: 400;
+
+  line-height: 0.95;
+}
+
+/* ==================================================
+   FEATURE ROW
+================================================== */
+
+.about-feature {
+  display: grid;
+
+  grid-template-columns: 1.05fr 0.95fr;
+
+  align-items: center;
+
+  gap: 100px;
+
+  margin-bottom: 180px;
+}
+
+.about-feature-reverse {
+  grid-template-columns: 0.95fr 1.05fr;
+}
+
+.about-feature-reverse .about-feature-image {
+  order: 2;
+}
+
+.about-feature-reverse .about-feature-text {
+  order: 1;
+}
+
+/* =========================================
+   STORY IMAGE FRAME
+========================================= */
+
+.about-story-new .about-feature-image {
+  position: relative;
+
+  width: 380px;
+  height: 290px;
+
+  margin: 0 auto;
+
+  padding: 5px;
+
+  background: #5c3000;
+
+  border: 1px solid #c9a45c;
+
+  box-shadow: 0 15px 35px rgba(70, 45, 28, 0.15);
+
+  overflow: hidden;
+}
+
+/* GARIS EMAS DALAM */
+
+.about-story-new .about-feature-image::before {
+  content: "";
+
+  position: absolute;
+
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+
+  border: 1px solid rgba(201, 164, 92, 0.65);
+
+  pointer-events: none;
+
+  z-index: 2;
+}
+
+/* FOTO */
+
+.about-story-new .about-feature-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+/* ==================================================
+   FEATURE TEXT
+================================================== */
+
+.about-feature-text {
+  max-width: 550px;
+}
+
+.about-feature-text .about-number {
+  display: block;
+  margin-bottom: 15px;
+
+  color: #2c2621;
+
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.about-feature-text h3 {
+  margin: 0 0 30px;
+
+  color: #2c2621;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 68px;
+  font-weight: 400;
+
+  line-height: 0.95;
+  letter-spacing: -1px;
+}
+
+.about-feature-text p {
+  margin: 0 0 18px;
+
+  color: #5a5047;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.about-stats {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  max-width: 1200px;
+
+  margin: 20px auto 110px;
+
+  padding: 0;
+
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #211a16 0%, #2c231d 45%, #171310 100%);
+
+  border: 1px solid rgba(201, 164, 92, 0.55);
+
+  box-shadow: 0 25px 60px rgba(35, 27, 21, 0.18);
+}
+
+/* garis dekorasi bagian atas */
+
+.about-stats::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 10%;
+  right: 10%;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(216, 184, 117, 0.8),
+    transparent
+  );
+}
+
+/* ==================================================
+   COMFORT
+================================================== */
+
+.about-comfort {
+  background: #2c2621;
+
+  color: #f5f1e8;
+}
+
+.about-comfort-inner {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 120px;
+
+  max-width: 1150px;
+
+  margin: 0 auto;
+
+  padding: 130px 30px;
+}
+
+.about-comfort-heading h2 {
+  margin: 0;
+
+  color: #f5f1e8;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: clamp(50px, 5vw, 72px);
+
+  font-weight: 400;
+
+  line-height: 0.98;
+}
+
+.about-comfort-text {
+  padding-top: 45px;
+}
+
+.about-comfort-text p {
+  margin: 0 0 22px;
+
+  color: #cfc7bb;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.9;
+}
+
+/* ==================================================
+   CLOSING
+================================================== */
+
+.about-closing {
+  background: #ebe4d7;
+
+  padding: 160px 30px;
+}
+
+.about-closing-content {
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.about-closing h2 {
+  margin: 0 0 30px;
+
+  color: #2c2621;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: clamp(52px, 6vw, 82px);
+
+  font-weight: 400;
+
+  line-height: 0.95;
+}
+
+.about-closing-content > p:not(.about-eyebrow) {
+  max-width: 580px;
+
+  margin: 0 auto 40px;
+
+  color: #5a5047;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.9;
+}
+
+/* ==================================================
+   BOOKING BUTTON
+================================================== */
+
+.about-booking-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 25px;
+
+  padding: 16px 24px;
+
+  background: #2c2621;
+
+  color: #f5f1e8;
+
+  text-decoration: none;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.about-booking-button span {
+  font-size: 17px;
+
+  font-weight: 400;
+}
+
+.about-booking-button:hover {
+  background: #b89b5e;
+
+  transform: translateY(-3px);
+}
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+.about-page footer {
+  background: #211d19;
+
+  color: #aaa196;
+}
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 900px) {
+  .about-hero {
+    min-height: 600px;
+
+    padding: 130px 30px 80px;
+  }
+
+  .about-hero h1 {
+    font-size: 75px;
+  }
+
+  .about-intro {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+    padding: 110px 30px;
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+
+    margin: 10px 30px 90px;
+  }
+
+  .about-stat {
+    min-height: 115px;
+  }
+
+  .about-stat:nth-child(3) {
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+  }
+
+  .about-stat:nth-child(4) {
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+  }
+
+  .about-feature,
+  .about-feature-reverse {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+
+    margin-bottom: 120px;
+  }
+
+  .about-feature-reverse .about-feature-image,
+  .about-feature-reverse .about-feature-text {
+    order: initial;
+  }
+
+  .about-feature-image {
+    width: 380px;
+    height: 290px;
+
+    max-width: 100%;
+
+    margin: 0 auto;
+  }
+
+  .about-feature-text {
+    max-width: 650px;
+
+    margin: 0 auto;
+  }
+
+  .about-comfort-inner {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+  .about-comfort-text {
+    padding-top: 0;
+  }
+}
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+  .about-hero {
+    min-height: 560px;
+
+    padding: 120px 22px 70px;
+  }
+
+  .about-hero h1 {
+    font-size: 60px;
+
+    letter-spacing: -1.5px;
+  }
+
+  .about-hero-bottom {
+    display: block;
+
+    margin-top: 60px;
+  }
+
+  .about-scroll {
+    margin-top: 30px;
+  }
+
+  .about-intro {
+    padding: 90px 22px;
+  }
+
+  .about-intro-content h2 {
+    font-size: 45px;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr;
+
+    margin: 10px 22px 70px;
+  }
+
+  .about-stat,
+  .about-stat:nth-child(3),
+  .about-stat:nth-child(4) {
+    min-height: 100px;
+
+    border-left: none;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+  }
+
+  .about-stat:first-child {
+    border-top: none;
+  }
+
+  .about-stat strong {
+    font-size: 34px;
+  }
+
+  .about-stat span {
+    font-size: 9px;
+    letter-spacing: 1.8px;
+  }
+
+  .about-story-new {
+    padding: 100px 22px 70px;
+  }
+
+  .about-story-header {
+    margin-bottom: 75px;
+  }
+
+  .about-story-header h2 {
+    font-size: 55px;
+  }
+
+  .about-feature-text h3 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 68px;
+    font-weight: 400;
+    line-height: 0.95;
+    margin: 12px 0 30px;
+  }
+
+  .about-comfort-inner {
+    padding: 90px 22px;
+  }
+
+  .about-comfort-heading h2 {
+    font-size: 52px;
+  }
+
+  .about-closing {
+    padding: 110px 22px;
+  }
+
+  .about-closing h2 {
+    font-size: 55px;
+  }
+  .about-story-new .about-feature-image {
+    width: 100%;
+    max-width: 340px;
+    height: 250px;
+
+    margin: 0 auto;
+  }
+}
+/* =========================================
+   NAVBAR KHUSUS HALAMAN TENTANG
+   ========================================= */
+
+.about-page header {
+  background: rgba(20, 20, 20, 0.22);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+/* ==================================================
+   ABOUT PAGE - LANDSCAPE HERO
+   OMAH NOTO CIJERUK
+================================================== */
+
+.about-page {
+  background:
+    linear-gradient(rgba(80, 48, 24, 0.18), rgba(80, 48, 24, 0.18)),
+    url("../images/bg-tentang.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* ==================================================
+   HERO
+================================================== */
+
+.about-page .about-hero {
+  position: relative;
+
+  min-height: 720px;
+
+  display: flex;
+  align-items: flex-end;
+
+  padding: 150px 7% 85px;
+
+  overflow: hidden;
+
+  /* FOTO FULL LANDSCAPE */
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(35, 27, 21, 0.78) 0%,
+      rgba(35, 27, 21, 0.55) 35%,
+      rgba(35, 27, 21, 0.2) 65%,
+      rgba(35, 27, 21, 0.05) 100%
+    ),
+    url("../images/view-gunung-01.jpg");
+
+  background-size: cover;
+
+  background-position: center center;
+
+  background-repeat: no-repeat;
+}
+
+/* ==================================================
+   HERO CONTENT
+================================================== */
+
+.about-page .about-hero-inner {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 1250px;
+
+  margin: 0 auto;
+}
+
+/* ==================================================
+   LABEL
+================================================== */
+
+.about-page .about-eyebrow {
+  margin: 0 0 22px;
+
+  color: #e0c486;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+}
+
+/* ==================================================
+   TITLE
+================================================== */
+
+.about-page .about-hero h1 {
+  max-width: 800px;
+
+  margin: 0;
+
+  color: #fffaf2;
+
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+
+  font-size: clamp(58px, 6.5vw, 92px);
+
+  font-weight: 400;
+
+  line-height: 0.9;
+
+  letter-spacing: -2px;
+}
+
+/* ==================================================
+   BOTTOM CONTENT
+================================================== */
+
+.about-page .about-hero-bottom {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  gap: 60px;
+
+  max-width: 1050px;
+
+  margin-top: 70px;
+
+  padding-top: 25px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+/* ==================================================
+   DESCRIPTION
+================================================== */
+
+.about-page .about-hero-bottom p {
+  max-width: 500px;
+
+  margin: 0;
+
+  color: rgba(255, 250, 242, 0.9);
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.9;
+}
+
+/* ==================================================
+   SCROLL
+================================================== */
+
+.about-page .about-scroll {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  color: #e0c486;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  white-space: nowrap;
+}
+
+.about-page .about-scroll i {
+  width: 45px;
+
+  height: 1px;
+
+  display: block;
+
+  background: #d8b875;
+}
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 900px) {
+  .about-page .about-hero {
+    min-height: 650px;
+
+    padding: 140px 30px 75px;
+
+    background-size: cover;
+
+    background-position: center center;
+  }
+
+  .about-page .about-hero h1 {
+    max-width: 650px;
+
+    font-size: 72px;
+
+    letter-spacing: -1.5px;
+  }
+
+  .about-page .about-hero-bottom {
+    margin-top: 60px;
+
+    gap: 40px;
+  }
+}
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+  .about-page .about-hero {
+    min-height: 680px;
+
+    padding: 125px 22px 55px;
+
+    background-size: cover;
+
+    background-position: center center;
+  }
+
+  .about-page .about-eyebrow {
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 18px;
+  }
+
+  .about-page .about-hero h1 {
+    max-width: 100%;
+
+    font-size: 56px;
+
+    line-height: 0.92;
+
+    letter-spacing: -1px;
+  }
+
+  .about-page .about-hero-bottom {
+    display: block;
+
+    margin-top: 55px;
+
+    padding-top: 20px;
+  }
+
+  .about-page .about-hero-bottom p {
+    max-width: 100%;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+  }
+
+  .about-page .about-scroll {
+    margin-top: 25px;
+
+    font-size: 9px;
+  }
+}
+.about-intro-label span {
+  color: #f0c982;
+}
+.about-story-header .about-eyebrow {
+  color: #552f00;
+}
+.about-closing-content .about-eyebrow {
+  color: #552f00;
+}
+/* ==================================================
+   FIX POSISI ABOUT STATS
+================================================== */
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  width: calc(100% - 40px);
+  max-width: 1500px;
+
+  margin: 20px auto 110px;
+
+  padding: 0;
+
+  min-height: 158px;
+
+  align-items: stretch;
+}
+
+.about-stats .about-stat {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  min-height: 158px;
+
+  padding: 25px 20px;
+
+  margin: 0;
+
+  box-sizing: border-box;
+
+  border-left: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.about-stats .about-stat:first-child {
+  border-left: none;
+}
+
+.about-stats .about-stat strong {
+  display: block;
+
+  margin: 0 0 9px;
+
+  line-height: 1;
+}
+
+.about-stats .about-stat span {
+  display: block;
+
+  margin: 0;
+
+  line-height: 1.2;
+}
+/* ==================================================
+   OMAH NOTO - LUXURY EDITORIAL STORY
+================================================== */
+
+/* BACKGROUND STORY */
+
+.about-story-new {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  padding: 150px 40px 120px;
+}
+
+/* BACKGROUND FULL WIDTH */
+
+.about-story-new::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  left: 50%;
+
+  width: 100vw;
+
+  transform: translateX(-50%);
+
+  background: #ebe4d7;
+
+  z-index: -1;
+}
+
+/* ==================================================
+   STORY HEADER
+================================================== */
+
+.about-story-header {
+  max-width: 900px;
+
+  margin: 0 auto 120px;
+
+  text-align: left;
+}
+
+.about-story-header .about-eyebrow {
+  margin-bottom: 22px;
+
+  color: #b89b5e;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+}
+
+.about-story-header h2 {
+  margin: 0;
+
+  color: #2c2621;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: clamp(55px, 6vw, 82px);
+
+  font-weight: 400;
+
+  line-height: 0.95;
+
+  letter-spacing: -1.5px;
+}
+
+/* ==================================================
+   STORY FEATURE
+================================================== */
+
+.about-feature {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 1fr 0.9fr;
+
+  align-items: center;
+
+  gap: 100px;
+
+  margin-bottom: 190px;
+}
+
+/* FOTO KANAN */
+
+.about-feature-reverse {
+  grid-template-columns: 0.9fr 1fr;
+}
+
+/* ==================================================
+   IMAGE
+================================================== */
+
+.about-story-new .about-feature-image {
+  position: relative;
+
+  width: 100%;
+
+  max-width: 455px;
+
+  height: 340px;
+
+  margin: 0 auto;
+
+  padding: 8px;
+
+  background: #d8c3aa;
+
+  border: 1px solid rgba(184, 155, 94, 0.8);
+
+  box-shadow: 0 25px 55px rgba(55, 38, 25, 0.16);
+
+  overflow: visible;
+}
+
+/* AKSEN GOLD DI BELAKANG FOTO */
+
+.about-story-new .about-feature-image::after {
+  content: "";
+
+  position: absolute;
+
+  width: 100%;
+
+  height: 100%;
+
+  top: 14px;
+
+  left: 14px;
+
+  border: 1px solid rgba(184, 155, 94, 0.45);
+
+  z-index: -1;
+}
+
+/* FOTO */
+
+.about-story-new .about-feature-image img {
+  width: 100%;
+
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.7s ease,
+    filter 0.7s ease;
+}
+
+/* HAPUS FRAME LAMA */
+
+.about-story-new .about-feature-image::before {
+  display: none;
+}
+
+/* HOVER FOTO */
+
+.about-story-new .about-feature-image:hover img {
+  transform: scale(1.025);
+
+  filter: brightness(1.04);
+}
+
+/* ==================================================
+   TEXT
+================================================== */
+
+.about-feature-text {
+  max-width: 500px;
+
+  padding: 15px 0;
+}
+
+/* NOMOR */
+
+.about-feature-text .about-number {
+  position: relative;
+
+  display: inline-block;
+
+  margin-bottom: 24px;
+
+  padding-left: 42px;
+
+  color: #b89b5e;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+}
+
+/* GARIS KECIL */
+
+.about-feature-text .about-number::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  top: 50%;
+
+  width: 28px;
+
+  height: 1px;
+
+  background: #b89b5e;
+
+  transform: translateY(-50%);
+}
+
+/* JUDUL */
+
+.about-feature-text h3 {
+  margin: 0 0 30px;
+
+  color: #2c2621;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: clamp(52px, 5vw, 68px);
+
+  font-weight: 400;
+
+  line-height: 0.92;
+
+  letter-spacing: -1px;
+}
+
+/* PARAGRAF */
+
+.about-feature-text p {
+  max-width: 470px;
+
+  margin: 0 0 17px;
+
+  color: #665b51;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 400;
+
+  line-height: 1.9;
+}
+
+/* ==================================================
+   PEMISAH ANTAR CERITA
+================================================== */
+
+.about-feature:not(:last-child)::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+
+  bottom: -95px;
+
+  width: 1px;
+
+  height: 55px;
+
+  background: linear-gradient(to bottom, rgba(184, 155, 94, 0.65), transparent);
+}
+
+/* ==================================================
+   CERITA TERAKHIR
+================================================== */
+
+.about-feature:last-child {
+  margin-bottom: 30px;
+}
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 900px) {
+  .about-story-new {
+    padding: 110px 30px 90px;
+  }
+
+  .about-story-header {
+    margin-bottom: 90px;
+  }
+
+  .about-story-header h2 {
+    font-size: 60px;
+  }
+
+  .about-feature,
+  .about-feature-reverse {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+
+    margin-bottom: 130px;
+  }
+
+  .about-feature-reverse .about-feature-image {
+    order: 1;
+  }
+
+  .about-feature-reverse .about-feature-text {
+    order: 2;
+  }
+
+  .about-story-new .about-feature-image {
+    width: 100%;
+
+    max-width: 520px;
+
+    height: 350px;
+  }
+
+  .about-feature-text {
+    max-width: 650px;
+
+    margin: 0 auto;
+  }
+
+  .about-feature-text h3 {
+    font-size: 58px;
+  }
+
+  .about-feature:not(:last-child)::after {
+    display: none;
+  }
+}
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+  .about-story-new {
+    padding: 85px 22px 70px;
+  }
+
+  .about-story-header {
+    margin-bottom: 70px;
+  }
+
+  .about-story-header h2 {
+    font-size: 48px;
+
+    line-height: 0.98;
+  }
+
+  .about-feature,
+  .about-feature-reverse {
+    gap: 40px;
+
+    margin-bottom: 100px;
+  }
+
+  .about-story-new .about-feature-image {
+    width: 100%;
+
+    max-width: 100%;
+
+    height: 270px;
+
+    padding: 6px;
+  }
+
+  .about-story-new .about-feature-image::after {
+    top: 9px;
+
+    left: 9px;
+  }
+
+  .about-feature-text h3 {
+    font-size: 48px;
+
+    line-height: 0.95;
+  }
+
+  .about-feature-text p {
+    font-size: 13px;
+
+    line-height: 1.85;
+  }
+
+  .about-feature-text .about-number {
+    margin-bottom: 18px;
+
+    font-size: 9px;
+
+    letter-spacing: 2.5px;
+  }
+}
+/* ==================================================
+   OMAH NOTO - PREMIUM FROSTED GLASS CARD
+================================================== */
+
+.about-feature-text {
+  position: relative;
+  max-width: 500px;
+  padding: 48px 50px;
+
+  /* KACA BURAM */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.48),
+    rgba(255, 255, 255, 0.18)
+  );
+
+  backdrop-filter: blur(24px) saturate(115%);
+  -webkit-backdrop-filter: blur(24px) saturate(115%);
+
+  /* BORDER KACA */
+  border: 1px solid rgba(255, 255, 255, 0.68);
+  border-radius: 20px;
+
+  /* BAYANGAN LUAR + CAHAYA DALAM */
+  box-shadow:
+    0 25px 60px rgba(55, 38, 25, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+
+  overflow: hidden;
+}
+
+/* ==================================================
+   CAHAYA DI DALAM KACA
+================================================== */
+
+.about-feature-text::before {
+  content: "";
+  position: absolute;
+
+  top: -80px;
+  left: -80px;
+
+  width: 220px;
+  height: 220px;
+
+  background: rgba(255, 255, 255, 0.2);
+
+  border-radius: 50%;
+
+  filter: blur(35px);
+
+  pointer-events: none;
+}
+
+/* ==================================================
+   GARIS REFLEKSI KACA
+================================================== */
+
+.about-feature-text::after {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  left: 8%;
+
+  width: 84%;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.95),
+    transparent
+  );
+
+  opacity: 0.8;
+
+  pointer-events: none;
+}
+
+/* ==================================================
+   ISI CARD
+================================================== */
+
+.about-feature-text > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* ==================================================
+   NUMBER
+================================================== */
+
+.about-feature-text .about-number {
+  margin-bottom: 24px;
+}
+
+/* ==================================================
+   JUDUL
+================================================== */
+
+.about-feature-text h3 {
+  margin-bottom: 30px;
+}
+
+/* ==================================================
+   PARAGRAF
+================================================== */
+
+.about-feature-text p {
+  margin-bottom: 17px;
+}
+
+/* ==================================================
+   HOVER - EFEK KACA LEBIH HIDUP
+================================================== */
+
+.about-feature-text {
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease,
+    background 0.5s ease;
+}
+
+.about-feature-text:hover {
+  transform: translateY(-4px);
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.56),
+    rgba(255, 255, 255, 0.22)
+  );
+
+  box-shadow:
+    0 30px 70px rgba(55, 38, 25, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.25);
+}
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 900px) {
+  .about-feature-text {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 45px;
+  }
+}
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+  .about-feature-text {
+    width: 100%;
+    max-width: 100%;
+    padding: 36px 28px;
+
+    border-radius: 16px;
+
+    backdrop-filter: blur(20px) saturate(110%);
+    -webkit-backdrop-filter: blur(20px) saturate(110%);
+  }
+
+  .about-feature-text .about-number {
+    margin-bottom: 18px;
+  }
+
+  .about-feature-text h3 {
+    margin-bottom: 24px;
+  }
+
+  .about-feature-text p {
+    margin-bottom: 15px;
+  }
+}
+/* ==================================================
+   OMAH NOTO — LUXURY FROSTED STORY
+   FINAL STORY BACKGROUND + GLASS
+================================================== */
+
+/* ==================================================
+   STORY SECTION
+================================================== */
+
+.about-story-new {
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
+
+  width: 100%;
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  padding: 150px 40px 120px;
+
+  color: #2c2621;
+
+  overflow: hidden;
+
+  /* Background utama */
+  background: linear-gradient(135deg, #eee8dc 0%, #e7dfd1 45%, #f2ede4 100%);
+}
+
+/* ==================================================
+   BACKGROUND LIGHT / BLUR
+================================================== */
+
+.about-story-new::before {
+  content: "";
+
+  position: absolute;
+
+  width: 650px;
+  height: 650px;
+
+  top: 80px;
+  left: -220px;
+
+  background: radial-gradient(
+    circle,
+    rgba(184, 155, 94, 0.28) 0%,
+    rgba(184, 155, 94, 0.12) 35%,
+    transparent 70%
+  );
+
+  filter: blur(55px);
+
+  z-index: -2;
+
+  pointer-events: none;
+}
+
+/* Blob kedua */
+
+.about-story-new::after {
+  content: "";
+
+  position: absolute;
+
+  width: 700px;
+  height: 700px;
+
+  right: -250px;
+  bottom: 100px;
+
+  background: radial-gradient(
+    circle,
+    rgba(115, 119, 90, 0.2) 0%,
+    rgba(115, 119, 90, 0.08) 38%,
+    transparent 72%
+  );
+
+  filter: blur(65px);
+
+  z-index: -2;
+
+  pointer-events: none;
+}
+
+/* ==================================================
+   STORY HEADER
+================================================== */
+
+.about-story-header {
+  position: relative;
+  z-index: 2;
+
+  max-width: 900px;
+
+  margin: 0 auto 120px;
+
+  text-align: left;
+}
+
+.about-story-header .about-eyebrow {
+  margin-bottom: 22px;
+
+  color: #b89b5e;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+}
+
+.about-story-header h2 {
+  margin: 0;
+
+  color: #2c2621;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: clamp(55px, 6vw, 82px);
+
+  font-weight: 400;
+
+  line-height: 0.95;
+
+  letter-spacing: -1.5px;
+}
+
+/* ==================================================
+   STORY FEATURE
+================================================== */
+
+.about-feature {
+  position: relative;
+  z-index: 2;
+}
+
+/* ==================================================
+   FOTO
+================================================== */
+
+.about-story-new .about-feature-image {
+  position: relative;
+
+  width: 100%;
+  max-width: 455px;
+  height: 340px;
+
+  margin: 0 auto;
+
+  padding: 8px;
+
+  background: rgba(216, 195, 170, 0.75);
+
+  border: 1px solid rgba(184, 155, 94, 0.75);
+
+  box-shadow: 0 25px 55px rgba(55, 38, 25, 0.16);
+
+  overflow: visible;
+}
+
+.about-story-new .about-feature-image::after {
+  content: "";
+
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  top: 14px;
+  left: 14px;
+
+  border: 1px solid rgba(184, 155, 94, 0.4);
+
+  z-index: -1;
+}
+
+.about-story-new .about-feature-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.7s ease,
+    filter 0.7s ease;
+}
+
+.about-story-new .about-feature-image:hover img {
+  transform: scale(1.025);
+
+  filter: brightness(1.04) saturate(1.03);
+}
+
+/* ==================================================
+   FROSTED GLASS CARD
+================================================== */
+
+.about-feature-text {
+  position: relative;
+
+  max-width: 500px;
+
+  padding: 48px 50px;
+
+  /* TRANSPARENT GLASS */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.42),
+    rgba(255, 255, 255, 0.16)
+  );
+
+  /* BLUR BACKGROUND */
+  backdrop-filter: blur(25px) saturate(120%);
+
+  -webkit-backdrop-filter: blur(25px) saturate(120%);
+
+  /* KACA */
+  border: 1px solid rgba(255, 255, 255, 0.62);
+
+  border-radius: 20px;
+
+  /* SHADOW */
+  box-shadow:
+    0 25px 60px rgba(55, 38, 25, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.82),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+/* ==================================================
+   GLASS LIGHT
+================================================== */
+
+.about-feature-text::before {
+  content: "";
+
+  position: absolute;
+
+  width: 280px;
+  height: 280px;
+
+  top: -140px;
+  left: -120px;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.38),
+    transparent 70%
+  );
+
+  filter: blur(25px);
+
+  pointer-events: none;
+}
+
+/* ==================================================
+   GLASS HIGHLIGHT LINE
+================================================== */
+
+.about-feature-text::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 10%;
+
+  width: 80%;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.95),
+    transparent
+  );
+
+  opacity: 0.85;
+
+  pointer-events: none;
+}
+
+/* ==================================================
+   TEXT
+================================================== */
+
+.about-feature-text > * {
+  position: relative;
+
+  z-index: 2;
+}
+
+/* NUMBER */
+
+.about-feature-text .about-number {
+  position: relative;
+
+  display: inline-block;
+
+  margin-bottom: 24px;
+
+  padding-left: 42px;
+
+  color: #b89b5e;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+}
+
+/* NUMBER LINE */
+
+.about-feature-text .about-number::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 50%;
+
+  width: 28px;
+  height: 1px;
+
+  background: #b89b5e;
+
+  transform: translateY(-50%);
+}
+
+/* TITLE */
+
+.about-feature-text h3 {
+  margin: 0 0 30px;
+
+  color: #2c2621;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: clamp(52px, 5vw, 68px);
+
+  font-weight: 400;
+
+  line-height: 0.92;
+
+  letter-spacing: -1px;
+}
+
+/* PARAGRAPH */
+
+.about-feature-text p {
+  max-width: 470px;
+
+  margin: 0 0 17px;
+
+  color: #665b51;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 400;
+
+  line-height: 1.9;
+}
+
+/* ==================================================
+   HOVER GLASS
+================================================== */
+
+.about-feature-text:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 30px 70px rgba(55, 38, 25, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.92),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.25);
+}
+
+/* ==================================================
+   SEPARATOR
+================================================== */
+
+.about-feature:not(:last-child)::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+
+  bottom: -95px;
+
+  width: 1px;
+  height: 55px;
+
+  background: linear-gradient(to bottom, rgba(184, 155, 94, 0.65), transparent);
+}
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 900px) {
+  .about-story-new {
+    padding: 110px 30px 90px;
+  }
+
+  .about-story-header {
+    margin-bottom: 90px;
+  }
+
+  .about-story-header h2 {
+    font-size: 60px;
+  }
+
+  .about-feature,
+  .about-feature-reverse {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+
+    margin-bottom: 130px;
+  }
+
+  .about-feature-reverse .about-feature-image {
+    order: 1;
+  }
+
+  .about-feature-reverse .about-feature-text {
+    order: 2;
+  }
+
+  .about-story-new .about-feature-image {
+    width: 100%;
+    max-width: 520px;
+    height: 350px;
+  }
+
+  .about-feature-text {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    padding: 45px;
+  }
+
+  .about-feature-text h3 {
+    font-size: 58px;
+  }
+
+  .about-feature:not(:last-child)::after {
+    display: none;
+  }
+}
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+  .about-story-new {
+    padding: 85px 22px 70px;
+  }
+
+  .about-story-header {
+    margin-bottom: 70px;
+  }
+
+  .about-story-header h2 {
+    font-size: 48px;
+
+    line-height: 0.98;
+  }
+
+  .about-feature,
+  .about-feature-reverse {
+    gap: 40px;
+
+    margin-bottom: 100px;
+  }
+
+  .about-story-new .about-feature-image {
+    width: 100%;
+    max-width: 100%;
+
+    height: 270px;
+
+    padding: 6px;
+  }
+
+  .about-story-new .about-feature-image::after {
+    top: 9px;
+    left: 9px;
+  }
+
+  .about-feature-text {
+    width: 100%;
+    max-width: 100%;
+
+    padding: 36px 28px;
+
+    border-radius: 16px;
+
+    backdrop-filter: blur(20px) saturate(115%);
+
+    -webkit-backdrop-filter: blur(20px) saturate(115%);
+  }
+
+  .about-feature-text h3 {
+    font-size: 48px;
+
+    line-height: 0.95;
+  }
+
+  .about-feature-text p {
+    font-size: 13px;
+
+    line-height: 1.85;
+  }
+
+  .about-feature-text .about-number {
+    margin-bottom: 18px;
+
+    font-size: 9px;
+
+    letter-spacing: 2.5px;
+  }
+}
+/* ==================================================
+   OMAH NOTO — LUXURY VILLA PHOTO FRAME
+================================================== */
+
+.about-story-new .about-feature-image {
+  position: relative;
+
+  width: 100%;
+  max-width: 455px;
+  height: 340px;
+
+  margin: 0 auto;
+
+  /* Ruang antara frame dan foto */
+  padding: 9px;
+
+  /* Bronze / dark walnut frame */
+  background: linear-gradient(145deg, #4a4036 0%, #2d2823 45%, #51463a 100%);
+
+  /* Frame utama */
+  border: 1px solid rgba(184, 155, 94, 0.85);
+
+  /* Luxury depth */
+  box-shadow:
+    0 2px 0 rgba(255, 255, 255, 0.35) inset,
+    0 0 0 1px rgba(70, 55, 42, 0.85),
+    0 18px 40px rgba(35, 26, 19, 0.22),
+    0 35px 70px rgba(35, 26, 19, 0.12);
+
+  overflow: visible;
+
+  z-index: 2;
+}
+
+/* ==================================================
+   GOLD INNER FRAME
+================================================== */
+
+.about-story-new .about-feature-image::before {
+  content: "";
+
+  position: absolute;
+
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+
+  border: 1px solid rgba(214, 183, 113, 0.75);
+
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+
+  pointer-events: none;
+
+  z-index: 3;
+}
+
+/* ==================================================
+   OFFSET BACK FRAME
+================================================== */
+
+.about-story-new .about-feature-image::after {
+  content: "";
+
+  position: absolute;
+
+  top: 13px;
+  left: 13px;
+
+  width: 100%;
+  height: 100%;
+
+  border: 1px solid rgba(184, 155, 94, 0.48);
+
+  background: transparent;
+
+  z-index: -1;
+
+  box-shadow: 0 12px 25px rgba(35, 26, 19, 0.08);
+}
+
+/* ==================================================
+   PHOTO
+================================================== */
+
+.about-story-new .about-feature-image img {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  border: 1px solid rgba(255, 248, 235, 0.38);
+
+  box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.12);
+
+  z-index: 2;
+
+  transition:
+    transform 0.7s ease,
+    filter 0.7s ease;
+}
+
+/* ==================================================
+   SUBTLE PHOTO HOVER
+================================================== */
+
+.about-story-new .about-feature-image:hover img {
+  transform: scale(1.018);
+
+  filter: brightness(1.035) saturate(1.03);
+}
+
+/* ==================================================
+   LIGHT ON FRAME
+================================================== */
+
+.about-story-new .about-feature-image {
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+.about-story-new .about-feature-image:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 2px 0 rgba(255, 255, 255, 0.4) inset,
+    0 0 0 1px rgba(70, 55, 42, 0.85),
+    0 25px 50px rgba(35, 26, 19, 0.25),
+    0 40px 80px rgba(35, 26, 19, 0.14);
+}
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+  .about-story-new .about-feature-image {
+    height: 270px;
+
+    padding: 7px;
+  }
+
+  .about-story-new .about-feature-image::before {
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+  }
+
+  .about-story-new .about-feature-image::after {
+    top: 9px;
+    left: 9px;
+  }
+}
+.facility-page .facility-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(15, 18, 16, 0.28) 0%,
+      rgba(15, 18, 16, 0.08) 40%,
+      rgba(15, 18, 16, 0.82) 100%
+    ),
+    url("../images/fasilitas-pool.jpg") center center / cover no-repeat;
+}
+.facility-page .facility-hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(1200px, 100%);
+  margin: 0 auto;
+
+  padding: 55px 60px 65px;
+
+  color: #2c2722;
+
+  /* GLASS PANEL */
+  background: rgba(245, 241, 232, 0.78);
+
+  border: 1px solid rgba(255, 255, 255, 0.65);
+
+  border-radius: 4px;
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.75);
+
+  max-width: 850px;
+}
+.facility-page .facility-hero h1 {
+  margin: 0;
+
+  max-width: 800px;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(60px, 7vw, 100px);
+  font-weight: 400;
+  line-height: 0.88;
+  letter-spacing: -3px;
+
+  color: #2c2722;
+
+  text-shadow: none;
+}
+.facility-page .facility-hero-text {
+  max-width: 560px;
+
+  margin: 30px 0 0;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  line-height: 1.9;
+
+  color: rgba(44, 39, 34, 0.72);
+}
+.facility-page .facility-hero-content::after {
+  content: "";
+
+  display: block;
+
+  width: 75px;
+  height: 1px;
+
+  margin-top: 32px;
+
+  background: #b89b5e;
+}
+.facility-page .facility-hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(1200px, 100%);
+  margin: 0 auto;
+
+  padding: 0 60px 105px;
+
+  color: #ffffff;
+
+  /* TANPA BACKGROUND */
+  background: transparent;
+
+  border: none;
+  border-radius: 0;
+
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+
+  box-shadow: none;
+
+  max-width: none;
+}
+.facility-page .facility-hero h1 {
+  margin: 0;
+
+  max-width: 800px;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(60px, 7vw, 100px);
+  font-weight: 400;
+  line-height: 0.88;
+  letter-spacing: -3px;
+
+  color: #ffffff;
+
+  text-shadow:
+    0 3px 18px rgba(0, 0, 0, 0.55),
+    0 1px 3px rgba(0, 0, 0, 0.8);
+}
+.facility-page .facility-hero-text {
+  max-width: 560px;
+
+  margin: 35px 0 0;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  line-height: 1.9;
+
+  color: rgba(255, 255, 255, 0.88);
+
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.65);
+}
+/* ==================================================
+   GALERI PAGE
+================================================== */
+
+.gallery-page {
+  background: #f5f1e8;
+  color: #2c2621;
+}
+
+/* ==================================================
+   GALERI HERO
+================================================== */
+
+.gallery-hero {
+  min-height: 620px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 150px 7% 100px;
+
+  background:
+    linear-gradient(rgba(44, 38, 33, 0.45), rgba(44, 38, 33, 0.65)),
+    url("../images/bg-galeri.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.gallery-hero-content {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.gallery-eyebrow {
+  margin: 0 0 20px;
+
+  color: #b89b5e;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+}
+
+.gallery-hero h1 {
+  margin: 0 0 30px;
+
+  color: #fff8eb;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: clamp(60px, 8vw, 110px);
+
+  font-weight: 400;
+
+  line-height: 0.9;
+
+  letter-spacing: -2px;
+}
+
+.gallery-description {
+  max-width: 600px;
+
+  margin: 0;
+
+  color: rgba(255, 248, 235, 0.82);
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.9;
+}
+
+/* ==================================================
+   FOTO SECTION
+================================================== */
+
+.gallery-photo-section {
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  padding: 140px 30px 150px;
+}
+
+.gallery-section-heading {
+  max-width: 700px;
+
+  margin-bottom: 70px;
+}
+
+.gallery-section-heading h2 {
+  margin: 0 0 25px;
+
+  color: #2c2621;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: clamp(48px, 6vw, 76px);
+
+  font-weight: 400;
+
+  line-height: 0.95;
+}
+
+.gallery-section-heading > p:last-child {
+  max-width: 600px;
+
+  margin: 0;
+
+  color: #5a5047;
+
+  font-family: "Montserrat", Arial, sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.9;
+}
+
+/* ==================================================
+   FOTO GRID
+================================================== */
+
+.gallery-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 24px;
+}
+
+/* ==================================================
+   FOTO CARD
+================================================== */
+
+.gallery-card {
+  position: relative;
+
+  overflow: hidden;
+
+  aspect-ratio: 4 / 3;
+
+  background: #ebe4d7;
+
+  border: 1px solid rgba(184, 155, 94, 0.35);
+
+  box-shadow: 0 15px 35px rgba(44, 38, 33, 0.1);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+/* FOTO */
+
+.gallery-page .gallery-card img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: contain;
+  object-position: center;
+
+  background: #e7dfd1;
+
+  transition:
+    transform 0.8s ease,
+    filter 0.8s ease;
+}
+
+/* GOLD FRAME */
+
+.gallery-card::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 8px;
+
+  border: 1px solid rgba(201, 164, 92, 0.55);
+
+  pointer-events: none;
+
+  z-index: 2;
+}
+
+/* HOVER */
+
+.gallery-card:hover {
+  transform: translateY(-7px);
+
+  box-shadow: 0 25px 50px rgba(44, 38, 33, 0.16);
+}
+
+.gallery-card:hover img {
+  transform: scale(1.04);
+}
+
+/* ==================================================
+   VIDEO SECTION
+================================================== */
+
+.gallery-video-section {
+  padding: 140px 30px 160px;
+
+  background: #2c2621;
+}
+
+.gallery-video-heading {
+  max-width: 800px;
+
+  margin: 0 auto 60px;
+
+  text-align: center;
+}
+
+.gallery-video-heading h2 {
+  color: #f5f1e8;
+}
+
+.gallery-video-heading > p:last-child {
+  margin: 0 auto;
+
+  color: #cfc7bb;
+}
+
+/* ==================================================
+   VIDEO
+================================================== */
+
+.gallery-video {
+  width: 100%;
+  max-width: 1000px;
+
+  margin: 0 auto;
+
+  padding: 7px;
+
+  background: #b89b5e;
+
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-video video {
+  width: 100%;
+
+  display: block;
+
+  background: #000;
+}
+
+/* ==================================================
+   GALERI RESPONSIVE
+================================================== */
+
+@media (max-width: 900px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-hero {
+    min-height: 550px;
+
+    padding: 140px 25px 80px;
+  }
+
+  .gallery-hero h1 {
+    font-size: 62px;
+  }
+
+  .gallery-photo-section {
+    padding: 100px 20px;
+  }
+
+  .gallery-section-heading {
+    margin-bottom: 50px;
+  }
+
+  .gallery-section-heading h2 {
+    font-size: 52px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .gallery-video-section {
+    padding: 100px 20px;
+  }
+
+  .gallery-video {
+    padding: 5px;
+  }
+}
+/* =========================================================
+   FOTO DI DALAM FACILITY CARD
+========================================================= */
+
+.facility-page .facility-card-image {
+  width: 100%;
+  height: 145px;
+  margin: -5px 0 28px;
+  overflow: hidden;
+
+  border: 1px solid rgba(197, 163, 94, 0.35);
+
+  background: #202521;
+}
+
+.facility-page .facility-card-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition:
+    transform 0.6s ease,
+    filter 0.6s ease;
+}
+
+/* efek saat card disentuh mouse */
+.facility-page .facility-card:hover .facility-card-image img {
+  transform: scale(1.05);
+  filter: brightness(1.08);
+}
+
+/* =========================================================
+   GALERI OMAH NOTO - PREMIUM EDITORIAL
+========================================================= */
+
+.gallery-page {
+  background: #fffff0;
+  color: #000000;
+}
+
+/* =========================================================
+   GALERI HERO
+========================================================= */
+
+.gallery-page .gallery-hero {
+  position: relative;
+  min-height: 90vh;
+
+  display: flex;
+  align-items: flex-end;
+
+  padding: 0 7% 100px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(180deg, rgba(25, 22, 18, 0.2), rgba(25, 22, 18, 0.72)),
+    url("images/bg-alam-judul.png") center / cover no-repeat;
+}
+
+.gallery-page .gallery-hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  color: #ffffff;
+}
+
+.gallery-page .gallery-eyebrow {
+  margin: 0 0 22px;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+
+  color: #e9e7e2;
+}
+
+.gallery-page .gallery-hero h1 {
+  max-width: 850px;
+
+  margin: 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(65px, 8vw, 115px);
+  font-weight: 400;
+  line-height: 0.88;
+  letter-spacing: -3px;
+}
+
+.gallery-page .gallery-description {
+  max-width: 560px;
+
+  margin: 35px 0 0;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  line-height: 1.9;
+
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.gallery-page .gallery-hero-content::after {
+  content: "";
+
+  display: block;
+
+  width: 75px;
+  height: 1px;
+
+  margin-top: 35px;
+
+  background: #c6a45e;
+}
+
+/* =========================================================
+   FOTO VILLA
+========================================================= */
+
+.gallery-page .gallery-photo-section {
+  padding: 140px 6% 160px;
+
+  background: linear-gradient(135deg, #f3eee4, #e7dfd1);
+}
+
+.gallery-page .gallery-section-heading {
+  max-width: 1200px;
+
+  margin: 0 auto 75px;
+}
+
+.gallery-page .gallery-section-heading h2 {
+  margin: 0 0 25px;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(50px, 6vw, 82px);
+  font-weight: 400;
+  line-height: 0.95;
+
+  color: #2c2621;
+}
+
+.gallery-page .gallery-section-heading > p:last-child {
+  max-width: 620px;
+
+  margin: 0;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  line-height: 1.9;
+
+  color: #71695f;
+}
+
+/* =========================================================
+   GALLERY GRID
+========================================================= */
+
+.gallery-page .gallery-grid {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 22px;
+}
+
+/* FOTO CARD */
+
+.gallery-page .gallery-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-page .gallery-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding: 70px 30px 28px;
+
+  color: #fff;
+
+  background: linear-gradient(
+    to top,
+    rgba(20, 18, 15, 0.88),
+    rgba(20, 18, 15, 0.45),
+    transparent
+  );
+
+  z-index: 3;
+}
+
+.gallery-page .gallery-caption span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: #d4b56f;
+}
+
+.gallery-page .gallery-caption h3 {
+  margin: 8px 0 5px;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 32px;
+  font-weight: 400;
+
+  color: #d4b56f;
+}
+
+.gallery-page .gallery-caption p {
+  margin: 0;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  line-height: 1.6;
+
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.gallery-page .gallery-card::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(180deg, transparent 55%, rgba(25, 22, 18, 0.28));
+
+  pointer-events: none;
+
+  opacity: 0.7;
+}
+
+.gallery-page .gallery-card img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition:
+    transform 0.8s ease,
+    filter 0.8s ease;
+}
+
+.gallery-page .gallery-card:hover img {
+  transform: scale(1.045);
+
+  filter: brightness(1.05);
+}
+
+/* =========================================================
+   VARIASI UKURAN FOTO
+========================================================= */
+
+.gallery-page .gallery-card:nth-child(1) {
+  height: 400px;
+}
+
+.gallery-page .gallery-card:nth-child(2) {
+  height: 400px;
+}
+
+.gallery-page .gallery-card:nth-child(3) {
+  height: 400px;
+}
+
+.gallery-page .gallery-card:nth-child(4) {
+  height: 400px;
+}
+
+.gallery-page .gallery-card:nth-child(5) {
+  height: 400px;
+}
+
+.gallery-page .gallery-card:nth-child(6) {
+  height: 400px;
+}
+
+/* =========================================================
+   VIDEO SECTION
+========================================================= */
+
+.gallery-page .gallery-video-section {
+  padding: 140px 6% 160px;
+
+  background: #24231f;
+
+  color: #fff;
+}
+
+.gallery-page .gallery-video-heading {
+  margin-bottom: 70px;
+}
+
+.gallery-page .gallery-video-heading h2 {
+  color: #f3eee4;
+}
+
+.gallery-page .gallery-video-heading > p:last-child {
+  color: rgba(243, 238, 228, 0.62);
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.gallery-page .gallery-video {
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  border: 1px solid rgba(197, 163, 94, 0.45);
+
+  background: #111;
+
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
+
+  overflow: hidden;
+}
+
+.gallery-page .gallery-video video {
+  width: 100%;
+
+  display: block;
+
+  max-height: 650px;
+
+  object-fit: cover;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  .gallery-page .gallery-hero {
+    min-height: 80vh;
+
+    padding: 0 35px 80px;
+  }
+
+  .gallery-page .gallery-photo-section,
+  .gallery-page .gallery-video-section {
+    padding: 110px 35px;
+  }
+
+  .gallery-page .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-page .gallery-card,
+  .gallery-page .gallery-card:nth-child(n) {
+    height: 420px;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-page .gallery-hero {
+    min-height: 85vh;
+
+    padding: 0 25px 65px;
+  }
+
+  .gallery-page .gallery-hero h1 {
+    font-size: 58px;
+
+    letter-spacing: -1.5px;
+  }
+
+  .gallery-page .gallery-description {
+    font-size: 12px;
+  }
+
+  .gallery-page .gallery-photo-section,
+  .gallery-page .gallery-video-section {
+    padding: 90px 90px;
+  }
+
+  .gallery-page .gallery-section-heading h2 {
+    font-size: 48px;
+  }
+
+  .gallery-page .gallery-grid {
+    gap: 15px;
+  }
+
+  .gallery-page .gallery-card,
+  .gallery-page .gallery-card:nth-child(n) {
+    height: 300px;
+  }
+}
+
+/* =========================================================
+   GALERI HERO - BACKGROUND ALAM
+========================================================= */
+
+.gallery-page .gallery-hero {
+  position: relative;
+
+  min-height: 90vh;
+
+  display: flex;
+  align-items: flex-end;
+
+  padding: 0 7% 100px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(180deg, rgba(20, 18, 15, 0.2), rgba(20, 18, 15, 0.72)),
+    url("../images/bg-alam-judul.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* =====================================================
+   OMAH NOTO — LUXURY GALLERY LIGHTBOX
+===================================================== */
+
+.gallery-page .luxury-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 70px 90px;
+
+  background: rgba(12, 15, 13, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    opacity 0.35s ease,
+    visibility 0.35s ease;
+}
+
+.gallery-page .luxury-lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* BINGKAI UTAMA */
+
+.gallery-page .lightbox-frame {
+  position: relative;
+
+  width: min(850px, 100%);
+  max-height: 85vh;
+
+  padding: 16px;
+
+  background: linear-gradient(
+    135deg,
+    #8f7748,
+    #b49a63 35%,
+    #d0b982 65%,
+    #8b7142
+  );
+
+  box-shadow:
+    0 0 0 1px rgba(230, 203, 139, 0.65),
+    0 0 0 7px rgba(184, 155, 94, 0.13),
+    0 25px 90px rgba(0, 0, 0, 0.65);
+
+  transform: scale(0.94);
+  transition: transform 0.35s ease;
+}
+
+.gallery-page .luxury-lightbox.is-open .lightbox-frame {
+  transform: scale(1);
+}
+
+/* BINGKAI BAGIAN DALAM */
+
+.gallery-page .lightbox-inner-frame {
+  position: relative;
+
+  padding: 8px;
+
+  border: 1px solid rgba(218, 190, 125, 0.65);
+
+  background: #191c19;
+}
+
+/* FOTO BESAR */
+
+.gallery-page .lightbox-inner-frame img {
+  display: block;
+
+  width: 100%;
+  max-height: 62vh;
+
+  object-fit: contain;
+
+  background: #191c19;
+}
+
+/* JUDUL FOTO */
+
+/* =====================================================
+   OMAH NOTO — LUXURY GALLERY LIGHTBOX
+===================================================== */
+
+.gallery-page .luxury-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 70px 90px;
+
+  background: rgba(12, 15, 13, 0.94);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    opacity 0.35s ease,
+    visibility 0.35s ease;
+}
+
+.gallery-page .luxury-lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* BINGKAI CHAMPAGNE GOLD */
+
+.gallery-page .lightbox-frame {
+  position: relative;
+
+  width: min(850px, 100%);
+  max-height: 85vh;
+
+  padding: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #8f7748,
+    #b49a63 35%,
+    #d0b982 65%,
+    #8b7142
+  );
+
+  box-shadow:
+    0 0 0 1px rgba(230, 203, 139, 0.45),
+    0 0 0 7px rgba(184, 155, 94, 0.12),
+    0 25px 90px rgba(0, 0, 0, 0.65);
+
+  transform: scale(0.94);
+  transition: transform 0.35s ease;
+}
+
+.gallery-page .luxury-lightbox.is-open .lightbox-frame {
+  transform: scale(1);
+}
+
+/* BINGKAI BAGIAN DALAM */
+
+.gallery-page .lightbox-inner-frame {
+  position: relative;
+
+  padding: 7px;
+
+  border: 1px solid rgba(218, 190, 125, 0.55);
+
+  background: #191c19;
+}
+
+/* FOTO BESAR */
+
+.gallery-page .lightbox-inner-frame img {
+  display: block;
+
+  width: 100%;
+  max-height: 62vh;
+
+  object-fit: contain;
+
+  background: #191c19;
+}
+
+/* CAPTION */
+
+.gallery-page .lightbox-caption {
+  padding: 22px 15px 12px;
+
+  text-align: center;
+}
+
+/* NOMOR FOTO */
+
+.gallery-page .lightbox-caption span {
+  display: block;
+
+  margin-bottom: 12px;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 4px;
+
+  color: #6e542b;
+}
+
+/* JUDUL FOTO */
+
+.gallery-page .lightbox-caption h2 {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(32px, 4vw, 46px);
+  font-weight: 400;
+  line-height: 1.1;
+
+  color: #fffaf0;
+  text-shadow: 0 2px 8px rgba(54, 39, 17, 0.2);
+}
+
+/* TOMBOL TUTUP */
+
+.gallery-page .lightbox-close {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+
+  width: 48px;
+  height: 48px;
+
+  border: 1px solid rgba(201, 164, 92, 0.7);
+  border-radius: 50%;
+
+  background: rgba(30, 32, 28, 0.9);
+
+  color: #e6d2a0;
+  font-size: 32px;
+  font-weight: 300;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.gallery-page .lightbox-close:hover {
+  background: #8f7138;
+  transform: rotate(90deg);
+}
+
+/* TOMBOL NAVIGASI */
+
+.gallery-page .lightbox-nav {
+  position: absolute;
+  top: 50%;
+
+  width: 48px;
+  height: 48px;
+
+  transform: translateY(-50%);
+
+  border: 1px solid rgba(201, 164, 92, 0.65);
+  border-radius: 50%;
+
+  background: rgba(30, 32, 28, 0.9);
+
+  color: #e6d2a0;
+  font-size: 18px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.gallery-page .lightbox-nav:hover {
+  background: #8f7138;
+  color: #fff;
+}
+
+.gallery-page .lightbox-prev {
+  left: 25px;
+}
+
+.gallery-page .lightbox-next {
+  right: 25px;
+}
+
+/* FOTO BISA DIKLIK */
+
+.gallery-page .gallery-card img {
+  cursor: zoom-in;
+}
+
+/* RESPONSIVE HP */
+
+@media (max-width: 600px) {
+  .gallery-page .luxury-lightbox {
+    padding: 65px 18px;
+  }
+
+  .gallery-page .lightbox-frame {
+    padding: 8px;
+  }
+
+  .gallery-page .lightbox-inner-frame {
+    padding: 4px;
+  }
+
+  .gallery-page .lightbox-inner-frame img {
+    max-height: 55vh;
+  }
+
+  .gallery-page .lightbox-close {
+    top: 12px;
+    right: 12px;
+
+    width: 42px;
+    height: 42px;
+  }
+
+  .gallery-page .lightbox-prev {
+    left: 8px;
+  }
+
+  .gallery-page .lightbox-next {
+    right: 8px;
+  }
+
+  .gallery-page .lightbox-nav {
+    width: 38px;
+    height: 38px;
+  }
+
+  .gallery-page .lightbox-caption span {
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+}
+/* =====================================================
+   OMAH NOTO — LUXURY GALLERY LIGHTBOX
+===================================================== */
+
+.gallery-page .luxury-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 70px 90px;
+
+  background: rgba(12, 15, 13, 0.94);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    opacity 0.35s ease,
+    visibility 0.35s ease;
+}
+
+.gallery-page .luxury-lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* BINGKAI CHAMPAGNE GOLD */
+
+.gallery-page .lightbox-frame {
+  position: relative;
+
+  width: min(850px, 100%);
+  max-height: 85vh;
+
+  padding: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #8f7748,
+    #b49a63 35%,
+    #d0b982 65%,
+    #8b7142
+  );
+
+  box-shadow:
+    0 0 0 1px rgba(230, 203, 139, 0.45),
+    0 0 0 7px rgba(184, 155, 94, 0.12),
+    0 25px 90px rgba(0, 0, 0, 0.65);
+
+  transform: scale(0.94);
+  transition: transform 0.35s ease;
+}
+
+.gallery-page .luxury-lightbox.is-open .lightbox-frame {
+  transform: scale(1);
+}
+
+/* BINGKAI BAGIAN DALAM */
+
+.gallery-page .lightbox-inner-frame {
+  position: relative;
+
+  padding: 7px;
+
+  border: 1px solid rgba(218, 190, 125, 0.55);
+
+  background: #191c19;
+}
+
+/* FOTO BESAR */
+
+.gallery-page .lightbox-inner-frame img {
+  display: block;
+
+  width: 100%;
+  max-height: 62vh;
+
+  object-fit: contain;
+
+  background: #191c19;
+}
+
+/* CAPTION */
+
+.gallery-page .lightbox-caption {
+  padding: 22px 15px 12px;
+
+  text-align: center;
+}
+
+/* NOMOR FOTO */
+
+.gallery-page .lightbox-caption span {
+  display: block;
+
+  margin-bottom: 12px;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 4px;
+
+  color: #6e542b;
+}
+
+/* JUDUL FOTO */
+
+.gallery-page .lightbox-caption h2 {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(32px, 4vw, 46px);
+  font-weight: 400;
+  line-height: 1.1;
+
+  color: #fffaf0;
+  text-shadow: 0 2px 8px rgba(54, 39, 17, 0.2);
+}
+
+/* TOMBOL TUTUP */
+
+.gallery-page .lightbox-close {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+
+  width: 48px;
+  height: 48px;
+
+  border: 1px solid rgba(201, 164, 92, 0.7);
+  border-radius: 50%;
+
+  background: rgba(30, 32, 28, 0.9);
+
+  color: #e6d2a0;
+  font-size: 32px;
+  font-weight: 300;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.gallery-page .lightbox-close:hover {
+  background: #8f7138;
+  transform: rotate(90deg);
+}
+
+/* TOMBOL NAVIGASI */
+
+.gallery-page .lightbox-nav {
+  position: absolute;
+  top: 50%;
+
+  width: 48px;
+  height: 48px;
+
+  transform: translateY(-50%);
+
+  border: 1px solid rgba(201, 164, 92, 0.65);
+  border-radius: 50%;
+
+  background: rgba(30, 32, 28, 0.9);
+
+  color: #e6d2a0;
+  font-size: 18px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.gallery-page .lightbox-nav:hover {
+  background: #8f7138;
+  color: #fff;
+}
+
+.gallery-page .lightbox-prev {
+  left: 25px;
+}
+
+.gallery-page .lightbox-next {
+  right: 25px;
+}
+
+/* FOTO BISA DIKLIK */
+
+.gallery-page .gallery-card img {
+  cursor: zoom-in;
+}
+
+/* RESPONSIVE HP */
+
+@media (max-width: 600px) {
+  .gallery-page .luxury-lightbox {
+    padding: 65px 18px;
+  }
+
+  .gallery-page .lightbox-frame {
+    padding: 8px;
+  }
+
+  .gallery-page .lightbox-inner-frame {
+    padding: 4px;
+  }
+
+  .gallery-page .lightbox-inner-frame img {
+    max-height: 55vh;
+  }
+
+  .gallery-page .lightbox-close {
+    top: 12px;
+    right: 12px;
+
+    width: 42px;
+    height: 42px;
+  }
+
+  .gallery-page .lightbox-prev {
+    left: 8px;
+  }
+
+  .gallery-page .lightbox-next {
+    right: 8px;
+  }
+
+  .gallery-page .lightbox-nav {
+    width: 38px;
+    height: 38px;
+  }
+
+  .gallery-page .lightbox-caption span {
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+}
+/* =====================================================
+   OMAH NOTO — FACILITY LIGHTBOX FIX
+===================================================== */
+
+.facility-page .luxury-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 70px 90px;
+  box-sizing: border-box;
+
+  background: rgba(12, 15, 13, 0.94);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    opacity 0.35s ease,
+    visibility 0.35s ease;
+}
+
+.facility-page .luxury-lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* BINGKAI UTAMA */
+
+.facility-page .lightbox-frame {
+  position: relative;
+
+  width: min(850px, 100%);
+  max-height: 85vh;
+  overflow-y: auto;
+
+  padding: 12px;
+  box-sizing: border-box;
+
+  background: linear-gradient(
+    135deg,
+    #8f7748,
+    #b49a63 35%,
+    #d0b982 65%,
+    #8b7142
+  );
+
+  box-shadow:
+    0 0 0 1px rgba(230, 203, 139, 0.45),
+    0 0 0 7px rgba(184, 155, 94, 0.12),
+    0 25px 90px rgba(0, 0, 0, 0.65);
+
+  transform: scale(0.94);
+  transition: transform 0.35s ease;
+}
+
+.facility-page .luxury-lightbox.is-open .lightbox-frame {
+  transform: scale(1);
+}
+
+/* BINGKAI DALAM */
+
+.facility-page .lightbox-inner-frame {
+  position: relative;
+  padding: 7px;
+
+  border: 1px solid rgba(218, 190, 125, 0.55);
+  background: #191c19;
+}
+
+/* FOTO LIGHTBOX */
+
+.facility-page .lightbox-inner-frame img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+  max-height: 62vh;
+
+  object-fit: contain;
+  object-position: center;
+
+  background: #191c19;
+}
+
+/* CAPTION */
+
+.facility-page .lightbox-caption {
+  padding: 22px 15px 12px;
+  text-align: center;
+}
+
+.facility-page .lightbox-caption span {
+  display: block;
+  margin-bottom: 12px;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 4px;
+
+  color: #fff0c7;
+}
+
+.facility-page .lightbox-caption h2 {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(32px, 4vw, 46px);
+  font-weight: 400;
+  line-height: 1.1;
+
+  color: #fffaf0;
+}
+
+/* TOMBOL TUTUP */
+
+.facility-page .lightbox-close {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+  padding: 0;
+
+  border: 1px solid rgba(201, 164, 92, 0.7);
+  border-radius: 50%;
+
+  background: rgba(30, 32, 28, 0.9);
+  color: #e6d2a0;
+
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.facility-page .lightbox-close:hover {
+  background: #8f7138;
+}
+
+/* TOMBOL NAVIGASI */
+
+.facility-page .lightbox-nav {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+  padding: 0;
+
+  transform: translateY(-50%);
+
+  border: 1px solid rgba(201, 164, 92, 0.65);
+  border-radius: 50%;
+
+  background: rgba(30, 32, 28, 0.9);
+  color: #e6d2a0;
+
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.facility-page .lightbox-nav:hover {
+  background: #8f7138;
+  color: #fff;
+}
+
+.facility-page .lightbox-prev {
+  left: 25px;
+}
+
+.facility-page .lightbox-next {
+  right: 25px;
+}
+
+/* RESPONSIVE HP */
+
+@media (max-width: 600px) {
+  .facility-page .luxury-lightbox {
+    padding: 65px 18px;
+  }
+
+  .facility-page .lightbox-frame {
+    padding: 8px;
+  }
+
+  .facility-page .lightbox-inner-frame {
+    padding: 4px;
+  }
+
+  .facility-page .lightbox-inner-frame img {
+    max-height: 55vh;
+  }
+
+  .facility-page .lightbox-close {
+    top: 12px;
+    right: 12px;
+
+    width: 42px;
+    height: 42px;
+  }
+
+  .facility-page .lightbox-prev {
+    left: 8px;
+  }
+
+  .facility-page .lightbox-next {
+    right: 8px;
+  }
+
+  .facility-page .lightbox-nav {
+    width: 38px;
+    height: 38px;
+  }
+
+  .facility-page .lightbox-caption span {
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+}
+
+/* ==================================================
+   SEKITAR VILLA — LUXURY FOUNDATION
+================================================== */
+
+.nearby-page {
+  --nearby-ivory: #f5f1e8;
+  --nearby-cream: #ebe4d7;
+  --nearby-brown: #2c2621;
+  --nearby-muted: #71665b;
+  --nearby-gold: #b89b5e;
+
+  background: var(--nearby-ivory);
+  color: var(--nearby-brown);
+  font-family: "Montserrat", Arial, sans-serif;
+  line-height: 1.8;
+}
+
+/* HERO PEMBUKA */
+
+.nearby-page .nearby-hero {
+  position: relative;
+  min-height: 620px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 150px 7% 100px;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(35, 27, 21, 0.82),
+      rgba(35, 27, 21, 0.48),
+      rgba(35, 27, 21, 0.18)
+    ),
+    url("../images/hero-villa.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.nearby-page .nearby-hero-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nearby-page .nearby-eyebrow {
+  margin-bottom: 22px;
+
+  color: #d8bd80;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.nearby-page .nearby-hero h1 {
+  max-width: 850px;
+  margin: 0 0 28px;
+
+  color: #fffaf0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(54px, 7vw, 88px);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -1px;
+}
+
+.nearby-page .nearby-hero-content > p:last-child {
+  max-width: 570px;
+  color: rgba(255, 250, 240, 0.84);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* AREA KONTEN */
+
+.nearby-page .nearby-content {
+  width: min(1200px, 86%);
+  margin: 0 auto;
+  padding: 110px 0 140px;
+}
+
+/* JUDUL SETIAP KATEGORI */
+
+.nearby-page .nearby-category {
+  margin-bottom: 100px;
+}
+
+.nearby-page .nearby-category:last-child {
+  margin-bottom: 0;
+}
+
+.nearby-page .nearby-category-heading {
+  margin-bottom: 38px;
+}
+
+.nearby-page .nearby-category-heading h2 {
+  margin-bottom: 12px;
+
+  color: var(--nearby-brown);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(38px, 5vw, 58px);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.nearby-page .nearby-category-heading p {
+  color: var(--nearby-muted);
+  font-size: 13px;
+}
+
+/* GRID KARTU TEMPAT */
+
+.nearby-page .nearby-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* KARTU DASAR */
+
+.nearby-page .nearby-card {
+  min-width: 0;
+  padding: 28px 26px;
+
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(184, 155, 94, 0.35);
+  box-shadow: 0 12px 30px rgba(44, 38, 33, 0.05);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.nearby-page .nearby-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(184, 155, 94, 0.75);
+  box-shadow: 0 18px 38px rgba(44, 38, 33, 0.10);
+}
+
+.nearby-page .nearby-card h3 {
+  margin-bottom: 10px;
+
+  color: var(--nearby-brown);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 27px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.nearby-page .nearby-card p {
+  color: var(--nearby-muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .nearby-page .nearby-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .nearby-page .nearby-content {
+    width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .nearby-page .nearby-hero {
+    min-height: 540px;
+    padding: 130px 25px 80px;
+  }
+
+  .nearby-page .nearby-hero h1 {
+    font-size: 52px;
+  }
+
+  .nearby-page .nearby-content {
+    width: auto;
+    padding: 80px 20px 100px;
+  }
+
+  .nearby-page .nearby-category {
+    margin-bottom: 75px;
+  }
+
+  .nearby-page .nearby-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .nearby-page .nearby-card {
+    padding: 24px 22px;
+  }
+}
+/* =====================================================
+   OMAH NOTO CIJERUK — LOCATION PAGE
+===================================================== */
+
+/* HALAMAN LOKASI */
+
+.location-page {
+  background: #f5f1e8;
+  color: #2c2621;
+  font-family: "Montserrat", Arial, sans-serif;
+  line-height: 1.7;
+}
+
+/* NAVBAR */
+
+.location-page header {
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  padding: 15px 30px;
+  background: #fffdf9;
+  border-bottom: 1px solid #e7dfd3;
+  box-shadow: 0 4px 20px rgba(44, 38, 33, 0.05);
+}
+
+.location-page header::after {
+  display: none;
+}
+
+.location-page nav {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.location-page .logo {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 25px;
+  font-weight: 600;
+  color: #2c2621;
+  white-space: nowrap;
+}
+
+.location-page nav ul {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+}
+
+.location-page nav ul li a {
+  display: inline-block;
+  padding: 10px 0;
+  color: #5a5047;
+  font-size: 12px;
+  text-decoration: none;
+  text-shadow: none;
+  transition: color 0.3s ease;
+}
+
+.location-page nav ul li a:hover,
+.location-page nav ul li a.active {
+  color: #b89b5e;
+}
+
+/* HERO LOKASI */
+
+.location-page .location-hero {
+  padding: 90px 24px 75px;
+  text-align: center;
+  background: #ebe4d7;
+}
+
+.location-page .eyebrow {
+  margin-bottom: 18px;
+  color: #a88a50;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.location-page .location-hero h1 {
+  margin: 0 0 22px;
+  color: #2c2621;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(45px, 6vw, 72px);
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+.location-page .location-hero p {
+  max-width: 650px;
+  margin: 0 auto;
+  color: #5a5047;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* KONTEN UTAMA */
+
+.location-page .location-container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 85px 30px;
+}
+
+.location-page .section-heading {
+  margin: 0 0 15px;
+  color: #2c2621;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.location-page .section-description {
+  margin-bottom: 30px;
+  color: #6c6257;
+  font-size: 13px;
+  line-height: 1.9;
+}
+/* BACKGROUND HERO HALAMAN LOKASI */
+body.location-page .location-hero {
+    background:
+        linear-gradient(
+            rgba(28, 25, 21, 0.42),
+            rgba(28, 25, 21, 0.42)
+        ),
+        url("../images/hero-villa.jpg") center center / cover no-repeat;
+}
+
+/* FOTO LOKASI */
+
+.location-page .location-photo {
+  width: 100%;
+  height: 430px;
+  margin-bottom: 60px;
+  overflow: hidden;
+  background: #e5ded2;
+  border: 1px solid #d8cbbb;
+}
+
+.location-page .location-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 60%;
+  transition: transform 0.6s ease;
+}
+
+.location-page .location-photo:hover .location-image {
+  transform: scale(1.02);
+}
+
+/* KARTU INFORMASI LOKASI */
+
+.location-page .location-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+  margin-bottom: 65px;
+}
+
+.location-page .location-card {
+  padding: 32px;
+  background: #fffdf9;
+  border: 1px solid #e8dfd3;
+}
+
+.location-page .card-label {
+  margin-bottom: 12px;
+  color: #a88a50;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.location-page .location-card h3 {
+  margin: 0 0 12px;
+  color: #2c2621;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.location-page .location-card p {
+  color: #6c6257;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* AKSES KENDARAAN */
+
+.location-page .access-section {
+  padding-top: 10px;
+}
+
+.location-page .access-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+
+/* FIX UKURAN KARTU KENDARAAN */
+.location-page .access-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.location-page .access-item {
+    position: relative;
+    min-width: 0;
+    min-height: 340px;
+    padding: 35px;
+    overflow: hidden;
+    gap: 15px;
+}
+
+.location-page .access-item-number {
+    flex-shrink: 0;
+}
+
+.location-page .access-item-content {
+    position: relative;
+    z-index: 2;
+    width: 62%;
+    min-width: 0;
+    flex: 0 1 62%;
+}
+
+.location-page .access-item-content h3 {
+    margin-bottom: 15px;
+    font-size: 34px;
+    overflow-wrap: break-word;
+}
+
+.location-page .access-item-content p {
+    font-size: 13px;
+    line-height: 1.8;
+    overflow-wrap: break-word;
+}
+
+.location-page .access-map-button {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 12px 15px;
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.location-page .access-vehicle-image {
+    position: absolute;
+    z-index: 1;
+    right: 2%;
+    bottom: 12%;
+    width: 36%;
+    height: 45%;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+@media (max-width: 900px) {
+    .location-page .access-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 520px) {
+    .location-page .access-item {
+        min-height: 390px;
+        padding: 25px 20px;
+    }
+
+    .location-page .access-item-content {
+        width: 75%;
+        flex-basis: 75%;
+    }
+
+    .location-page .access-vehicle-image {
+        width: 48%;
+        height: 35%;
+        bottom: 5%;
+        right: 3%;
+    }
+}
+
+/* GOOGLE MAPS */
+
+.location-page .maps-section {
+  margin-top: 65px;
+  padding: 55px 25px;
+  background: #2c2621;
+  color: #f5f1e8;
+  text-align: center;
+}
+
+.location-page .maps-section h2 {
+  margin: 0 0 15px;
+  color: #f5f1e8;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 42px;
+  font-weight: 400;
+}
+
+.location-page .maps-section p {
+  max-width: 600px;
+  margin: 0 auto 25px;
+  color: #d1c7b8;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.location-page .maps-button {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #b89b5e;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.location-page .maps-button:hover {
+  background: #96783e;
+  transform: translateY(-2px);
+}
+
+/* FOOTER */
+
+.location-page footer {
+  padding: 25px;
+  background: #211d19;
+  color: #cfc7bb;
+  text-align: center;
+  font-size: 11px;
+}
+
+/* RESPONSIVE TABLET */
+
+@media (max-width: 900px) {
+  .location-page header {
+    padding: 15px 20px;
+  }
+
+  .location-page nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .location-page nav ul {
+    gap: 15px;
+  }
+
+  .location-page .location-container {
+    padding: 65px 25px;
+  }
+}
+
+/* RESPONSIVE HP */
+
+@media (max-width: 600px) {
+  .location-page .location-hero {
+    padding: 65px 20px;
+  }
+
+  .location-page .location-container {
+    padding: 50px 20px;
+  }
+
+  .location-page .location-hero h1 {
+    font-size: 44px;
+  }
+
+  .location-page .location-photo {
+    height: 280px;
+    margin-bottom: 40px;
+  }
+
+  .location-page .location-grid,
+  .location-page .access-list {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .location-page .location-card,
+  .location-page .access-item {
+    padding: 24px;
+  }
+
+  .location-page .section-heading {
+    font-size: 34px;
+  }
+
+  .location-page .maps-section {
+    padding: 40px 20px;
+  }
+
+  .location-page .maps-section h2 {
+    font-size: 34px;
+  }
+
+  .location-page nav ul {
+    gap: 10px 15px;
+  }
+
+  .location-page nav ul li a {
+    font-size: 11px;
+  }
+
+  .location-page .logo {
+    font-size: 24px;
+  }
+}
+/* ==========================================
+   LUXURY VILLA ADDRESS CARD
+   OMAH NOTO CIJERUK
+========================================== */
+
+.villa-address-card {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    min-height: 310px;
+    padding: 32px !important;
+    background: linear-gradient(
+        135deg,
+        #fffdf8 0%,
+        #f7f1e7 100%
+    ) !important;
+    border: 1px solid #e4d8c5 !important;
+    box-shadow: 0 12px 35px rgba(69, 53, 35, 0.045);
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+/* AKSEN EMAS DI SISI KARTU */
+
+.villa-address-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        #c8ae78,
+        #9d7c43,
+        #e6d5b4
+    );
+}
+
+/* DETAIL DEKORATIF */
+
+.villa-address-card::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    right: -65px;
+    bottom: -85px;
+    width: 210px;
+    height: 210px;
+    border: 1px solid rgba(174, 143, 89, 0.15);
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 18px rgba(174, 143, 89, 0.035),
+        0 0 0 38px rgba(174, 143, 89, 0.025);
+    pointer-events: none;
+}
+
+.villa-address-card:hover {
+    transform: translateY(-4px);
+    border-color: #cbb58d !important;
+    box-shadow: 0 20px 45px rgba(69, 53, 35, 0.09);
+}
+
+/* LABEL BAGIAN ATAS */
+
+.villa-address-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 24px;
+}
+
+.villa-address-label {
+    color: #9b7a46;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 3.5px;
+}
+
+.villa-address-number {
+    color: #c4b18f;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 22px;
+    font-style: italic;
+}
+
+/* IKON LOKASI */
+
+.villa-address-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 18px;
+    color: #9e804d;
+    background: rgba(184, 155, 94, 0.10);
+    border: 1px solid rgba(184, 155, 94, 0.28);
+    border-radius: 50%;
+}
+
+/* NAMA VILLA */
+
+.villa-address-title {
+    margin: 0 0 18px !important;
+    color: #403328 !important;
+    font-family: "Cormorant Garamond", Georgia, serif !important;
+    font-size: clamp(30px, 3vw, 38px) !important;
+    font-weight: 500 !important;
+    line-height: 1.05;
+}
+
+.villa-address-title span {
+    display: block;
+    margin-top: 5px;
+    color: #a48757;
+    font-size: 0.88em;
+    font-style: italic;
+    font-weight: 400;
+}
+
+/* GARIS EMAS */
+
+.villa-address-divider {
+    width: 52px;
+    height: 1px;
+    margin-bottom: 18px;
+    background: linear-gradient(
+        to right,
+        #b89b5e,
+        rgba(184, 155, 94, 0.15)
+    );
+}
+
+/* TEKS ALAMAT */
+
+.villa-address-text {
+    max-width: 360px;
+    margin: 0 0 25px !important;
+    color: #71675a !important;
+    font-size: 12px !important;
+    line-height: 2 !important;
+    overflow-wrap: anywhere;
+}
+
+/* IDENTITAS LOKASI */
+
+.villa-address-bottom {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding-top: 17px;
+    border-top: 1px solid #e8dece;
+    color: #9a8668;
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+}
+
+.villa-address-dot {
+    flex: 0 0 6px;
+    width: 6px;
+    height: 6px;
+    background: #b89b5e;
+    border-radius: 50%;
+}
+
+/* RESPONSIVE HP */
+
+@media (max-width: 600px) {
+    .villa-address-card {
+        min-height: auto;
+        padding: 27px 24px !important;
+    }
+
+    .villa-address-top {
+        margin-bottom: 20px;
+    }
+
+    .villa-address-title {
+        font-size: 34px !important;
+    }
+
+    .villa-address-text {
+        font-size: 12px !important;
+    }
+}
+
+/* AKSESIBILITAS: HENTIKAN ANIMASI JIKA DIPERLUKAN */
+
+@media (prefers-reduced-motion: reduce) {
+    .villa-address-card {
+        transition: none;
+    }
+
+    .villa-address-card:hover {
+        transform: none;
+    }
+}
+/* =====================================================
+   OMAH NOTO CIJERUK — LOCATION PAGE ENHANCEMENTS
+   Luxury Editorial | Ivory, Cocoa & Gold
+===================================================== */
+
+/* PENGATURAN DASAR HALAMAN */
+
+body.location-page {
+    background: #f5f1e8;
+    color: #2c2621;
+    font-family: "Montserrat", Arial, sans-serif;
+    line-height: 1.7;
+}
+
+.location-page *,
+.location-page *::before,
+.location-page *::after {
+    box-sizing: border-box;
+}
+
+.location-page a {
+    text-decoration: none;
+}
+
+
+/* NAVBAR */
+
+.location-page header {
+    position: relative;
+    width: 100%;
+    padding: 15px 30px;
+    background: #fffdf9;
+    border-bottom: 1px solid #e7dfd3;
+    box-shadow: 0 4px 20px rgba(44, 38, 33, 0.05);
+}
+
+.location-page header::after {
+    display: none;
+}
+
+.location-page nav {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.location-page .logo {
+    color: #574536;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 28px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.location-page nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    list-style: none;
+}
+
+.location-page nav ul li a {
+    position: relative;
+    display: inline-block;
+    padding: 12px 0;
+    color: #5a5047;
+    font-size: 12px;
+    font-weight: 500;
+    text-shadow: none;
+    transition: color 0.3s ease;
+}
+
+.location-page nav ul li a:not(.nav-booking)::after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #b89b5e;
+    transition: width 0.3s ease;
+}
+
+.location-page nav ul li a:not(.nav-booking):hover::after,
+.location-page nav ul li a:not(.nav-booking).active::after {
+    width: 100%;
+}
+
+.location-page nav ul li a:hover,
+.location-page nav ul li a.active {
+    color: #a48757;
+}
+
+.location-page nav ul li a.nav-booking {
+    padding: 13px 23px;
+    background: #a48757;
+    color: #fffdf9;
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.location-page nav ul li a.nav-booking:hover {
+    background: #80643d;
+    transform: translateY(-2px);
+}
+
+
+/* HERO SECTION */
+
+.location-page .location-hero {
+    position: relative;
+    display: flex;
+    min-height: 440px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 85px 25px 90px;
+    background:
+        radial-gradient(
+            ellipse at 50% 0%,
+            rgba(255, 255, 255, 0.52),
+            transparent 65%
+        ),
+        #ebe4d7;
+    text-align: center;
+}
+
+.location-page .location-hero::before {
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    width: 1px;
+    height: 35px;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(164, 135, 87, 0.6)
+    );
+}
+
+.location-page .location-hero-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 900px;
+}
+
+.location-page .eyebrow {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: #a48757;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    line-height: 1.8;
+    text-transform: uppercase;
+}
+
+.location-page .location-hero h1 {
+    margin: 0 0 24px;
+    color: #2c2621;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(48px, 6.2vw, 82px);
+    font-weight: 400;
+    line-height: 0.98;
+    letter-spacing: -1.5px;
+}
+
+.location-page .location-hero h1 span {
+    display: block;
+    margin-top: 8px;
+    color: #8b704c;
+    font-style: italic;
+}
+
+.location-page .location-hero p {
+    max-width: 620px;
+    margin: 0 auto;
+    color: #6c6257;
+    font-size: 13px;
+    line-height: 2;
+}
+
+/* TOMBOL LOKASI — GLASSMORPHISM */
+.location-page .location-hero-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    margin-top: 30px;
+    padding: 13px 22px;
+
+    /* Efek kaca transparan */
+    background: rgba(255, 255, 255, 0.10);
+    -webkit-backdrop-filter: blur(12px) saturate(140%);
+    backdrop-filter: blur(12px) saturate(140%);
+
+    /* Bingkai emas */
+    border: 1px solid rgba(212, 181, 125, 0.75);
+    border-radius: 4px;
+
+    color: #fffaf2;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    text-decoration: none;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.12),
+        0 5px 18px rgba(0, 0, 0, 0.12);
+
+    transition:
+        gap 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* Efek hover */
+.location-page .location-hero-link:hover {
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.85);
+    color: #fffaf2;
+    transform: translateY(-2px);
+}
+
+/* Panah */
+.location-page .location-hero-link span {
+    font-size: 15px;
+    color: #e6c78f;
+}
+
+.location-page .location-hero-decoration {
+    position: absolute;
+    right: 35px;
+    bottom: 25px;
+    left: 35px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    color: #9b8a72;
+    font-size: 8px;
+    letter-spacing: 2px;
+}
+
+
+/* KONTEN UTAMA */
+
+.location-page .location-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 85px 35px;
+}
+
+.location-page .location-section-intro {
+    max-width: 680px;
+    margin-bottom: 35px;
+}
+
+.location-page .section-heading {
+    margin: 0 0 15px;
+    color: #2c2621;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(34px, 4vw, 48px);
+    font-weight: 500;
+    line-height: 1.15;
+}
+
+.location-page .section-description {
+    margin: 0;
+    color: #6c6257;
+    font-size: 13px;
+    line-height: 2;
+}
+
+
+/* FOTO LOKASI */
+
+.location-page .location-photo {
+    position: relative;
+    width: 100%;
+    height: 440px;
+    margin: 0 0 55px;
+    overflow: hidden;
+    background: #e5ded2;
+    border: 1px solid #d8cbbb;
+}
+
+.location-page .location-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 60%;
+    transition: transform 0.7s ease;
+}
+
+.location-page .location-photo:hover .location-image {
+    transform: scale(1.025);
+}
+
+.location-page .location-photo-caption {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 18px 22px;
+    background: linear-gradient(
+        to top,
+        rgba(34, 29, 24, 0.82),
+        transparent
+    );
+    color: #fffaf2;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+
+/* GRID INFORMASI */
+
+.location-page .location-information-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 25px;
+    margin-bottom: 80px;
+}
+
+.location-page .location-card {
+    min-width: 0;
+    padding: 32px;
+    background: #fffdf9;
+    border: 1px solid #e8dfd3;
+}
+
+
+/* KARTU ALAMAT */
+
+.location-page .villa-address-card {
+    min-height: 0;
+    padding: 32px !important;
+    background: linear-gradient(
+        135deg,
+        #fffdf8,
+        #f7f1e7
+    ) !important;
+    border: 1px solid #e4d8c5 !important;
+    box-shadow: 0 12px 35px rgba(69, 53, 35, 0.045);
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.location-page .villa-address-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 45px rgba(69, 53, 35, 0.09);
+}
+
+.location-page .villa-address-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 24px;
+}
+
+.location-page .villa-address-label {
+    color: #9b7a46;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 3.5px;
+}
+
+.location-page .villa-address-number {
+    color: #c4b18f;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 22px;
+    font-style: italic;
+}
+
+.location-page .villa-address-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 18px;
+    border: 1px solid rgba(184, 155, 94, 0.28);
+    border-radius: 50%;
+    background: rgba(184, 155, 94, 0.1);
+    color: #9e804d;
+}
+
+.location-page .villa-address-title {
+    margin: 0 0 18px !important;
+    color: #403328 !important;
+    font-family: "Cormorant Garamond", Georgia, serif !important;
+    font-size: clamp(30px, 3vw, 38px) !important;
+    font-weight: 500 !important;
+    line-height: 1.05;
+}
+
+.location-page .villa-address-title span {
+    display: block;
+    margin-top: 5px;
+    color: #a48757;
+    font-size: 0.88em;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.location-page .villa-address-divider {
+    width: 52px;
+    height: 1px;
+    margin-bottom: 18px;
+    background: linear-gradient(
+        to right,
+        #b89b5e,
+        rgba(184, 155, 94, 0.15)
+    );
+}
+
+.location-page .villa-address-text {
+    max-width: 360px;
+    margin: 0 0 25px !important;
+    color: #71675a !important;
+    font-size: 12px !important;
+    line-height: 2 !important;
+    overflow-wrap: anywhere;
+}
+
+.location-page .villa-address-bottom {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding-top: 17px;
+    border-top: 1px solid #e8dece;
+    color: #9a8668;
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+}
+
+.location-page .villa-address-dot {
+    flex: 0 0 6px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #b89b5e;
+}
+
+.location-page .location-card-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    margin-top: 25px;
+    padding: 13px 19px;
+    background: #a48757;
+    color: #fffdf9;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.location-page .location-card-button:hover {
+    background: #80643d;
+    transform: translateY(-2px);
+}
+
+
+/* KARTU DETAIL LOKASI */
+
+.location-page .location-detail-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 38px;
+    background: #ebe4d7;
+    border-color: #e3d9c8;
+}
+
+.location-page .card-label {
+    margin-bottom: 12px;
+    color: #a48757;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.location-page .location-detail-card h3 {
+    margin: 0 0 15px;
+    color: #403328;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.location-page .location-detail-card > p {
+    color: #6c6257;
+    font-size: 12px;
+    line-height: 2;
+}
+
+.location-page .location-detail-divider {
+    height: 1px;
+    margin: 25px 0;
+    background: #d8cbbb;
+}
+
+.location-page .location-detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(216, 203, 187, 0.65);
+    font-size: 11px;
+}
+
+.location-page .location-detail-row:last-child {
+    border-bottom: 0;
+}
+
+.location-page .location-detail-row span {
+    color: #85786a;
+}
+
+.location-page .location-detail-row strong {
+    color: #574536;
+    font-weight: 600;
+    text-align: right;
+}
+
+
+/* AKSES KENDARAAN */
+
+.location-page .access-section {
+    padding-top: 5px;
+}
+
+.location-page .access-heading {
+    max-width: 650px;
+    margin-bottom: 30px;
+}
+
+.location-page .access-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.location-page .access-item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+    min-width: 0;
+    padding: 30px 25px;
+    background: #ebe4d7;
+    border: 1px solid #e2d8c7;
+    border-left: 2px solid #b89b5e;
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.location-page .access-item:hover {
+    background: #f0e9dd;
+    transform: translateY(-3px);
+}
+
+.location-page .access-item-number {
+    color: #b89b5e;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 25px;
+    font-style: italic;
+}
+
+.location-page .access-item-content {
+    min-width: 0;
+}
+
+.location-page .access-item h3 {
+    margin: 0 0 9px;
+    color: #403328;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.location-page .access-item p {
+    color: #6c6257;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.location-page .access-item-icon {
+    margin-left: auto;
+    color: #a48757;
+    font-size: 18px;
+}
+
+
+/* GOOGLE MAPS CTA */
+
+.location-page .maps-section {
+    position: relative;
+    overflow: hidden;
+    margin-top: 80px;
+    padding: 65px 25px;
+    background:
+        radial-gradient(
+            circle at 90% 15%,
+            rgba(184, 155, 94, 0.12),
+            transparent 35%
+        ),
+        #2c2621;
+    color: #f5f1e8;
+    text-align: center;
+}
+
+.location-page .maps-section .eyebrow {
+    color: #c6ad7d;
+}
+
+.location-page .maps-section h2 {
+    position: relative;
+    z-index: 1;
+    margin: 0 0 15px;
+    color: #f5f1e8;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(34px, 4vw, 48px);
+    font-weight: 400;
+    line-height: 1.15;
+}
+
+.location-page .maps-section p {
+    position: relative;
+    z-index: 1;
+    max-width: 580px;
+    margin: 0 auto 27px;
+    color: #d1c7b8;
+    font-size: 12px;
+    line-height: 2;
+}
+
+.location-page .maps-button {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 26px;
+    background: #b89b5e;
+    color: #fffdf9;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.location-page .maps-button:hover {
+    background: #96783e;
+    transform: translateY(-3px);
+}
+
+.location-page .maps-decoration {
+    position: absolute;
+    right: 20px;
+    bottom: 8px;
+    left: 20px;
+    color: rgba(255, 255, 255, 0.035);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(30px, 8vw, 90px);
+    font-weight: 600;
+    letter-spacing: 5px;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+
+/* FOOTER */
+
+.location-page .location-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 38px 25px 25px;
+    background: #211d19;
+    color: #cfc7bb;
+    text-align: center;
+}
+
+.location-page .footer-brand {
+    color: #f5f1e8;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.location-page .location-footer p {
+    max-width: 460px;
+    color: #bdb2a3;
+    font-size: 11px;
+    line-height: 1.9;
+}
+
+.location-page .footer-copyright {
+    margin-top: 15px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    width: 100%;
+    color: #9f9486;
+    font-size: 10px;
+}
+
+
+/* RESPONSIVE TABLET */
+
+@media (max-width: 1000px) {
+    .location-page header {
+        padding: 16px 22px;
+    }
+
+    .location-page nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .location-page nav ul {
+        gap: 10px 20px;
+    }
+
+    .location-page .location-container {
+        padding: 65px 25px;
+    }
+
+    .location-page .location-information-grid {
+        gap: 18px;
+    }
+
+    .location-page .location-card {
+        padding: 25px;
+    }
+
+    .location-page .villa-address-card {
+        padding: 27px !important;
+    }
+}
+
+
+/* RESPONSIVE HP */
+
+@media (max-width: 600px) {
+    .location-page header {
+        padding: 15px 18px;
+    }
+
+    .location-page .logo {
+        font-size: 25px;
+    }
+
+    .location-page nav ul {
+        gap: 5px 14px;
+    }
+
+    .location-page nav ul li a {
+        padding: 8px 0;
+        font-size: 11px;
+    }
+
+    .location-page nav ul li a.nav-booking {
+        padding: 9px 15px;
+    }
+
+    .location-page .location-hero {
+        min-height: 390px;
+        padding: 75px 22px 80px;
+    }
+
+    .location-page .location-hero h1 {
+        font-size: clamp(43px, 12vw, 60px);
+        letter-spacing: -0.5px;
+    }
+
+    .location-page .location-hero p {
+        font-size: 12px;
+    }
+
+    .location-page .location-hero-decoration {
+        right: 18px;
+        bottom: 18px;
+        left: 18px;
+        font-size: 7px;
+        letter-spacing: 1px;
+    }
+
+    .location-page .location-container {
+        padding: 50px 18px;
+    }
+
+    .location-page .location-section-intro {
+        margin-bottom: 25px;
+    }
+
+    .location-page .section-heading {
+        font-size: 35px;
+    }
+
+    .location-page .section-description {
+        font-size: 12px;
+    }
+
+    .location-page .location-photo {
+        height: 280px;
+        margin-bottom: 30px;
+    }
+
+    .location-page .location-photo-caption {
+        padding: 13px;
+        font-size: 8px;
+        letter-spacing: 0.7px;
+    }
+
+    .location-page .location-information-grid,
+    .location-page .access-list {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-bottom: 55px;
+    }
+
+    .location-page .location-card,
+    .location-page .villa-address-card {
+        padding: 25px !important;
+    }
+
+    .location-page .location-detail-card {
+        padding: 27px !important;
+    }
+
+    .location-page .location-detail-card h3 {
+        font-size: 32px;
+    }
+
+    .location-page .villa-address-title {
+        font-size: 35px !important;
+    }
+
+    .location-page .villa-address-text {
+        font-size: 12px !important;
+    }
+
+    .location-page .villa-address-bottom {
+        font-size: 7px;
+        letter-spacing: 1px;
+    }
+
+    .location-page .access-item {
+        padding: 24px 18px;
+        gap: 15px;
+    }
+
+    .location-page .access-item h3 {
+        font-size: 25px;
+    }
+
+    .location-page .maps-section {
+        margin-top: 55px;
+        padding: 45px 20px;
+    }
+
+    .location-page .maps-section h2 {
+        font-size: 35px;
+    }
+
+    .location-page .maps-decoration {
+        font-size: 35px;
+        letter-spacing: 2px;
+    }
+
+    .location-page .location-footer {
+        padding: 30px 20px 20px;
+    }
+}
+
+
+/* AKSESIBILITAS */
+
+@media (prefers-reduced-motion: reduce) {
+    .location-page *,
+    .location-page *::before,
+    .location-page *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+
+    .location-page .location-photo:hover .location-image,
+    .location-page .villa-address-card:hover,
+    .location-page .access-item:hover,
+    .location-page .maps-button:hover {
+        transform: none;
+    }
+}
+/* =========================================================
+   OMAH NOTO CIJERUK — LOCATION PAGE FINAL ENHANCEMENTS
+   Menyamakan navbar dan WhatsApp dengan halaman Home
+   Semua aturan dibatasi ke .location-page
+========================================================= */
+
+
+/* =========================================================
+   1. NAVBAR — DARK GLASS STYLE
+========================================================= */
+
+body.location-page > header {
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    padding: 15px 4.2%;
+    background: rgba(29, 29, 29, 0.94);
+    border-bottom: 1px solid rgba(184, 155, 94, 0.4);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+body.location-page > header::before,
+body.location-page > header::after {
+    display: none;
+    content: none;
+}
+
+body.location-page > header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 28px;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+body.location-page > header nav .logo {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    flex-shrink: 0;
+    color: #ffffff;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 29px;
+    font-weight: 600;
+    line-height: 1;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* Logo bulat villa */
+
+body.location-page > header nav .logo img {
+    display: block;
+    width: 59px;
+    height: 59px;
+    flex-shrink: 0;
+    object-fit: contain;
+    border: 2px solid #b89b5e;
+    border-radius: 50%;
+    background: #fffaf1;
+    box-shadow: 0 0 0 4px rgba(184, 155, 94, 0.12);
+}
+
+/* Teks logo */
+
+body.location-page > header nav .logo-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+body.location-page > header nav .logo-text span {
+    display: block;
+}
+
+body.location-page > header nav .logo-text .logo-subtitle {
+    color: #c7a45d;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+/* Daftar navigasi */
+
+body.location-page > header nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body.location-page > header nav ul li {
+    margin: 0;
+    padding: 0;
+}
+
+body.location-page > header nav ul li a {
+    position: relative;
+    display: inline-block;
+    padding: 12px 0;
+    color: #f5f1e8;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-decoration: none;
+    text-shadow: none;
+    transition: color 0.3s ease;
+}
+
+body.location-page > header nav ul li a:not(.nav-booking)::after {
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #c5a15c;
+    content: "";
+    transition: width 0.3s ease;
+}
+
+body.location-page > header nav ul li a:not(.nav-booking):hover::after,
+body.location-page > header nav ul li a:not(.nav-booking).active::after {
+    width: 100%;
+}
+
+body.location-page > header nav ul li a:not(.nav-booking):hover,
+body.location-page > header nav ul li a.active {
+    color: #c9a660;
+}
+
+/* Tombol Booking */
+
+body.location-page > header nav ul li a.nav-booking {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 48px;
+    padding: 13px 27px;
+    border: 1px solid #b89b5e;
+    border-radius: 3px;
+    background: #a48757;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.15);
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+body.location-page > header nav ul li a.nav-booking:hover {
+    background: #87683a;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   2. WHATSAPP FLOATING WIDGET
+========================================================= */
+
+body.location-page .whatsapp-float {
+    position: fixed;
+    right: 28px;
+    bottom: 25px;
+    z-index: 2000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    width: min(570px, calc(100% - 40px));
+    min-height: 102px;
+    padding: 13px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 60px;
+    background: rgba(20, 20, 20, 0.97);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.28);
+    color: #ffffff;
+    font-family: "Montserrat", Arial, sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+body.location-page .whatsapp-float:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.34);
+}
+
+/* Logo villa di sisi kiri */
+
+body.location-page .whatsapp-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 62px;
+    height: 62px;
+    flex: 0 0 62px;
+    overflow: hidden;
+    border: 2px solid #c6a363;
+    border-radius: 50%;
+    background: #fffaf1;
+}
+
+body.location-page .whatsapp-avatar img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+/* Tulisan di tengah */
+
+body.location-page .whatsapp-text {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+    gap: 3px;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+body.location-page .whatsapp-text strong {
+    display: block;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+body.location-page .whatsapp-text span {
+    display: block;
+    color: #c9c9c9;
+    font-size: 12px;
+}
+
+/* Tombol hijau */
+
+body.location-page .whatsapp-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    flex: 0 0 auto;
+    min-height: 61px;
+    padding: 15px 22px;
+    border: 0;
+    border-radius: 40px;
+    background: #20c875;
+    color: #ffffff;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+body.location-page .whatsapp-button:hover {
+    background: #16ad62;
+    transform: scale(1.02);
+}
+
+body.location-page .whatsapp-button img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+/* Jika tombol WhatsApp memakai SVG */
+
+body.location-page .whatsapp-button svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   3. RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+    body.location-page > header {
+        padding: 14px 25px;
+    }
+
+    body.location-page > header nav {
+        flex-wrap: wrap;
+        gap: 15px 25px;
+    }
+
+    body.location-page > header nav ul {
+        gap: 12px 20px;
+    }
+
+    body.location-page > header nav ul li a {
+        font-size: 12px;
+    }
+
+    body.location-page .whatsapp-float {
+        right: 20px;
+        bottom: 20px;
+        width: min(520px, calc(100% - 40px));
+    }
+
+    body.location-page .whatsapp-button {
+        padding: 13px 17px;
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================================
+   4. RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+    body.location-page > header {
+        padding: 13px 16px;
+    }
+
+    body.location-page > header nav {
+        justify-content: center;
+        gap: 13px;
+    }
+
+    body.location-page > header nav .logo {
+        justify-content: center;
+        font-size: 25px;
+    }
+
+    body.location-page > header nav .logo img {
+        width: 49px;
+        height: 49px;
+    }
+
+    body.location-page > header nav .logo-text .logo-subtitle {
+        font-size: 8px;
+        letter-spacing: 4px;
+    }
+
+    body.location-page > header nav ul {
+        justify-content: center;
+        gap: 5px 14px;
+        width: 100%;
+    }
+
+    body.location-page > header nav ul li a {
+        padding: 7px 0;
+        font-size: 11px;
+    }
+
+    body.location-page > header nav ul li a.nav-booking {
+        min-height: 0;
+        padding: 9px 15px;
+        font-size: 11px;
+    }
+
+    body.location-page .whatsapp-float {
+        right: 12px;
+        bottom: 12px;
+        gap: 9px;
+        width: calc(100% - 24px);
+        min-height: 76px;
+        padding: 9px;
+        border-radius: 45px;
+    }
+
+    body.location-page .whatsapp-avatar {
+        width: 45px;
+        height: 45px;
+        flex-basis: 45px;
+    }
+
+    body.location-page .whatsapp-text {
+        gap: 1px;
+    }
+
+    body.location-page .whatsapp-text strong {
+        font-size: 11px;
+    }
+
+    body.location-page .whatsapp-text span {
+        font-size: 10px;
+    }
+
+    body.location-page .whatsapp-button {
+        min-height: 43px;
+        gap: 5px;
+        padding: 10px 12px;
+        font-size: 10px;
+    }
+
+    body.location-page .whatsapp-button img,
+    body.location-page .whatsapp-button svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+
+/* LAYAR HP SANGAT KECIL */
+
+@media (max-width: 380px) {
+    body.location-page .whatsapp-float {
+        gap: 7px;
+        padding: 8px;
+    }
+
+    body.location-page .whatsapp-avatar {
+        width: 38px;
+        height: 38px;
+        flex-basis: 38px;
+    }
+
+    body.location-page .whatsapp-text strong {
+        font-size: 10px;
+    }
+
+    body.location-page .whatsapp-text span {
+        font-size: 9px;
+    }
+
+    body.location-page .whatsapp-button {
+        padding: 9px 10px;
+        font-size: 9px;
+    }
+}
+
+
+/* =========================================================
+   5. AKSESIBILITAS
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    body.location-page .whatsapp-float,
+    body.location-page .whatsapp-button,
+    body.location-page > header nav ul li a {
+        transition: none;
+    }
+
+    body.location-page .whatsapp-float:hover,
+    body.location-page .whatsapp-button:hover {
+        transform: none;
+    }
+}
+/* ===== FLOATING WHATSAPP - LOKASI ===== */
+
+.location-whatsapp {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    width: fit-content;
+    max-width: calc(100vw - 32px);
+    padding: 10px 13px;
+
+    background: #fffdf8;
+    border: 1px solid rgba(87, 78, 60, 0.12);
+    border-radius: 15px;
+    box-shadow: 0 5px 22px rgba(0, 0, 0, 0.14);
+
+    color: #302f28;
+    text-decoration: none;
+
+    font-family: 'Montserrat', sans-serif;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.location-whatsapp:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.18);
+}
+
+.location-whatsapp-logo {
+    width: 43px;
+    height: 43px;
+    flex-shrink: 0;
+
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid #e8dfce;
+}
+
+.location-whatsapp-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.location-whatsapp-text strong {
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.location-whatsapp-text small {
+    font-size: 9px;
+    color: #77746b;
+    line-height: 1.4;
+}
+
+.location-whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    flex-shrink: 0;
+    padding: 10px 12px;
+
+    background: #218c55;
+    color: #fff;
+    border-radius: 9px;
+
+    font-size: 10px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.location-whatsapp-button svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+    .location-whatsapp {
+        right: 12px;
+        bottom: 12px;
+        gap: 8px;
+        padding: 8px 10px;
+    }
+
+    .location-whatsapp-logo {
+        width: 35px;
+        height: 35px;
+    }
+
+    .location-whatsapp-text strong {
+        font-size: 9px;
+    }
+
+    .location-whatsapp-text small {
+        font-size: 8px;
+    }
+
+    .location-whatsapp-button {
+        gap: 4px;
+        padding: 9px;
+        font-size: 9px;
+    }
+
+    .location-whatsapp-button svg {
+        width: 14px;
+        height: 14px;
+    }
+}
+/* =========================================
+   LOKASI — NAVBAR GLASS EFFECT
+   ========================================= */
+
+body.location-page > header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    background: rgba(35, 35, 33, 0.72) !important;
+    -webkit-backdrop-filter: blur(18px) saturate(150%);
+    backdrop-filter: blur(18px) saturate(150%);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+
+    transition:
+        background 0.3s ease,
+        backdrop-filter 0.3s ease;
+}
+
+/* Navbar tetap terbaca di atas background terang */
+body.location-page > header nav {
+    background: transparent !important;
+}
+
+/* Link menu */
+body.location-page > header nav ul li a {
+    transition: color 0.25s ease;
+}
+
+/* Menu lokasi aktif */
+body.location-page > header nav ul li a.active {
+    color: #c6a15b;
+}
+
+/* Tombol booking */
+body.location-page > header nav ul li a.nav-booking {
+    background: #a98b58;
+    color: #fff;
+    border-radius: 4px;
+}
+/* =========================================
+   LOKASI — WHATSAPP WIDGET
+   ========================================= */
+
+.location-whatsapp {
+    position: fixed;
+    right: 28px;
+    bottom: 24px;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    width: max-content;
+    max-width: calc(100vw - 32px);
+    padding: 12px 14px;
+
+    background: rgba(255, 253, 248, 0.92);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+
+    box-shadow: 0 8px 28px rgba(40, 32, 20, 0.12);
+
+    color: #302f28;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.location-whatsapp-logo {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.location-whatsapp-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.location-whatsapp-text strong {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.location-whatsapp-text small {
+    font-size: 10px;
+    color: #77746b;
+}
+
+.location-whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    padding: 11px 14px;
+
+    background: #218c55;
+    color: white;
+    border-radius: 10px;
+
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.location-whatsapp-button svg {
+    width: 17px;
+    height: 17px;
+}
+
+.location-whatsapp:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(40, 32, 20, 0.16);
+}
+
+@media (max-width: 480px) {
+    .location-whatsapp {
+        right: 12px;
+        bottom: 12px;
+        gap: 8px;
+        padding: 9px;
+    }
+
+    .location-whatsapp-logo {
+        width: 34px;
+        height: 34px;
+    }
+
+    .location-whatsapp-text strong {
+        font-size: 9px;
+    }
+
+    .location-whatsapp-text small {
+        font-size: 8px;
+    }
+
+    .location-whatsapp-button {
+        padding: 9px;
+        font-size: 9px;
+    }
+
+    .location-whatsapp-button svg {
+        width: 14px;
+        height: 14px;
+    }
+}
+/* =====================================
+   LOKASI — HERO TEXT READABILITY
+   ===================================== */
+
+body.location-page .location-hero .location-hero-content h1 {
+    color: #fffaf2 !important;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
+}
+
+body.location-page .location-hero .location-hero-content h1 span {
+    color: #d5b783 !important;
+}
+
+body.location-page .location-hero .location-hero-content p {
+    color: #fffaf2 !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.65);
+}
+
+body.location-page .location-hero .eyebrow {
+    color: #d5b783 !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+body.location-page .location-hero .location-hero-link {
+    color: #fffaf2 !important;
+    border-color: #d5b783 !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+body.location-page .location-hero-decoration {
+    color: #e5d4b8 !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+/* ==========================================
+   LOCATION HERO — DESCRIPTION & GLASS BUTTON
+   ========================================== */
+
+/* Deskripsi hero */
+body.location-page .location-hero .location-hero-content > p {
+    max-width: 700px;
+    margin: 26px auto 0;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 2;
+    letter-spacing: 0.15px;
+
+    color: #fffaf2 !important;
+    text-align: center;
+
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.65);
+}
+
+/* Tombol kaca */
+body.location-page .location-hero .location-hero-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    margin-top: 28px;
+    padding: 13px 22px;
+
+    background: rgba(255, 255, 255, 0.10) !important;
+
+    -webkit-backdrop-filter: blur(12px) saturate(140%);
+    backdrop-filter: blur(12px) saturate(140%);
+
+    border: 1px solid rgba(230, 199, 143, 0.65) !important;
+    border-radius: 4px !important;
+
+    color: #fffaf2 !important;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-decoration: none;
+
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.12),
+        0 5px 18px rgba(0, 0, 0, 0.10);
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* Ikon panah */
+body.location-page .location-hero .location-hero-link span {
+    color: #e6c78f !important;
+    font-size: 15px;
+    transition: transform 0.3s ease;
+}
+
+/* Efek hover */
+body.location-page .location-hero .location-hero-link:hover {
+    background: rgba(255, 255, 255, 0.18) !important;
+    border-color: rgba(255, 255, 255, 0.85) !important;
+    transform: translateY(-2px);
+}
+
+body.location-page .location-hero .location-hero-link:hover span {
+    transform: translateY(3px);
+}
+
+/* Tampilan HP */
+@media (max-width: 600px) {
+    body.location-page .location-hero .location-hero-content > p {
+        max-width: 88%;
+        font-size: 12px;
+        line-height: 1.9;
+    }
+
+    body.location-page .location-hero .location-hero-link {
+        padding: 12px 18px;
+        font-size: 9px;
+        letter-spacing: 1.5px;
+    }
+}
+/* =================================
+   PERBAIKAN NAVBAR HALAMAN LOKASI
+================================= */
+
+.location-page header {
+    transform: none;
+    border-bottom: none;
+}
+
+.location-page header nav a {
+    position: relative;
+    transform: none;
+    text-decoration: none;
+}
+
+.location-page header nav a::after {
+    transform: none;
+}
+
+/* Hilangkan garis bawah pada menu lokasi */
+.location-page header nav a.active::after {
+    display: none;
+}
+
+/* Hilangkan efek garis bawah ketika hover */
+.location-page header nav a:hover::after {
+    display: none;
+}
+/* =================================
+   PERBAIKAN HERO HALAMAN LOKASI
+================================= */
+
+.location-page .location-hero {
+    padding: 100px 7%;
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.location-page .location-hero-content {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.location-page .location-hero-content .eyebrow {
+    display: block;
+    margin-bottom: 24px;
+    letter-spacing: 3px;
+}
+
+.location-page .location-hero-content h1 {
+    margin: 0 0 28px;
+    line-height: 1.15;
+}
+
+.location-page .location-hero-content p {
+    max-width: 750px;
+    margin: 0 auto 30px;
+    line-height: 1.9;
+}
+
+.location-page .location-hero-content .location-hero-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
+}
+/* ==========================================
+   NAVBAR LOKASI — SAMAKAN DENGAN SEKITAR VILLA
+========================================== */
+
+body.location-page > header {
+    transform: none;
+}
+
+body.location-page > header nav {
+    transform: none;
+}
+
+body.location-page > header nav ul li a {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: normal;
+    text-decoration: none;
+    transform: none;
+}
+
+body.location-page > header nav ul li a::before,
+body.location-page > header nav ul li a::after {
+    transform: none;
+}
+
+/* Samakan perilaku menu aktif */
+body.location-page > header nav ul li a.active {
+    text-decoration: none;
+}
+/* NAVBAR HALAMAN LOKASI — SAMAKAN DENGAN HALAMAN SEKITAR */
+
+.location-page header {
+  background: rgba(35, 31, 29, 0.42);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(201, 164, 92, 0.35);
+}
+/* PENYESUAIAN NAVBAR LOKASI AGAR MIRIP HALAMAN SEKITAR */
+
+body.location-page > header {
+    background: rgba(35, 31, 29, 0.42) !important;
+    -webkit-backdrop-filter: blur(14px) saturate(140%) !important;
+    backdrop-filter: blur(14px) saturate(140%) !important;
+    border-bottom: 1px solid rgba(201, 164, 92, 0.35);
+    box-shadow: none;
+}
+
+body.location-page > header nav {
+    padding: 15px 4%;
+}
+
+/* UKURAN LOGO */
+body.location-page > header .logo {
+    gap: 12px;
+}
+
+body.location-page > header .logo img {
+    width: 62px;
+    height: 62px;
+}
+
+/* UKURAN NAMA OMAH NOTO */
+body.location-page > header .logo-text > span {
+    font-size: 30px;
+}
+
+body.location-page > header .logo-text small {
+    font-size: 10px;
+}
+
+/* UKURAN FONT DAN JARAK MENU */
+body.location-page > header nav ul {
+    gap: 28px;
+}
+
+body.location-page > header nav ul li a {
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+/* TOMBOL BOOKING */
+body.location-page > header nav ul li:last-child a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 26px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff !important;
+    background: rgba(140, 106, 47, 0.85);
+    border: 1px solid rgba(201, 164, 92, 0.65);
+    border-radius: 3px;
+    line-height: 1.4;
+    white-space: nowrap;
+}
+
+/* RESPONSIF UNTUK HP */
+@media (max-width: 700px) {
+    body.location-page > header .logo img {
+        width: 48px;
+        height: 48px;
+    }
+
+    body.location-page > header .logo-text > span {
+        font-size: 22px;
+    }
+
+    body.location-page > header nav ul {
+        gap: 12px;
+    }
+
+    body.location-page > header nav ul li a {
+        font-size: 13px;
+    }
+
+    body.location-page > header nav ul li:last-child a {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+}
+/* Membuat intro halaman lokasi rata tengah */
+.location-page .location-section-intro {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 40px;
+}
+
+.location-page .location-section-intro .eyebrow {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.location-page .location-section-intro h2 {
+    text-align: center;
+    margin: 0 auto 24px;
+}
+
+.location-page .location-section-intro p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.9;
+}
+/* Heading bagian akses perjalanan */
+.location-page .access-heading {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 40px;
+}
+
+.location-page .access-heading .eyebrow {
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.location-page .access-heading h2 {
+    text-align: center;
+    margin: 0 auto 24px;
+}
+
+.location-page .access-heading .section-description {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.9;
+}
+/* Turunkan posisi teks hero halaman Lokasi */
+.location-page .location-hero-content {
+    transform: translateY(40px);
+}
+
+/* ==========================================
+   NAVBAR LOKASI — SAMAKAN DENGAN GAMBAR KEDUA
+========================================== */
+
+body.location-page > header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 98px;
+    min-height: 98px;
+    padding: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+    background: rgba(37, 36, 34, 0.94);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: none;
+}
+
+body.location-page > header nav {
+    width: 100%;
+    height: 98px;
+    min-height: 98px;
+    max-width: none;
+    margin: 0;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    box-sizing: border-box;
+    background: transparent;
+    backdrop-filter: none;
+}
+
+/* LOGO */
+body.location-page > header .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+body.location-page > header .logo img {
+    display: block;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+body.location-page > header .logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.05;
+}
+
+body.location-page > header .logo-text > span {
+    color: #fff;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 29px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+body.location-page > header .logo-text small {
+    margin-top: 5px;
+    color: #c6a15b;
+    font-family: "Montserrat", sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+}
+
+/* MENU NAVBAR */
+body.location-page > header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body.location-page > header nav ul li {
+    margin: 0;
+    padding: 0;
+}
+
+body.location-page > header nav ul li a {
+    display: inline-block;
+    padding: 8px 0;
+    color: #f7f4ed;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.5;
+    text-decoration: none;
+    white-space: nowrap;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    transform: none;
+    transition: color 0.25s ease;
+}
+
+body.location-page > header nav ul li a:hover,
+body.location-page > header nav ul li a.active {
+    color: #c6a15b;
+}
+
+/* HILANGKAN GARIS DEKORATIF MENU */
+body.location-page > header nav ul li a::before,
+body.location-page > header nav ul li a::after {
+    display: none;
+    content: none;
+}
+
+/* TOMBOL BOOKING */
+body.location-page > header nav ul li:last-child a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    padding: 0 22px;
+    border: 1px solid #a17c43;
+    border-radius: 3px;
+    background: #80612f;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    box-shadow: none;
+    transition: background 0.25s ease;
+}
+
+body.location-page > header nav ul li:last-child a:hover {
+    background: #96743d;
+    color: #fff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+    body.location-page > header nav {
+        padding: 0 4%;
+        gap: 15px;
+    }
+
+    body.location-page > header nav ul {
+        gap: 15px;
+    }
+
+    body.location-page > header nav ul li a {
+        font-size: 12px;
+    }
+
+    body.location-page > header .logo img {
+        width: 50px;
+        height: 50px;
+    }
+
+    body.location-page > header .logo-text > span {
+        font-size: 25px;
+    }
+
+    body.location-page > header nav ul li:last-child a {
+        min-height: 44px;
+        padding: 0 16px;
+    }
+}
