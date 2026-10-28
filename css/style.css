@@ -9270,6 +9270,41 @@ body.harga-page {
     line-height: 1.9;
 }
 
+/* BACKGROUND HALAMAN HARGA */
+.harga-page .harga-section {
+    position: relative;
+    isolation: isolate;
+
+    background-image: url("../images/bg-harga.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+/* Judul dan kartu tetap berada di atas background */
+.harga-page .harga-section > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Kartu harga tetap jelas dan mudah dibaca */
+.harga-page .harga-card {
+    background: rgba(255, 253, 248, 0.94);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+/* Tampilan HP */
+@media (max-width: 768px) {
+    .harga-page .harga-section {
+        background-position: center;
+        background-attachment: scroll;
+    }
+}
+
+
+
 /* =====================================================
    KARTU HARGA
 ===================================================== */
