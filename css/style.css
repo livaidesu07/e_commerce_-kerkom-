@@ -9786,3 +9786,38 @@ body.harga-page {
         transform: none;
     }
 }
+/* GOOGLE MAPS BUTTON */
+.access-map-button {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 14px 25px;
+    margin-top: 20px;
+
+    background: #a88950 !important;
+    color: #ffffff !important;
+
+    border: 1px solid #a88950;
+    border-radius: 5px;
+
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    box-shadow: 0 5px 15px rgba(120, 90, 45, 0.15);
+}
+
+/* HOVER EFFECT */
+.access-item:hover .access-map-button {
+    background: #ffffff !important;
+    color: #a88950 !important;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(120, 90, 45, 0.2);
+}
