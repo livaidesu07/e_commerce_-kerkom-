@@ -4,10 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Booking - Omah Noto Cijeruk</title>
+    <title>Booking | Omah Noto Cijeruk</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/booking.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
-  <body>
+  <body class="booking-page">
     <!-- NAVBAR -->
     <header>
       <nav>
@@ -21,23 +34,183 @@
           <li><a href="harga.html">Harga</a></li>
           <li><a href="sekitar.html">Sekitar Villa</a></li>
           <li><a href="lokasi.html">Lokasi</a></li>
-          <li><a href="booking.html">Booking</a></li>
+          <li><a href="booking.html" class="active">Booking</a></li>
         </ul>
       </nav>
     </header>
 
-    <!-- BOOKING -->
-    <section>
-      <h1>Booking Omah Noto Cijeruk</h1>
+    <!-- HERO BOOKING -->
+    <section class="booking-hero">
+      <span class="booking-eyebrow"> RESERVATION & BOOKING </span>
 
-      <p>Hubungi kami untuk informasi ketersediaan dan pemesanan villa.</p>
+      <h1>Rencanakan <span>Penginapanmu</span></h1>
 
-      <a href="#">Booking Sekarang</a>
+      <p>
+        Isi informasi pemesanan dan persiapkan pengalaman menginap yang nyaman
+        bersama Omah Noto Cijeruk.
+      </p>
     </section>
 
+    <!-- BOOKING FORM -->
+    <main class="booking-container">
+      <div class="booking-heading">
+        <span class="booking-label"> YOUR RESERVATION </span>
+
+        <h2>Formulir Pemesanan</h2>
+
+        <p>
+          Lengkapi informasi berikut untuk melanjutkan proses pemesanan villa.
+        </p>
+      </div>
+
+      <div class="booking-layout">
+        <!-- FORM DATA -->
+        <section class="booking-form-card">
+          <h3>Informasi Pemesan</h3>
+
+          <form id="bookingForm">
+            <!-- NAMA -->
+            <div class="form-group">
+              <label for="nama">Nama Lengkap</label>
+
+              <input
+                type="text"
+                id="nama"
+                name="nama"
+                placeholder="Masukkan nama lengkap"
+                required
+              />
+            </div>
+
+            <!-- WHATSAPP -->
+            <div class="form-group">
+              <label for="whatsapp">Nomor WhatsApp</label>
+
+              <input
+                type="tel"
+                id="whatsapp"
+                name="whatsapp"
+                placeholder="Contoh: 081234567890"
+                required
+              />
+            </div>
+
+            <!-- TANGGAL -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="checkin">Tanggal Check-in</label>
+
+                <input type="date" id="checkin" name="checkin" required />
+              </div>
+
+              <div class="form-group">
+                <label for="checkout">Tanggal Check-out</label>
+
+                <input type="date" id="checkout" name="checkout" required />
+              </div>
+            </div>
+
+            <!-- JUMLAH TAMU -->
+            <div class="form-group">
+              <label for="jumlahTamu">Jumlah Tamu</label>
+
+              <input
+                type="number"
+                id="jumlahTamu"
+                name="jumlahTamu"
+                min="1"
+                value="1"
+                required
+              />
+            </div>
+
+            <!-- PAKET -->
+            <div class="form-group">
+              <label for="paket">Pilihan Harga</label>
+
+              <select id="paket" name="paket" required>
+                <option value="">Pilih paket menginap</option>
+
+                <option value="weekday">Weekday - Rp1.000.000</option>
+
+                <option value="weekend">Weekend - Rp1.300.000</option>
+
+                <option value="holiday">Holiday - Rp1.500.000</option>
+              </select>
+            </div>
+
+            <!-- CATATAN -->
+            <div class="form-group">
+              <label for="catatan"> Catatan Tambahan (Opsional) </label>
+
+              <textarea
+                id="catatan"
+                name="catatan"
+                rows="4"
+                placeholder="Tuliskan permintaan khusus jika ada..."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="booking-submit">
+              Lanjutkan Pemesanan
+              <span>↗</span>
+            </button>
+          </form>
+        </section>
+
+        <!-- RINGKASAN BOOKING -->
+        <aside class="booking-summary">
+          <span class="booking-label"> BOOKING SUMMARY </span>
+
+          <h3>Ringkasan Pemesanan</h3>
+
+          <div class="summary-divider"></div>
+
+          <div class="summary-item">
+            <span>Nama Pemesan</span>
+            <strong id="summaryNama">-</strong>
+          </div>
+
+          <div class="summary-item">
+            <span>Check-in</span>
+            <strong id="summaryCheckin">-</strong>
+          </div>
+
+          <div class="summary-item">
+            <span>Check-out</span>
+            <strong id="summaryCheckout">-</strong>
+          </div>
+
+          <div class="summary-item">
+            <span>Jumlah Tamu</span>
+            <strong id="summaryTamu">1 Orang</strong>
+          </div>
+
+          <div class="summary-item">
+            <span>Paket Menginap</span>
+            <strong id="summaryPaket">-</strong>
+          </div>
+
+          <div class="summary-divider"></div>
+
+          <div class="summary-total">
+            <span>Estimasi Total</span>
+            <strong id="summaryTotal"> Rp0 </strong>
+          </div>
+
+          <p class="summary-note">
+            *Harga akhir dan ketersediaan villa akan dikonfirmasi oleh admin.
+          </p>
+        </aside>
+      </div>
+    </main>
+
     <!-- FOOTER -->
-    <footer>
+    <footer class="booking-footer">
       <p>&copy; 2026 Omah Noto Cijeruk. All Rights Reserved.</p>
     </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="booking.js"></script>
   </body>
 </html>

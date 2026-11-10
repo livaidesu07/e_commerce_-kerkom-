@@ -1,0 +1,454 @@
+/* =========================================
+   BOOKING PAGE - OMAH NOTO CIJERUK
+========================================= */
+
+.booking-page {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  background: #f5f1e9;
+  color: #40352b;
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.booking-page header {
+  position: relative;
+  z-index: 1000;
+  width: 100%;
+  background: rgba(35, 32, 28, 0.94);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+.booking-page nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 4%;
+}
+
+.booking-page .logo {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.booking-page nav ul {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.booking-page nav ul li a {
+  color: #f5f1e9;
+  text-decoration: none;
+  font-size: 13px;
+  transition: 0.3s ease;
+}
+
+.booking-page nav ul li a:hover,
+.booking-page nav ul li a.active {
+  color: #c6a15b;
+}
+
+/* =========================================
+   NAVBAR - GLASS TRANSPARENT
+========================================= */
+
+.booking-page header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+
+  background: rgba(20, 20, 20, 0.28);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.booking-page nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 15px 4%;
+}
+
+.booking-page .logo {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.booking-page nav ul {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.booking-page nav ul li a {
+  color: rgba(255, 255, 255, 0.95);
+  text-decoration: none;
+  font-size: 13px;
+
+  transition: 0.3s ease;
+}
+
+.booking-page nav ul li a:hover,
+.booking-page nav ul li a.active {
+  color: #c9a45c;
+}
+
+/* =========================================
+   BOOKING CONTAINER
+========================================= */
+
+.booking-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 30px 100px;
+}
+
+.booking-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.booking-heading h2 {
+  margin: 15px 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 44px;
+  font-weight: 500;
+  color: #352d26;
+}
+
+.booking-heading p {
+  color: #85796d;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* =========================================
+   BOOKING LAYOUT
+========================================= */
+
+.booking-layout {
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr;
+  gap: 35px;
+  align-items: start;
+}
+
+/* =========================================
+   FORM CARD
+========================================= */
+
+.booking-form-card {
+  padding: 45px;
+  background: #fffdf9;
+  border: 1px solid #e4d8c4;
+  box-shadow: 0 12px 40px rgba(80, 60, 35, 0.06);
+}
+
+.booking-form-card h3 {
+  margin: 0 0 35px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px;
+  font-weight: 500;
+  color: #40352b;
+}
+
+/* =========================================
+   FORM INPUT
+========================================= */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  margin-bottom: 10px;
+  color: #594b3e;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 15px 16px;
+
+  background: #faf8f3;
+  border: 1px solid #ded3c1;
+  border-radius: 3px;
+
+  outline: none;
+
+  color: #40352b;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #a88950;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(168, 137, 80, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #aaa094;
+}
+
+/* =========================================
+   FORM ROW
+========================================= */
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* =========================================
+   SUBMIT BUTTON
+========================================= */
+
+.booking-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  width: 100%;
+  padding: 18px 25px;
+
+  background: #a88950;
+  border: 1px solid #a88950;
+  border-radius: 3px;
+
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.booking-submit:hover {
+  background: #fff;
+  color: #a88950;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(120, 90, 45, 0.13);
+}
+
+.booking-submit span {
+  font-size: 17px;
+}
+
+/* =========================================
+   BOOKING SUMMARY
+========================================= */
+
+.booking-summary {
+  padding: 40px 35px;
+
+  background: #eae1d2;
+  border: 1px solid #d7c6a9;
+
+  position: sticky;
+  top: 30px;
+}
+
+.booking-summary h3 {
+  margin: 18px 0 25px;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px;
+  font-weight: 500;
+
+  color: #40352b;
+}
+
+.summary-divider {
+  width: 100%;
+  height: 1px;
+  background: #cfc0a7;
+  margin: 25px 0;
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 22px;
+}
+
+.summary-item span {
+  color: #887b6b;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+
+.summary-item strong {
+  color: #40352b;
+  font-size: 13px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.summary-total {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.summary-total span {
+  color: #766957;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.summary-total strong {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 35px;
+  font-weight: 600;
+  color: #a88950;
+}
+
+.summary-note {
+  margin-top: 25px;
+  color: #897d6d;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.booking-footer {
+  padding: 30px 20px;
+  text-align: center;
+
+  background: #292621;
+  color: #c9c0b3;
+}
+
+.booking-footer p {
+  margin: 0;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+
+/* =========================================
+   RESPONSIVE TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+  .booking-page nav {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .booking-page nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .booking-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-summary {
+    position: relative;
+    top: auto;
+  }
+}
+
+/* =========================================
+   RESPONSIVE MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .booking-hero {
+    padding: 75px 20px;
+  }
+
+  .booking-hero h1 {
+    font-size: 43px;
+  }
+
+  .booking-container {
+    padding: 55px 16px 70px;
+  }
+
+  .booking-heading h2 {
+    font-size: 35px;
+  }
+
+  .booking-form-card {
+    padding: 25px 20px;
+  }
+
+  .booking-form-card h3 {
+    font-size: 28px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .booking-summary {
+    padding: 30px 25px;
+  }
+
+  .booking-summary h3 {
+    font-size: 28px;
+  }
+
+  .booking-page nav ul {
+    gap: 12px;
+  }
+
+  .booking-page nav ul li a {
+    font-size: 11px;
+  }
+}
